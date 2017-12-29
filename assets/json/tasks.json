@@ -1,184 +1,182 @@
 {
-  "Tasks": {
-    "TzHaar": {
-      "monster-name": "TzHaar",
-      "task-weight": 10,
-      "tags": "boss"
-    },
-    "Abyssal Demons": {
-      "monster-name": "Abyssal Demons",
-      "task-weight": 9,
-      "tags": "boss"
-    },
-    "Black Demons": {
-      "monster-name": "Black Demons",
-      "task-weight": 9,
-      "tags": "boss"
-    },
-    "Bloodveld": {
-      "monster-name": "Bloodveld",
-      "task-weight": 9,
-      "tags": ""
-    },
-    "Kalphite": {
-      "monster-name": "Kalphite",
-      "task-weight": 9,
-      "tags": "boss, boss-crush"
-    },
-    "Fire Giants": {
-      "monster-name": "Fire Giants",
-      "task-weight": 9,
-      "tags": ""
-    },
-    "Daggonnath": {
-      "monster-name": "Daggonnath",
-      "task-weight": 8,
-      "tags": "boss, ely"
-    },
-    "Hellhounds": {
-      "monster-name": "Hellhounds",
-      "task-weight": 8,
-      "tags": "boss, boss-crush"
-    },
-    "Suqahs": {
-      "monster-name": "Suqahs",
-      "task-weight": 8,
-      "tags": ""
-    },
-    "Lizardmen": {
-      "monster-name": "Lizardmen",
-      "task-weight": 8,
-      "tags": ""
-    },
-    "Nechryael": {
-      "monster-name": "Nechryael",
-      "task-weight": 7,
-      "tags": ""
-    },
-    "Smoke Devils": {
-      "monster-name": "Smoke Devils",
-      "task-weight": 7,
-      "tags": ""
-    },
-    "Greater Demons": {
-      "monster-name": "Greater Demons",
-      "task-weight": 7,
-      "tags": ""
-    },
-    "Spiritual Creatures": {
-      "monster-name": "Spiritual Creatures",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Aviansies": {
-      "monster-name": "Aviansies",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Gargoyles": {
-      "monster-name": "Gargoyles",
-      "task-weight": 6,
-      "tags": "boss, boss-double-phase"
-    },
-    "Cave Kraken": {
-      "monster-name": "Cave Kraken",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Dust Devils": {
-      "monster-name": "Dust Devils",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Aberrant Spectres": {
-      "monster-name": "Aberrant Spectres",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Trolls": {
-      "monster-name": "Trolls",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Black Dragons": {
-      "monster-name": "Black Dragons",
-      "task-weight": 6,
-      "tags": ""
-    },
-    "Dark Beasts": {
-      "monster-name": "Dark Beasts",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Iron Dragons": {
-      "monster-name": "Iron Dragons",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Red Dragons": {
-      "monster-name": "Red Dragons",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Mithril Dragons": {
-      "monster-name": "Mithril Dragons",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Ankou": {
-      "monster-name": "Ankou",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Steel Dragons": {
-      "monster-name": "Steel Dragons",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Cave Horrors": {
-      "monster-name": "Cave Horrors",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Skeletal Wyverns": {
-      "monster-name": "Skeletal Wyverns",
-      "task-weight": 5,
-      "tags": ""
-    },
-    "Elves": {
-      "monster-name": "Elves",
-      "task-weight": 4,
-      "tags": ""
-    },
-    "Blue Dragons": {
-      "monster-name": "Blue Dragons",
-      "task-weight": 4,
-      "tags": ""
-    },
-    "Scarabs": {
-      "monster-name": "Scarabs",
-      "task-weight": 4,
-      "tags": ""
-    },
-    "Kurask": {
-      "monster-name": "Kurask",
-      "task-weight": 3,
-      "tags": ""
-    },
-    "Turoth": {
-      "monster-name": "Turoth",
-      "task-weight": 3,
-      "tags": ""
-    },
-    "Brine Rates": {
-      "monster-name": "Brine Rates",
-      "task-weight": 3,
-      "tags": ""
-    },
-    "Mutated Zygomites": {
-      "monster-name": "Mutated Zygomites",
-      "task-weight": 2,
-      "tags": ""
-    }
+  "TzHaar": {
+    "monster-name": "TzHaar",
+    "task-weight": 10,
+    "tags": "boss"
+  },
+  "Abyssal Demons": {
+    "monster-name": "Abyssal Demons",
+    "task-weight": 9,
+    "tags": "boss"
+  },
+  "Black Demons": {
+    "monster-name": "Black Demons",
+    "task-weight": 9,
+    "tags": "boss"
+  },
+  "Bloodveld": {
+    "monster-name": "Bloodveld",
+    "task-weight": 9,
+    "tags": ""
+  },
+  "Kalphite": {
+    "monster-name": "Kalphite",
+    "task-weight": 9,
+    "tags": "boss, boss-crush"
+  },
+  "Fire Giants": {
+    "monster-name": "Fire Giants",
+    "task-weight": 9,
+    "tags": ""
+  },
+  "Daggonnath": {
+    "monster-name": "Daggonnath",
+    "task-weight": 8,
+    "tags": "boss, ely"
+  },
+  "Hellhounds": {
+    "monster-name": "Hellhounds",
+    "task-weight": 8,
+    "tags": "boss, boss-crush"
+  },
+  "Suqahs": {
+    "monster-name": "Suqahs",
+    "task-weight": 8,
+    "tags": ""
+  },
+  "Lizardmen": {
+    "monster-name": "Lizardmen",
+    "task-weight": 8,
+    "tags": ""
+  },
+  "Nechryael": {
+    "monster-name": "Nechryael",
+    "task-weight": 7,
+    "tags": ""
+  },
+  "Smoke Devils": {
+    "monster-name": "Smoke Devils",
+    "task-weight": 7,
+    "tags": ""
+  },
+  "Greater Demons": {
+    "monster-name": "Greater Demons",
+    "task-weight": 7,
+    "tags": ""
+  },
+  "Spiritual Creatures": {
+    "monster-name": "Spiritual Creatures",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Aviansies": {
+    "monster-name": "Aviansies",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Gargoyles": {
+    "monster-name": "Gargoyles",
+    "task-weight": 6,
+    "tags": "boss, boss-double-phase"
+  },
+  "Cave Kraken": {
+    "monster-name": "Cave Kraken",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Dust Devils": {
+    "monster-name": "Dust Devils",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Aberrant Spectres": {
+    "monster-name": "Aberrant Spectres",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Trolls": {
+    "monster-name": "Trolls",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Black Dragons": {
+    "monster-name": "Black Dragons",
+    "task-weight": 6,
+    "tags": ""
+  },
+  "Dark Beasts": {
+    "monster-name": "Dark Beasts",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Iron Dragons": {
+    "monster-name": "Iron Dragons",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Red Dragons": {
+    "monster-name": "Red Dragons",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Mithril Dragons": {
+    "monster-name": "Mithril Dragons",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Ankou": {
+    "monster-name": "Ankou",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Steel Dragons": {
+    "monster-name": "Steel Dragons",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Cave Horrors": {
+    "monster-name": "Cave Horrors",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Skeletal Wyverns": {
+    "monster-name": "Skeletal Wyverns",
+    "task-weight": 5,
+    "tags": ""
+  },
+  "Elves": {
+    "monster-name": "Elves",
+    "task-weight": 4,
+    "tags": ""
+  },
+  "Blue Dragons": {
+    "monster-name": "Blue Dragons",
+    "task-weight": 4,
+    "tags": ""
+  },
+  "Scarabs": {
+    "monster-name": "Scarabs",
+    "task-weight": 4,
+    "tags": ""
+  },
+  "Kurask": {
+    "monster-name": "Kurask",
+    "task-weight": 3,
+    "tags": ""
+  },
+  "Turoth": {
+    "monster-name": "Turoth",
+    "task-weight": 3,
+    "tags": ""
+  },
+  "Brine Rates": {
+    "monster-name": "Brine Rates",
+    "task-weight": 3,
+    "tags": ""
+  },
+  "Mutated Zygomites": {
+    "monster-name": "Mutated Zygomites",
+    "task-weight": 2,
+    "tags": ""
   }
 }
