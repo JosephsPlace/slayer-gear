@@ -7,7 +7,29 @@
     "dps-increase": 2.65,
     "def-increase": "",
     "tags": "all, strength",
-    "predecessor": "Dragon scimitar"
+    "predecessor": "Dragon scimitar",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 82,
+        "crush": 60,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 82,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
   },
   "11791": {
     "id": 11791,
@@ -17,7 +39,29 @@
     "dps-increase": 2.16,
     "def-increase": "",
     "tags": "all, strength",
-    "predecessor": "Saradomin Sword"
+    "predecessor": "Saradomin Sword",
+    "stats": {
+      "attack": {
+        "stab": 55,
+        "slash": 70,
+        "crush": 0,
+        "magic": 17,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 3,
+        "crush": 3,
+        "magic": 17,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 72,
+        "range-str": 0,
+        "magic-str": 15,
+        "prayer": 0
+      }
+    }
   },
   "13265": {
     "id": 13265,
@@ -27,7 +71,29 @@
     "dps-increase": 5.18,
     "def-increase": "",
     "tags": "all, strength",
-    "predecessor": "Staff of the Dead"
+    "predecessor": "Staff of the Dead",
+    "stats": {
+      "attack": {
+        "stab": 75,
+        "slash": 40,
+        "crush": -4,
+        "magic": 1,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 1,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 75,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "12809": {
     "id": 12809,
@@ -37,7 +103,29 @@
     "dps-increase": 5.15,
     "def-increase": "",
     "tags": "all, strength",
-    "predecessor": "Staff of the Dead"
+    "predecessor": "Staff of the Dead",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 100,
+        "crush": 60,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 88,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
   },
   "4151": {
     "id": 4151,
@@ -47,7 +135,29 @@
     "dps-increase": 4.93,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Abyssal Dagger"
+    "predecessor": "Abyssal Dagger",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 82,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 82,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "11889": {
     "id": 11889,
@@ -57,7 +167,29 @@
     "dps-increase": 28,
     "def-increase": "",
     "tags": "crush",
-    "predecessor": "Abyssal whip"
+    "predecessor": "Abyssal whip",
+    "stats": {
+      "attack": {
+        "stab": 85,
+        "slash": 65,
+        "crush": 65,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 13,
+        "slash": 13,
+        "crush": 12,
+        "magic": 0,
+        "range": 13
+      },
+      "other": {
+        "melee-str": 75,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
   },
   "13263": {
     "id": 13263,
@@ -67,7 +199,29 @@
     "dps-increase": 17.23,
     "def-increase": "",
     "tags": "crush",
-    "predecessor": "Zamorak Hasta"
+    "predecessor": "Zamorak Hasta",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 102,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 85,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "12899": {
     "id": 12899,
@@ -77,7 +231,29 @@
     "dps-increase": 24.73,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Trident of the Seas"
+    "predecessor": "Trident of the Seas",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 25,
+        "range": 0
+      },
+      "defence": {
+        "stab": 2,
+        "slash": 3,
+        "crush": 1,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "12924": {
     "id": 12924,
@@ -87,7 +263,29 @@
     "dps-increase": 73.9,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Rune Crossbow"
+    "predecessor": "Rune Crossbow",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 60
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "6914": {
     "id": 6914,
@@ -97,7 +295,29 @@
     "dps-increase": 0.23,
     "def-increase": "",
     "tags": "aoe, prayer",
-    "predecessor": "Ancient Staff"
+    "predecessor": "Ancient Staff",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "21006": {
     "id": 21006,
@@ -107,7 +327,29 @@
     "dps-increase": 13.7,
     "def-increase": "",
     "tags": "aoe, prayer",
-    "predecessor": "Master Wand"
+    "predecessor": "Master Wand",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 28,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 3,
+        "crush": 3,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 15,
+        "prayer": 0
+      }
+    }
   },
   "12612": {
     "id": 12612,
@@ -117,7 +359,29 @@
     "dps-increase": 0.06,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Time of Fire"
+    "predecessor": "Time of Fire",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 10,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 5
+      }
+    }
   },
   "11924": {
     "id": 11924,
@@ -127,7 +391,29 @@
     "dps-increase": 0.06,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Book of Darkness"
+    "predecessor": "Book of Darkness",
+    "stats": {
+      "attack": {
+        "stab": -8,
+        "slash": -8,
+        "crush": -8,
+        "magic": 12,
+        "range": -12
+      },
+      "defence": {
+        "stab": 50,
+        "slash": 52,
+        "crush": 48,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "6889": {
     "id": 6889,
@@ -137,7 +423,29 @@
     "dps-increase": 0.09,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Malediction Ward"
+    "predecessor": "Malediction Ward",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "12825": {
     "id": 12825,
@@ -147,7 +455,29 @@
     "dps-increase": 0.13,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Mage's Book"
+    "predecessor": "Mage's Book",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "defence": {
+        "stab": 53,
+        "slash": 55,
+        "crush": 73,
+        "magic": 2,
+        "range": 52
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 3
+      }
+    }
   },
   "12817": {
     "id": 12817,
@@ -157,7 +487,29 @@
     "dps-increase": 0,
     "def-increase": 29.02,
     "tags": "dks",
-    "predecessor": "Blessed Spirit Shield"
+    "predecessor": "Blessed Spirit Shield",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 63,
+        "slash": 65,
+        "crush": 75,
+        "magic": 2,
+        "range": 57
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 3
+      }
+    }
   },
   "6585": {
     "id": 6585,
@@ -167,7 +519,29 @@
     "dps-increase": 4,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Amulet of Glory"
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 10,
+        "slash": 10,
+        "crush": 10,
+        "magic": 10,
+        "range": 10
+      },
+      "defence": {
+        "stab": 15,
+        "slash": 15,
+        "crush": 15,
+        "magic": 15,
+        "range": 15
+      },
+      "other": {
+        "melee-str": 8,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 5
+      }
+    }
   },
   "19553": {
     "id": 19553,
@@ -177,7 +551,29 @@
     "dps-increase": 0.81,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Amulet of Fury"
+    "predecessor": "Amulet of Fury",
+    "stats": {
+      "attack": {
+        "stab": 15,
+        "slash": 15,
+        "crush": 15,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 10,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
   },
   "19547": {
     "id": 19547,
@@ -187,7 +583,29 @@
     "dps-increase": 6.31,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Amulet of Glory"
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 15
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 5,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
   },
   "12002": {
     "id": 12002,
@@ -197,7 +615,29 @@
     "dps-increase": 7.22,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Amulet of Glory"
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 10,
+        "prayer": 2
+      }
+    }
   },
   "11832": {
     "id": 11832,
@@ -207,7 +647,29 @@
     "dps-increase": 0,
     "def-increase": 55.43,
     "tags": "without-prayer",
-    "predecessor": "Obsidian Chestplate"
+    "predecessor": "Obsidian Chestplate",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -15,
+        "range": -10
+      },
+      "defence": {
+        "stab": 98,
+        "slash": 93,
+        "crush": 105,
+        "magic": -6,
+        "range": 133
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
   },
   "11828": {
     "id": 11828,
@@ -217,7 +679,29 @@
     "dps-increase": 0.45,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Blessed D'hide Top"
+    "predecessor": "Blessed D'hide Top",
+    "stats": {
+      "attack": {
+        "stab": -7,
+        "slash": -7,
+        "crush": -7,
+        "magic": -15,
+        "range": 33
+      },
+      "defence": {
+        "stab": 56,
+        "slash": 48,
+        "crush": 61,
+        "magic": 70,
+        "range": 57
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
   },
   "4712": {
     "id": 4712,
@@ -227,7 +711,29 @@
     "dps-increase": 9.17,
     "def-increase": "",
     "tags": "without-prayer",
-    "predecessor": "Mystic Robetop"
+    "predecessor": "Mystic Robetop",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 30,
+        "range": -10
+      },
+      "defence": {
+        "stab": 52,
+        "slash": 37,
+        "crush": 63,
+        "magic": 30,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "21021": {
     "id": 21021,
@@ -237,7 +743,29 @@
     "dps-increase": 4.02,
     "def-increase": "",
     "tags": "without-prayer",
-    "predecessor": "Ahrims Robetop"
+    "predecessor": "Ahrims Robetop",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 30,
+        "range": -10
+      },
+      "defence": {
+        "stab": 52,
+        "slash": 37,
+        "crush": 63,
+        "magic": 30,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "21304": {
     "id": 21304,
@@ -247,7 +775,29 @@
     "dps-increase": 1.04,
     "def-increase": -13.27,
     "tags": "without-prayer",
-    "predecessor": "Rune Platelegs"
+    "predecessor": "Rune Platelegs",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 46,
+        "slash": 43,
+        "crush": 41,
+        "magic": -10,
+        "range": 40
+      },
+      "other": {
+        "melee-str": 1,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "11834": {
     "id": 11834,
@@ -257,7 +807,29 @@
     "dps-increase": 1.04,
     "def-increase": 72.35,
     "tags": "without-prayer",
-    "predecessor": "Obsidian Platelegs"
+    "predecessor": "Obsidian Platelegs",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -21,
+        "range": -7
+      },
+      "defence": {
+        "stab": 71,
+        "slash": 63,
+        "crush": 66,
+        "magic": -4,
+        "range": 93
+      },
+      "other": {
+        "melee-str": 2,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
   },
   "11830": {
     "id": 11830,
@@ -267,7 +839,29 @@
     "dps-increase": 0.54,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Blessed D'hide Legs"
+    "predecessor": "Blessed D'hide Legs",
+    "stats": {
+      "attack": {
+        "stab": -6,
+        "slash": -6,
+        "crush": -6,
+        "magic": -10,
+        "range": 20
+      },
+      "defence": {
+        "stab": 32,
+        "slash": 26,
+        "crush": 34,
+        "magic": 40,
+        "range": 33
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
   },
   "4714": {
     "id": 4714,
@@ -277,7 +871,29 @@
     "dps-increase": 6.73,
     "def-increase": "",
     "tags": "without-prayer",
-    "predecessor": "Mystic Robebottom"
+    "predecessor": "Mystic Robebottom",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 22,
+        "range": -7
+      },
+      "defence": {
+        "stab": 33,
+        "slash": 30,
+        "crush": 36,
+        "magic": 22,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "21024": {
     "id": 21024,
@@ -287,7 +903,29 @@
     "dps-increase": 3.6,
     "def-increase": "",
     "tags": "without-prayer",
-    "predecessor": "Ahrims Robeskirt"
+    "predecessor": "Ahrims Robeskirt",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 26,
+        "range": -7
+      },
+      "defence": {
+        "stab": 27,
+        "slash": 24,
+        "crush": 30,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 2,
+        "prayer": 0
+      }
+    }
   },
   "11840": {
     "id": 11840,
@@ -297,7 +935,29 @@
     "dps-increase": 2.08,
     "def-increase": 1175,
     "tags": "all",
-    "predecessor": "Climbing Boots"
+    "predecessor": "Climbing Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -3,
+        "range": -1
+      },
+      "defence": {
+        "stab": 16,
+        "slash": 17,
+        "crush": 18,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "13239": {
     "id": 13239,
@@ -307,7 +967,29 @@
     "dps-increase": 1.42,
     "def-increase": 29.41,
     "tags": "all",
-    "predecessor": "Dragon Boots"
+    "predecessor": "Dragon Boots",
+    "stats": {
+      "attack": {
+        "stab": 2,
+        "slash": 2,
+        "crush": 2,
+        "magic": -4,
+        "range": -1
+      },
+      "defence": {
+        "stab": 22,
+        "slash": 22,
+        "crush": 22,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 5,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "19921": {
     "id": 19921,
@@ -317,7 +999,29 @@
     "dps-increase": 0.88,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Snakeskin Boots"
+    "predecessor": "Snakeskin Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -10,
+        "range": 7
+      },
+      "defence": {
+        "stab": 4,
+        "slash": 4,
+        "crush": 4,
+        "magic": 4,
+        "range": 4
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
   },
   "13237": {
     "id": 13237,
@@ -327,7 +1031,29 @@
     "dps-increase": 1.04,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "D'hide Boots"
+    "predecessor": "D'hide Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -12,
+        "range": 12
+      },
+      "defence": {
+        "stab": 5,
+        "slash": 5,
+        "crush": 5,
+        "magic": 5,
+        "range": 5
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "2579": {
     "id": 2579,
@@ -337,7 +1063,29 @@
     "dps-increase": 1.09,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Mystic Boots"
+    "predecessor": "Mystic Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 4,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 4,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "6920": {
     "id": 6920,
@@ -347,7 +1095,29 @@
     "dps-increase": 1.08,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Wizard Boots"
+    "predecessor": "Wizard Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 5,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 5,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "13235": {
     "id": 13235,
@@ -357,7 +1127,29 @@
     "dps-increase": 3.19,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Infinity Boots"
+    "predecessor": "Infinity Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 8,
+        "range": 0
+      },
+      "defence": {
+        "stab": 5,
+        "slash": 5,
+        "crush": 5,
+        "magic": 8,
+        "range": 5
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "19544": {
     "id": 19544,
@@ -367,7 +1159,29 @@
     "dps-increase": 7.57,
     "def-increase": "",
     "tags": "all",
-    "predecessor": "Barrows Gloves"
+    "predecessor": "Barrows Gloves",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 10,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 5,
+        "prayer": 2
+      }
+    }
   },
   "6737": {
     "id": 6737,
@@ -377,7 +1191,29 @@
     "dps-increase": 8.33,
     "def-increase": "",
     "tags": "all",
-    "predecessor": ""
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 8,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 8,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "6733": {
     "id": 6733,
@@ -387,7 +1223,29 @@
     "dps-increase": 1.82,
     "def-increase": "",
     "tags": "all",
-    "predecessor": ""
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 8
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 8
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   },
   "6731": {
     "id": 6731,
@@ -397,6 +1255,28 @@
     "dps-increase": 13.48,
     "def-increase": "",
     "tags": "all",
-    "predecessor": ""
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
   }
 }
