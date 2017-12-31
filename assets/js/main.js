@@ -121,7 +121,15 @@ let VueObj = new Vue({
                         //
                         // equipment[key]['price'] = final_price;
                         // console.log(final_price);
+                        function sleep(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
 
+                        async function wait() {
+                            await sleep(100);
+                        }
+
+                        wait();
                     });
                 }
                 //console.log(equipment);
