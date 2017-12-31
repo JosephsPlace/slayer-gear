@@ -4,11 +4,10 @@
     "item-name": "Saradomin Sword",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 2.65,
-    "def-increase": "",
     "tags": "all, strength",
     "predecessor": "Dragon scimitar",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 0,
         "slash": 82,
@@ -36,11 +35,10 @@
     "item-name": "Staff of the Dead",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 2.16,
-    "def-increase": "",
     "tags": "all, strength",
     "predecessor": "Saradomin Sword",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 55,
         "slash": 70,
@@ -68,11 +66,10 @@
     "item-name": "Abyssal Dagger",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 5.18,
-    "def-increase": "",
     "tags": "all, strength",
     "predecessor": "Staff of the Dead",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 75,
         "slash": 40,
@@ -97,14 +94,13 @@
   },
   "12809": {
     "id": 12809,
-    "item-name": "Blessed Saradomin Sword",
+    "item-name": "Saradomin's Blessed Sword",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 5.15,
-    "def-increase": "",
-    "tags": "all, strength",
+    "tags": "all, strength, ss-charges",
     "predecessor": "Staff of the Dead",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 0,
         "slash": 100,
@@ -132,11 +128,10 @@
     "item-name": "Abyssal whip",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 4.93,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Abyssal Dagger",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 0,
         "slash": 82,
@@ -164,11 +159,10 @@
     "item-name": "Zamorak Hasta",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 28,
-    "def-increase": "",
     "tags": "crush",
     "predecessor": "Abyssal whip",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 85,
         "slash": 65,
@@ -196,11 +190,10 @@
     "item-name": "Abyssal Bludgeon",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "dps-increase": 17.23,
-    "def-increase": "",
     "tags": "crush",
     "predecessor": "Zamorak Hasta",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -228,9 +221,7 @@
     "item-name": "Trident of the Swamp",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "dps-increase": 24.73,
-    "def-increase": "",
-    "tags": "all",
+    "tags": "all, trident-charges",
     "predecessor": "Trident of the Seas",
     "stats": {
       "attack": {
@@ -260,11 +251,10 @@
     "item-name": "Toxic Blowpipe",
     "item-slot": "main hand",
     "combat-style": "range",
-    "dps-increase": 73.9,
-    "def-increase": "",
-    "tags": "all",
+    "tags": "all, blowpipe-charges",
     "predecessor": "Rune Crossbow",
     "stats": {
+      "speed": 1.2,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -292,8 +282,6 @@
     "item-name": "Master Wand",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "dps-increase": 0.23,
-    "def-increase": "",
     "tags": "aoe, prayer",
     "predecessor": "Ancient Staff",
     "stats": {
@@ -324,8 +312,6 @@
     "item-name": "Kodai Wand",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "dps-increase": 13.7,
-    "def-increase": "",
     "tags": "aoe, prayer",
     "predecessor": "Master Wand",
     "stats": {
@@ -356,8 +342,6 @@
     "item-name": "Book of Darkness",
     "item-slot": "off hand",
     "combat-style": "magic",
-    "dps-increase": 0.06,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Time of Fire",
     "stats": {
@@ -388,8 +372,6 @@
     "item-name": "Malediction ward",
     "item-slot": "off hand",
     "combat-style": "magic",
-    "dps-increase": 0.06,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Book of Darkness",
     "stats": {
@@ -420,8 +402,6 @@
     "item-name": "Mage's Book",
     "item-slot": "off hand",
     "combat-style": "magic",
-    "dps-increase": 0.09,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Malediction Ward",
     "stats": {
@@ -452,8 +432,6 @@
     "item-name": "Arcane spirit shield",
     "item-slot": "off hand",
     "combat-style": "magic",
-    "dps-increase": 0.13,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Mage's Book",
     "stats": {
@@ -484,8 +462,6 @@
     "item-name": "Elysian spirit shield",
     "item-slot": "off hand",
     "combat-style": "melee",
-    "dps-increase": 0,
-    "def-increase": 29.02,
     "tags": "dks",
     "predecessor": "Blessed Spirit Shield",
     "stats": {
@@ -516,8 +492,6 @@
     "item-name": "Amulet of fury",
     "item-slot": "neck",
     "combat-style": "melee",
-    "dps-increase": 4,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Amulet of Glory",
     "stats": {
@@ -548,8 +522,6 @@
     "item-name": "Amulet of torture",
     "item-slot": "neck",
     "combat-style": "melee",
-    "dps-increase": 0.81,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Amulet of Fury",
     "stats": {
@@ -580,8 +552,6 @@
     "item-name": "Necklace of anguish",
     "item-slot": "neck",
     "combat-style": "range",
-    "dps-increase": 6.31,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Amulet of Glory",
     "stats": {
@@ -612,8 +582,6 @@
     "item-name": "Occult necklace",
     "item-slot": "neck",
     "combat-style": "mage",
-    "dps-increase": 7.22,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Amulet of Glory",
     "stats": {
@@ -644,8 +612,6 @@
     "item-name": "Bandos Chestplate",
     "item-slot": "chest",
     "combat-style": "melee",
-    "dps-increase": 0,
-    "def-increase": 55.43,
     "tags": "without-prayer",
     "predecessor": "Obsidian Chestplate",
     "stats": {
@@ -676,8 +642,6 @@
     "item-name": "Armadyl Chestplate",
     "item-slot": "chest",
     "combat-style": "range",
-    "dps-increase": 0.45,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Blessed D'hide Top",
     "stats": {
@@ -708,8 +672,6 @@
     "item-name": "Ahrims Robetop",
     "item-slot": "chest",
     "combat-style": "mage",
-    "dps-increase": 9.17,
-    "def-increase": "",
     "tags": "without-prayer",
     "predecessor": "Mystic Robetop",
     "stats": {
@@ -740,8 +702,6 @@
     "item-name": "Ancestral Robetop",
     "item-slot": "chest",
     "combat-style": "mage",
-    "dps-increase": 4.02,
-    "def-increase": "",
     "tags": "without-prayer",
     "predecessor": "Ahrims Robetop",
     "stats": {
@@ -772,8 +732,6 @@
     "item-name": "Obsidian Platelegs",
     "item-slot": "legs",
     "combat-style": "melee",
-    "dps-increase": 1.04,
-    "def-increase": -13.27,
     "tags": "without-prayer",
     "predecessor": "Rune Platelegs",
     "stats": {
@@ -804,8 +762,6 @@
     "item-name": "Bandos Tassets",
     "item-slot": "legs",
     "combat-style": "melee",
-    "dps-increase": 1.04,
-    "def-increase": 72.35,
     "tags": "without-prayer",
     "predecessor": "Obsidian Platelegs",
     "stats": {
@@ -836,8 +792,6 @@
     "item-name": "Armadyl Chainskirt",
     "item-slot": "legs",
     "combat-style": "range",
-    "dps-increase": 0.54,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Blessed D'hide Legs",
     "stats": {
@@ -868,8 +822,6 @@
     "item-name": "Ahrims Robeskirt",
     "item-slot": "legs",
     "combat-style": "magic",
-    "dps-increase": 6.73,
-    "def-increase": "",
     "tags": "without-prayer",
     "predecessor": "Mystic Robebottom",
     "stats": {
@@ -900,8 +852,6 @@
     "item-name": "Ancestral Bottom",
     "item-slot": "legs",
     "combat-style": "magic",
-    "dps-increase": 3.6,
-    "def-increase": "",
     "tags": "without-prayer",
     "predecessor": "Ahrims Robeskirt",
     "stats": {
@@ -932,8 +882,6 @@
     "item-name": "Dragon Boots",
     "item-slot": "boots",
     "combat-style": "melee",
-    "dps-increase": 2.08,
-    "def-increase": 1175,
     "tags": "all",
     "predecessor": "Climbing Boots",
     "stats": {
@@ -964,8 +912,6 @@
     "item-name": "Primordial Boots",
     "item-slot": "boots",
     "combat-style": "melee",
-    "dps-increase": 1.42,
-    "def-increase": 29.41,
     "tags": "all",
     "predecessor": "Dragon Boots",
     "stats": {
@@ -996,8 +942,6 @@
     "item-name": "D'hide Boots",
     "item-slot": "boots",
     "combat-style": "range",
-    "dps-increase": 0.88,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Snakeskin Boots",
     "stats": {
@@ -1028,8 +972,6 @@
     "item-name": "Pegasian Boots",
     "item-slot": "boots",
     "combat-style": "range",
-    "dps-increase": 1.04,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "D'hide Boots",
     "stats": {
@@ -1060,8 +1002,6 @@
     "item-name": "Wizard Boots",
     "item-slot": "boots",
     "combat-style": "magic",
-    "dps-increase": 1.09,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Mystic Boots",
     "stats": {
@@ -1092,8 +1032,6 @@
     "item-name": "Infinity Boots",
     "item-slot": "boots",
     "combat-style": "magic",
-    "dps-increase": 1.08,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Wizard Boots",
     "stats": {
@@ -1124,8 +1062,6 @@
     "item-name": "Eternal Boots",
     "item-slot": "boots",
     "combat-style": "magic",
-    "dps-increase": 3.19,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Infinity Boots",
     "stats": {
@@ -1156,8 +1092,6 @@
     "item-name": "Tormented Bracelet",
     "item-slot": "hands",
     "combat-style": "magic",
-    "dps-increase": 7.57,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "Barrows Gloves",
     "stats": {
@@ -1188,8 +1122,6 @@
     "item-name": "Berserker Ring (i)",
     "item-slot": "ring",
     "combat-style": "melee",
-    "dps-increase": 8.33,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "",
     "stats": {
@@ -1220,8 +1152,6 @@
     "item-name": "Archer's Ring (i)",
     "item-slot": "ring",
     "combat-style": "range",
-    "dps-increase": 1.82,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "",
     "stats": {
@@ -1252,8 +1182,6 @@
     "item-name": "Seer's Ring (i)",
     "item-slot": "ring",
     "combat-style": "magic",
-    "dps-increase": 13.48,
-    "def-increase": "",
     "tags": "all",
     "predecessor": "",
     "stats": {
