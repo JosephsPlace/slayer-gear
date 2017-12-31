@@ -39,6 +39,11 @@ let VueObj = new Vue({
             'range': 3.6,
             // Trident of the Seas speed
             'magic': 2.4
+        },
+        task_styles: {
+            'melee': 33.333,
+            'range': 33.333,
+            'magic': 33.333
         }
     },
 
@@ -48,20 +53,6 @@ let VueObj = new Vue({
 
         this.$http.get('./assets/json/tasks.json').then((data) => {
             this.task_list = data.body;
-        });
-
-        this.$http.get(this.ge_base_url + '4151').then((price_data) => {
-
-            let whole_price = price_data.body.item.current.price;
-            let last_letter = whole_price.slice(-1);
-            let price = whole_price.slice(0, -1);
-            let final_price = price;
-            if (last_letter === 'm') {
-                final_price *= 1000000;
-            } else if(last_letter === 'k') {
-                final_price *= 1000;
-            }
-            console.log(final_price);
         });
     },
 
@@ -96,6 +87,12 @@ let VueObj = new Vue({
                 let equipment = data.body;
 
                 console.log(data);
+
+                function sleep (time) {
+                    console.log('here');
+                    return new Promise((resolve) => setTimeout(resolve, time));
+                }
+
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
 
@@ -105,43 +102,31 @@ let VueObj = new Vue({
                     }
 
                     this.$http.get(this.ge_base_url + key).then((price_data) => {
-                        console.log(key);
-                        console.log(price_data);
-                        equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
-                        // let whole_price = price_data.body.item.current.price;
-                        // let last_letter = whole_price.slice(-1);
-                        // let price = whole_price.slice(0, -1);
-                        // let final_price = price;
-                        //
-                        // if (last_letter === 'm') {
-                        //     final_price *= 1000000;
-                        // } else if(last_letter === 'k') {
-                        //     final_price *= 1000;
-                        // }
-                        //
-                        // equipment[key]['price'] = final_price;
-                        // console.log(final_price);
-                        function sleep(ms) {
-                            return new Promise(resolve => setTimeout(resolve, ms));
-                        }
+                        sleep(500).then(() => {
+                            equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
 
-                        async function wait() {
-                            await sleep(100);
-                        }
+                            equipment[key]['item-ranking'] = 1000 * ((equipment[key]['dps'] / equipment[key]['price']) * this.task_styles[equipment[key]['combat-style']]);
 
-                        wait();
+                            console.log(equipment[key]['item-ranking']);
+
+                            // function sleep(ms) {
+                            //     return new Promise(resolve => setTimeout(resolve, ms));
+                            // }
+                            //
+                            // async function wait() {
+                            //     await sleep(25);
+                            // }
+                            //
+                            // wait();
+                        });
                     });
                 }
-                //console.log(equipment);
-
-
             });
         },
         getItemPrice: function (short_price) {
             let whole_price = short_price;
             let last_letter = whole_price.slice(-1);
-            let price = whole_price.slice(0, -1);
-            let final_price = price;
+            let final_price = whole_price.slice(0, -1);
 
             if (last_letter === 'm') {
                 final_price *= 1000000;
