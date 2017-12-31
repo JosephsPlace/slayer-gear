@@ -4,10 +4,9 @@ let VueObj = new Vue({
     el: "#app",
     data: {
         // ge_base_url: 'https://cors-anywhere.herokuapp.com/https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
-        // user_base_url: 'https://cors-anywhere.herokuapp.com/https://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
+        user_base_url: 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
         ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
-        user_base_url: 'https://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
 
         equipment_list: [],
         task_list: [],
@@ -52,21 +51,22 @@ let VueObj = new Vue({
     },
 
     created: function () {
-        // Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
-        // Vue.http.headers.common['Accept'] = '*/*';
-        // Vue.http.headers.common['Content-Type'] = 'text/plain';
-
         this.$http.get('./assets/json/tasks.json').then((data) => {
             this.task_list = data.body;
         });
 
-        this.getEquipment();
+        //this.getEquipment();
     },
 
     methods: {
         setUsername: function () {
             let username = this.username;
-            this.$http.get(this.user_base_url + username).then((user_data) => {
+            this.$http.get(this.user_base_url + username,{
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Accept': '*/*'
+                }
+            }).then((user_data) => {
                 let all_user_data = user_data.body.split("\n");
 
                 let combat_data = {
@@ -85,7 +85,8 @@ let VueObj = new Vue({
                 this.user_levels.ranged = parseInt(combat_data.ranged[1]);
                 this.user_levels.magic = parseInt(combat_data.magic[1]);
 
-                this.getEquipment();
+                console.log(this.user_levels);
+                //this.getEquipment();
             });
         },
         getEquipment: function() {
@@ -106,8 +107,6 @@ let VueObj = new Vue({
                             'Accept': '*/*'
                         }
                     }).then((price_data) => {
-                        // console.log(price_data);
-                        // console.log(price_data.body.item);
                         //equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
                         console.log(price_data);
                         //this.equipment_list = equipment;
