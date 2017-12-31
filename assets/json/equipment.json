@@ -92,8 +92,8 @@
       }
     }
   },
-  "12809": {
-    "id": 12809,
+  "12804": {
+    "id": 12804,
     "item-name": "Saradomin's Blessed Sword",
     "item-slot": "main hand",
     "combat-style": "melee",
@@ -216,14 +216,15 @@
       }
     }
   },
-  "12899": {
-    "id": 12899,
+  "12900": {
+    "id": 12900,
     "item-name": "Trident of the Swamp",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "tags": "all, trident-charges",
+    "tags": "all, trident-charges, trident-max-hit",
     "predecessor": "Trident of the Seas",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -271,7 +272,7 @@
       },
       "other": {
         "melee-str": 0,
-        "range-str": 0,
+        "range-str": 40,
         "magic-str": 0,
         "prayer": 0
       }
@@ -282,9 +283,10 @@
     "item-name": "Master Wand",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "tags": "aoe, prayer",
+    "tags": "aoe, prayer, ancients-max-hit",
     "predecessor": "Ancient Staff",
     "stats": {
+      "speed": 3,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -312,9 +314,10 @@
     "item-name": "Kodai Wand",
     "item-slot": "main hand",
     "combat-style": "magic",
-    "tags": "aoe, prayer",
+    "tags": "aoe, prayer, ancients-max-hit",
     "predecessor": "Master Wand",
     "stats": {
+      "speed": 3,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -337,8 +340,8 @@
       }
     }
   },
-  "12612": {
-    "id": 12612,
+  "13159": {
+    "id": 13159,
     "item-name": "Book of Darkness",
     "item-slot": "off hand",
     "combat-style": "magic",
@@ -581,7 +584,7 @@
     "id": 12002,
     "item-name": "Occult necklace",
     "item-slot": "neck",
-    "combat-style": "mage",
+    "combat-style": "magic",
     "tags": "all",
     "predecessor": "Amulet of Glory",
     "stats": {
@@ -671,7 +674,7 @@
     "id": 4712,
     "item-name": "Ahrims Robetop",
     "item-slot": "chest",
-    "combat-style": "mage",
+    "combat-style": "magic",
     "tags": "without-prayer",
     "predecessor": "Mystic Robetop",
     "stats": {
@@ -701,7 +704,7 @@
     "id": 21021,
     "item-name": "Ancestral Robetop",
     "item-slot": "chest",
-    "combat-style": "mage",
+    "combat-style": "magic",
     "tags": "without-prayer",
     "predecessor": "Ahrims Robetop",
     "stats": {
@@ -722,7 +725,7 @@
       "other": {
         "melee-str": 0,
         "range-str": 0,
-        "magic-str": 0,
+        "magic-str": 2,
         "prayer": 0
       }
     }

@@ -15,6 +15,10 @@
 </head>
 <body>
     <div id="app">
+        <form v-on:submit.prevent="setUsername">
+            <input type="text" id="username" v-model="username">
+            <button type="submit">Enter</button>
+        </form>
 
     </div>
 
