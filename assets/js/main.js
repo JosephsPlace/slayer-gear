@@ -3,8 +3,12 @@
 let VueObj = new Vue({
     el: "#app",
     data: {
-        ge_base_url: 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
-        user_base_url: 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
+        // ge_base_url: 'https://cors-anywhere.herokuapp.com/https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
+        // user_base_url: 'https://cors-anywhere.herokuapp.com/https://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
+        ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
+        rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
+        user_base_url: 'https://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
+
         equipment_list: [],
         task_list: [],
         default_mob: {
@@ -48,12 +52,15 @@ let VueObj = new Vue({
     },
 
     created: function () {
-        Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
-        Vue.http.headers.common['Accept'] = '*/*';
+        // Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
+        // Vue.http.headers.common['Accept'] = '*/*';
+        // Vue.http.headers.common['Content-Type'] = 'text/plain';
 
         this.$http.get('./assets/json/tasks.json').then((data) => {
             this.task_list = data.body;
         });
+
+        this.getEquipment();
     },
 
     methods: {
@@ -86,41 +93,27 @@ let VueObj = new Vue({
             this.$http.get('./assets/json/equipment.json').then((data) => {
                 let equipment = data.body;
 
-                console.log(data);
-
-                function sleep (time) {
-                    console.log('here');
-                    return new Promise((resolve) => setTimeout(resolve, time));
-                }
-
                 for (let key in equipment) {
-                    equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    //equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
 
+                    // if (isNaN(equipment[key]['dps'])) {
+                    //     equipment[key]['dps'] = 0;
+                    // }
 
-                    if (isNaN(equipment[key]['dps'])) {
-                        equipment[key]['dps'] = 0;
-                    }
-
-                    this.$http.get(this.ge_base_url + key).then((price_data) => {
-                        sleep(500).then(() => {
-                            equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
-
-                            equipment[key]['item-ranking'] = 1000 * ((equipment[key]['dps'] / equipment[key]['price']) * this.task_styles[equipment[key]['combat-style']]);
-
-                            console.log(equipment[key]['item-ranking']);
-
-                            // function sleep(ms) {
-                            //     return new Promise(resolve => setTimeout(resolve, ms));
-                            // }
-                            //
-                            // async function wait() {
-                            //     await sleep(25);
-                            // }
-                            //
-                            // wait();
-                        });
+                    this.$http.get(this.ge_base_url + key, {
+                        headers: {
+                            'Access-Control-Allow-Origin': '*',
+                            'Accept': '*/*'
+                        }
+                    }).then((price_data) => {
+                        // console.log(price_data);
+                        // console.log(price_data.body.item);
+                        //equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
+                        console.log(price_data);
+                        //this.equipment_list = equipment;
                     });
                 }
+                console.log('done');
             });
         },
         getItemPrice: function (short_price) {
