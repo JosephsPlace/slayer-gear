@@ -1,17 +1,16 @@
-// import json from '/assets/json/equpiment.json';
-// console.log(json);
 let VueObj = new Vue({
     el: "#app",
     data: {
         // ge_base_url: 'https://cors-anywhere.herokuapp.com/https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
         user_base_url: 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
-        ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
+        //ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
 
         equipment_list: [],
         task_list: [],
+        price_list: [],
         default_mob: {
-            'defense-level' : {
+            'defense-level': {
                 'stab': 102,
                 'slash': 102,
                 'crush': 102,
@@ -28,11 +27,11 @@ let VueObj = new Vue({
         },
         username: '',
         user_levels: {
-            'attack' : 99,
-            'strength' : 99,
-            'defense' :  99,
-            'ranged' : 99,
-            'magic' : 99
+            'attack': 99,
+            'strength': 99,
+            'defense': 99,
+            'ranged': 99,
+            'magic': 99
         },
         // These attack speeds will be set to the starting loadout and will change when new weapons are bought
         attack_speed: {
@@ -44,9 +43,10 @@ let VueObj = new Vue({
             'magic': 2.4
         },
         task_styles: {
-            'melee': 33.333,
-            'range': 33.333,
-            'magic': 33.333
+            'melee': .3333,
+            'range': .3333,
+            'magic': .3333,
+            'aoe': .125,
         }
     },
 
@@ -55,13 +55,20 @@ let VueObj = new Vue({
             this.task_list = data.body;
         });
 
-        //this.getEquipment();
+        // console.log(this.calculateDPS('', 'base-dps', 'melee'));
+
+        this.$http.get('./assets/json/prices.json').then((data) => {
+            this.price_list = data.body;
+
+            this.getEquipment();
+        });
+
     },
 
     methods: {
         setUsername: function () {
             let username = this.username;
-            this.$http.get(this.user_base_url + username,{
+            this.$http.get(this.user_base_url + username, {
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Accept': '*/*'
@@ -84,35 +91,60 @@ let VueObj = new Vue({
                 this.user_levels.hitpoints = parseInt(combat_data.hitpoints[1]);
                 this.user_levels.ranged = parseInt(combat_data.ranged[1]);
                 this.user_levels.magic = parseInt(combat_data.magic[1]);
-
-                console.log(this.user_levels);
-                //this.getEquipment();
             });
         },
-        getEquipment: function() {
-            // Get template
+        getEquipment: function () {
             this.$http.get('./assets/json/equipment.json').then((data) => {
                 let equipment = data.body;
 
                 for (let key in equipment) {
-                    //equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    equipment[key]['speed'] = this.attack_speed[equipment[key]['combat-style']];
 
-                    // if (isNaN(equipment[key]['dps'])) {
-                    //     equipment[key]['dps'] = 0;
-                    // }
+                    if (isNaN(equipment[key]['dps'])) {
+                        equipment[key]['dps'] = 0;
+                    }
 
-                    this.$http.get(this.ge_base_url + key, {
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Accept': '*/*'
-                        }
-                    }).then((price_data) => {
-                        //equipment[key]['price'] = this.getItemPrice(price_data.body.item.current.price);
-                        console.log(price_data);
-                        //this.equipment_list = equipment;
-                    });
+                    equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
+                    equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + this.task_styles[equipment[key]['combat-style']]);
+
+                    let tags_obj = equipment[key]['tags'].split(",");
+                    for (let tag in tags_obj) {
+                       if (tags_obj[tag] === 'aoe') {
+                           equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + (this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
+                       }
+                    }
                 }
-                console.log('done');
+
+                let sortable_equipment = [];
+                for (let item in equipment) {
+                    sortable_equipment.push(equipment[item]);
+                }
+
+                sortable_equipment.sort((a, b) => {
+                    return a.rank - b.rank;
+                });
+
+                sortable_equipment.reverse();
+
+                // Since some ranged items are calculated with BP, we need to move those after BP
+                let main_hand_check = 0;
+                let tmp_storage =[];
+                let final_list = [];
+                for (let item in sortable_equipment) {
+                    if (sortable_equipment[item]['combat-style'] === 'range' && sortable_equipment[item]['item-slot'] !== 'main hand' && main_hand_check === 0) {
+                        tmp_storage.push(sortable_equipment[item]);
+                    } else {
+                        final_list.push(sortable_equipment[item]);
+                    }
+
+                    if (sortable_equipment[item]['combat-style'] === 'range' && sortable_equipment[item]['item-slot'] === 'main hand' && main_hand_check === 0) {
+                        main_hand_check = 1;
+                        for (let tmp in tmp_storage) {
+                            final_list.push(tmp_storage[tmp]);
+                        }
+                    }
+                }
             });
         },
         getItemPrice: function (short_price) {
@@ -122,15 +154,15 @@ let VueObj = new Vue({
 
             if (last_letter === 'm') {
                 final_price *= 1000000;
-            } else if(last_letter === 'k') {
+            } else if (last_letter === 'k') {
                 final_price *= 1000;
             }
 
             return final_price;
         },
-        calculateDPS: function(stats, tags, style) {
+        calculateDPS: function (stats, tags, style) {
             let max_type = 0;
-            let max_type_name  = '';
+            let max_type_name = 'slash';
             let attack_speed = this.attack_speed[style];
             let accuracy = 0;
             let max_hit = 0;
@@ -150,13 +182,14 @@ let VueObj = new Vue({
             if (style === 'melee') {
                 strength = stats['other']['melee-str'];
 
+
                 for (let tag in tags_obj) {
                     if (tags_obj[tag].trim() === 'strength') {
                         is_strength = true;
                     }
                 }
 
-                for( let type in stats['attack']) {
+                for (let type in stats['attack']) {
                     if (stats['attack'][type] > max_type) {
                         max_type = stats['attack'][type];
                         max_type_name = type;
@@ -182,7 +215,8 @@ let VueObj = new Vue({
                 effective_attack = this.user_levels.ranged + 8;
                 effective_strength = this.user_levels.ranged + 8;
 
-                max_hit = Math.floor((0.5 + effective_strength * (64 + strength) / 640));
+                // SUBTRACT BASE RANGED DPS
+                max_hit = Math.floor(0.5 + effective_strength * (64 + strength) / 640);
             } else if (style === 'magic') {
                 strength = stats['other']['magic-str'];
 
@@ -229,7 +263,7 @@ let VueObj = new Vue({
             let average_damage = ((max_hit * (max_hit + 1) / 2)) / (max_hit + 1);
             average_damage = average_damage * accuracy;
 
-            if (typeof stats['speed'] !== 'undefined') {
+            if (typeof stats['speed'] !== 'undefined' && style !== 'magic') {
                 attack_speed = stats['speed'];
                 this.attack_speed[style] = stats['speed'];
             }

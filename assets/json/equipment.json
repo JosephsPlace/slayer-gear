@@ -1198,6 +1198,7 @@
       "defence": {
         "stab": 0,
         "slash": 0,
+        "slash": 0,
         "crush": 0,
         "magic": 12,
         "range": 0

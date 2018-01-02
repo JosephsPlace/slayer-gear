@@ -1,0 +1,2745 @@
+{
+  "554": {
+    "id": 554,
+    "item-name": "Fire Rune",
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=554",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=554",
+        "id": 554,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Fire rune",
+        "description": "One of the 4 basic elemental Runes.",
+        "current": {
+          "trend": "neutral",
+          "price": 5
+        },
+        "today": {
+          "trend": "neutral",
+          "price": 0
+        },
+        "members": "false",
+        "day30": {
+          "trend": "neutral",
+          "change": "0.0%"
+        },
+        "day90": {
+          "trend": "neutral",
+          "change": "0.0%"
+        },
+        "day180": {
+          "trend": "neutral",
+          "change": "0.0%"
+        }
+      }
+    }
+  },
+  "560": {
+    "id": 560,
+    "item-name": "Death Rune",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=560",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=560",
+        "id": 560,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Death rune",
+        "description": "Used for medium level missile spells.",
+        "current": {
+          "trend": "neutral",
+          "price": 225
+        },
+        "today": {
+          "trend": "neutral",
+          "price": 0
+        },
+        "members": "false",
+        "day30": {
+          "trend": "neutral",
+          "change": "0.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-5.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-3.0%"
+        }
+      }
+    }
+  },
+  "562": {
+    "id": 562,
+    "item-name": "Chaos Rune",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=562",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=562",
+        "id": 562,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Chaos rune",
+        "description": "Used for low level missile spells.",
+        "current": {
+          "trend": "neutral",
+          "price": 100
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+1"
+        },
+        "members": "false",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "neutral",
+          "change": "0.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-1.0%"
+        }
+      }
+    }
+  },
+  "809": {
+    "id": 809,
+    "item-name": "Mithril Dart",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=809",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=809",
+        "id": 809,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Mithril dart",
+        "description": "A deadly throwing dart with a mithril tip.",
+        "current": {
+          "trend": "neutral",
+          "price": 29
+        },
+        "today": {
+          "trend": "neutral",
+          "price": 0
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-3.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-9.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-12.0%"
+        }
+      }
+    }
+  },
+  "810": {
+    "id": 810,
+    "item-name": "Adamant Dart",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=810",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=810",
+        "id": 810,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Adamant dart",
+        "description": "A deadly throwing dart with an adamant tip.",
+        "current": {
+          "trend": "neutral",
+          "price": 132
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 2"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-20.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+4.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+0.0%"
+        }
+      }
+    }
+  },
+  "811": {
+    "id": 12004,
+    "item-name": "Rune Dart",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12004",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12004",
+        "id": 12004,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Kraken tentacle",
+        "description": "Ewwww... it's still sucky.",
+        "current": {
+          "trend": "neutral",
+          "price": "102.0k"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 1,401"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-17.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-15.0%"
+        }
+      }
+    }
+  },
+  "2579": {
+    "id": 2579,
+    "item-name": "Wizard Boots",
+    "item-slot": "boots",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Mystic Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 4,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 4,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=2579",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=2579",
+        "id": 2579,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Wizard boots",
+        "description": "Slightly magical boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "475.6k"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 3,900"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+31.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+20.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+50.0%"
+        }
+      }
+    }
+  },
+  "4151": {
+    "id": 4151,
+    "item-name": "Abyssal whip",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "Abyssal Dagger",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 0,
+        "slash": 82,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 82,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=4151",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=4151",
+        "id": 4151,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Abyssal whip",
+        "description": "A weapon from the abyss.",
+        "current": {
+          "trend": "neutral",
+          "price": "2.1m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 13.6k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+17.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+10.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+16.0%"
+        }
+      }
+    }
+  },
+  "4712": {
+    "id": 4712,
+    "item-name": "Ahrims Robetop",
+    "item-slot": "chest",
+    "combat-style": "magic",
+    "tags": "without-prayer",
+    "predecessor": "Mystic Robetop",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 30,
+        "range": -10
+      },
+      "defence": {
+        "stab": 52,
+        "slash": 37,
+        "crush": 63,
+        "magic": 30,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=4712",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=4712",
+        "id": 4712,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Ahrim's robetop",
+        "description": "Ahrim the Blighted's armoured robe top.",
+        "current": {
+          "trend": "neutral",
+          "price": "1.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 19.2k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+48.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+38.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+25.0%"
+        }
+      }
+    }
+  },
+  "4714": {
+    "id": 4714,
+    "item-name": "Ahrims Robeskirt",
+    "item-slot": "legs",
+    "combat-style": "magic",
+    "tags": "without-prayer",
+    "predecessor": "Mystic Robebottom",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 22,
+        "range": -7
+      },
+      "defence": {
+        "stab": 33,
+        "slash": 30,
+        "crush": 36,
+        "magic": 22,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=4714",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=4714",
+        "id": 4714,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Ahrim's robeskirt",
+        "description": "Ahrim the Blighted's armoured robe skirt.",
+        "current": {
+          "trend": "neutral",
+          "price": "1.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 38.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+70.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+77.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+79.0%"
+        }
+      }
+    }
+  },
+  "6585": {
+    "id": 6585,
+    "item-name": "Amulet of fury",
+    "item-slot": "neck",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 10,
+        "slash": 10,
+        "crush": 10,
+        "magic": 10,
+        "range": 10
+      },
+      "defence": {
+        "stab": 15,
+        "slash": 15,
+        "crush": 15,
+        "magic": 15,
+        "range": 15
+      },
+      "other": {
+        "melee-str": 8,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 5
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6585",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6585",
+        "id": 6585,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Amulet of fury",
+        "description": "A very powerful onyx amulet.",
+        "current": {
+          "trend": "neutral",
+          "price": "3.0m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 11.1k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+3.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-1.0%"
+        }
+      }
+    }
+  },
+  "6731": {
+    "id": 6731,
+    "item-name": "Seer's Ring (i)",
+    "item-slot": "ring",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6731",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6731",
+        "id": 6731,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Seers ring",
+        "description": "A mysterious ring that can fill the wearer with magical power...",
+        "current": {
+          "trend": "neutral",
+          "price": "427.3k"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 13.2k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+67.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+45.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+41.0%"
+        }
+      }
+    }
+  },
+  "6733": {
+    "id": 6733,
+    "item-name": "Archer's Ring (i)",
+    "item-slot": "ring",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 8
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 8
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6733",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6733",
+        "id": 6733,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Archers ring",
+        "description": "A fabled ring that improves the wearer's skill with a bow...",
+        "current": {
+          "trend": "neutral",
+          "price": "3.0m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 21.8k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+39.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+6.0%"
+        }
+      }
+    }
+  },
+  "6737": {
+    "id": 6737,
+    "item-name": "Berserker Ring (i)",
+    "item-slot": "ring",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 8,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 8,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6737",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6737",
+        "id": 6737,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Berserker ring",
+        "description": "A ring reputed to bring out a berserk fury in its wearer.",
+        "current": {
+          "trend": "neutral",
+          "price": "3.0m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 17.4k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+45.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+15.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+22.0%"
+        }
+      }
+    }
+  },
+  "6889": {
+    "id": 6889,
+    "item-name": "Mage's Book",
+    "item-slot": "off hand",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Malediction Ward",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6889",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6889",
+        "id": 6889,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Mage's book",
+        "description": "The magical book of the Mage.",
+        "current": {
+          "trend": "neutral",
+          "price": "5.5m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 120.0k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-2.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+3.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-9.0%"
+        }
+      }
+    }
+  },
+  "6914": {
+    "id": 6914,
+    "item-name": "Master Wand",
+    "item-slot": "main hand",
+    "combat-style": "magic",
+    "tags": "aoe, prayer, ancients-max-hit",
+    "predecessor": "Ancient Staff",
+    "stats": {
+      "speed": 3,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6914",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6914",
+        "id": 6914,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Master wand",
+        "description": "A master level wand.",
+        "current": {
+          "trend": "neutral",
+          "price": "4.3m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 76.2k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-17.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-11.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-14.0%"
+        }
+      }
+    }
+  },
+  "6920": {
+    "id": 6920,
+    "item-name": "Infinity Boots",
+    "item-slot": "boots",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Wizard Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 5,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 5,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=6920",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=6920",
+        "id": 6920,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Infinity boots",
+        "description": "Mystical boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "1.1m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 23.8k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-1.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-0.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+10.0%"
+        }
+      }
+    }
+  },
+  "11791": {
+    "id": 11791,
+    "item-name": "Staff of the Dead",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "all, strength",
+    "predecessor": "Saradomin Sword",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 55,
+        "slash": 70,
+        "crush": 0,
+        "magic": 17,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 3,
+        "crush": 3,
+        "magic": 17,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 72,
+        "range-str": 0,
+        "magic-str": 15,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11791",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11791",
+        "id": 11791,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Staff of the dead",
+        "description": "A ghastly weapon with evil origins.",
+        "current": {
+          "trend": "neutral",
+          "price": "5.8m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+11.6k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+19.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+18.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+46.0%"
+        }
+      }
+    }
+  },
+  "11828": {
+    "id": 11828,
+    "item-name": "Armadyl Chestplate",
+    "item-slot": "chest",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "Blessed D'hide Top",
+    "stats": {
+      "attack": {
+        "stab": -7,
+        "slash": -7,
+        "crush": -7,
+        "magic": -15,
+        "range": 33
+      },
+      "defence": {
+        "stab": 56,
+        "slash": 48,
+        "crush": 61,
+        "magic": 70,
+        "range": 57
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11828",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11828",
+        "id": 11828,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Armadyl chestplate",
+        "description": "Armour of great craftsmanship.",
+        "current": {
+          "trend": "neutral",
+          "price": "36.5m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+913.8k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+15.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+22.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+24.0%"
+        }
+      }
+    }
+  },
+  "11830": {
+    "id": 11830,
+    "item-name": "Armadyl Chainskirt",
+    "item-slot": "legs",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "Blessed D'hide Legs",
+    "stats": {
+      "attack": {
+        "stab": -6,
+        "slash": -6,
+        "crush": -6,
+        "magic": -10,
+        "range": 20
+      },
+      "defence": {
+        "stab": 32,
+        "slash": 26,
+        "crush": 34,
+        "magic": 40,
+        "range": 33
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11830",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11830",
+        "id": 11830,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Armadyl chainskirt",
+        "description": "A chainskirt of great craftsmanship.",
+        "current": {
+          "trend": "neutral",
+          "price": "30.5m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+49.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+17.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+23.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+19.0%"
+        }
+      }
+    }
+  },
+  "11832": {
+    "id": 11832,
+    "item-name": "Bandos Chestplate",
+    "item-slot": "chest",
+    "combat-style": "melee",
+    "tags": "without-prayer",
+    "predecessor": "Obsidian Chestplate",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -15,
+        "range": -10
+      },
+      "defence": {
+        "stab": 98,
+        "slash": 93,
+        "crush": 105,
+        "magic": -6,
+        "range": 133
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11832",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11832",
+        "id": 11832,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Bandos chestplate",
+        "description": "A sturdy chestplate.",
+        "current": {
+          "trend": "neutral",
+          "price": "13.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 26.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+8.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-0.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+6.0%"
+        }
+      }
+    }
+  },
+  "11834": {
+    "id": 11834,
+    "item-name": "Bandos Tassets",
+    "item-slot": "legs",
+    "combat-style": "melee",
+    "tags": "without-prayer",
+    "predecessor": "Obsidian Platelegs",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -21,
+        "range": -7
+      },
+      "defence": {
+        "stab": 71,
+        "slash": 63,
+        "crush": 66,
+        "magic": -4,
+        "range": 93
+      },
+      "other": {
+        "melee-str": 2,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11834",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11834",
+        "id": 11834,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Bandos tassets",
+        "description": "A sturdy pair of tassets.",
+        "current": {
+          "trend": "neutral",
+          "price": "26.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 53.2k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+10.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+4.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+11.0%"
+        }
+      }
+    }
+  },
+  "11838": {
+    "id": 11838,
+    "item-name": "Saradomin Sword",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "all, strength",
+    "predecessor": "Dragon scimitar",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 0,
+        "slash": 82,
+        "crush": 60,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 82,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11838",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11838",
+        "id": 11838,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Saradomin sword",
+        "description": "The incredible blade of an Icyene.",
+        "current": {
+          "trend": "neutral",
+          "price": "699.5k"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+14.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+13.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+1.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-7.0%"
+        }
+      }
+    }
+  },
+  "11840": {
+    "id": 11840,
+    "item-name": "Dragon Boots",
+    "item-slot": "boots",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "Climbing Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -3,
+        "range": -1
+      },
+      "defence": {
+        "stab": 16,
+        "slash": 17,
+        "crush": 18,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11840",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11840",
+        "id": 11840,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Dragon boots",
+        "description": "These will protect my feet.",
+        "current": {
+          "trend": "neutral",
+          "price": "193.3k"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+450"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+2.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-9.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-0.0%"
+        }
+      }
+    }
+  },
+  "11889": {
+    "id": 11889,
+    "item-name": "Zamorak Hasta",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "crush",
+    "predecessor": "Abyssal whip",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 85,
+        "slash": 65,
+        "crush": 65,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 13,
+        "slash": 13,
+        "crush": 12,
+        "magic": 0,
+        "range": 13
+      },
+      "other": {
+        "melee-str": 75,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11889",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11889",
+        "id": 11889,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Zamorakian hasta",
+        "description": "An evil one-handed spear.",
+        "current": {
+          "trend": "neutral",
+          "price": "9.5m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+59.1k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+32.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+33.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+46.0%"
+        }
+      }
+    }
+  },
+  "11924": {
+    "id": 11924,
+    "item-name": "Malediction ward",
+    "item-slot": "off hand",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Book of Darkness",
+    "stats": {
+      "attack": {
+        "stab": -8,
+        "slash": -8,
+        "crush": -8,
+        "magic": 12,
+        "range": -12
+      },
+      "defence": {
+        "stab": 50,
+        "slash": 52,
+        "crush": 48,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=11924",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=11924",
+        "id": 11924,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Malediction ward",
+        "description": "An ancient, evil shield forged by Volcanic heat.",
+        "current": {
+          "trend": "neutral",
+          "price": "2.1m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 33.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+9.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-1.0%"
+        }
+      }
+    }
+  },
+  "12002": {
+    "id": 12002,
+    "item-name": "Occult necklace",
+    "item-slot": "neck",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 12,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 10,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12002",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12002",
+        "id": 12002,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Occult necklace",
+        "description": "A satanic evil embodies this amulet.",
+        "current": {
+          "trend": "neutral",
+          "price": "688.8k"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 17.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+59.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+65.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+44.0%"
+        }
+      }
+    }
+  },
+  "12804": {
+    "id": 12804,
+    "item-name": "Saradomin's Blessed Sword",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "all, strength, ss-charges",
+    "predecessor": "Staff of the Dead",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 0,
+        "slash": 100,
+        "crush": 60,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 88,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12804",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12804",
+        "id": 12804,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Saradomin's tear",
+        "description": "After a terrible battle, Saradomin wept over the wounds of his faithful Zilyana.",
+        "current": {
+          "trend": "neutral",
+          "price": "5.2m"
+        },
+        "today": {
+          "trend": "neutral",
+          "price": 0
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+23.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+5.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-13.0%"
+        }
+      }
+    }
+  },
+  "12817": {
+    "id": 12817,
+    "item-name": "Elysian spirit shield",
+    "item-slot": "off hand",
+    "combat-style": "melee",
+    "tags": "dks",
+    "predecessor": "Blessed Spirit Shield",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 63,
+        "slash": 65,
+        "crush": 75,
+        "magic": 2,
+        "range": 57
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 3
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12817",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12817",
+        "id": 12817,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Elysian spirit shield",
+        "description": "An ethereal shield with an elysian sigil attached to it.",
+        "current": {
+          "trend": "neutral",
+          "price": "422.7m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+5.4m"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+8.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+24.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+26.0%"
+        }
+      }
+    }
+  },
+  "12825": {
+    "id": 12825,
+    "item-name": "Arcane spirit shield",
+    "item-slot": "off hand",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Mage's Book",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "defence": {
+        "stab": 53,
+        "slash": 55,
+        "crush": 73,
+        "magic": 2,
+        "range": 52
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 3
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12825",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12825",
+        "id": 12825,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Arcane spirit shield",
+        "description": "An ethereal shield with an arcane sigil attached to it.",
+        "current": {
+          "trend": "neutral",
+          "price": "105.5m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+310.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+6.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+12.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+10.0%"
+        }
+      }
+    }
+  },
+  "12900": {
+    "id": 12900,
+    "item-name": "Trident of the Swamp",
+    "item-slot": "main hand",
+    "combat-style": "magic",
+    "tags": "all, trident-charges, trident-max-hit",
+    "predecessor": "Trident of the Seas",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 25,
+        "range": 0
+      },
+      "defence": {
+        "stab": 2,
+        "slash": 3,
+        "crush": 1,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12900",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12900",
+        "id": 12900,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Uncharged toxic trident",
+        "description": "It needs to be charged with death runes, chaos runes, fire runes and Zulrah's scales.",
+        "current": {
+          "trend": "neutral",
+          "price": "2.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 22.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+2.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+2.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-5.0%"
+        }
+      }
+    }
+  },
+  "12924": {
+    "id": 12924,
+    "item-name": "Toxic Blowpipe",
+    "item-slot": "main hand",
+    "combat-style": "range",
+    "tags": "all, blowpipe-charges",
+    "predecessor": "Rune Crossbow",
+    "stats": {
+      "speed": 1.2,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 60
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 40,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12924",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12924",
+        "id": 12924,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Toxic blowpipe (empty)",
+        "description": "Fires darts while coating them with venom.",
+        "current": {
+          "trend": "neutral",
+          "price": "2.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 66.4k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "negative",
+          "change": "-13.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+9.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-1.0%"
+        }
+      }
+    }
+  },
+  "12934": {
+    "id": 12934,
+    "item-name": "Zulrah's Scale",
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=12934",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=12934",
+        "id": 12934,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Zulrah's scales",
+        "description": "Flakes of toxic snakeskin.",
+        "current": {
+          "trend": "neutral",
+          "price": 132
+        },
+        "today": {
+          "trend": "neutral",
+          "price": 0
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+4.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+4.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-2.0%"
+        }
+      }
+    }
+  },
+  "13159": {
+    "id": 13159,
+    "item-name": "Book of Darkness",
+    "item-slot": "off hand",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Time of Fire",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 10,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 5
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13159",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13159",
+        "id": 13159,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Book of darkness page set",
+        "description": "A set containing the four pages of the Ancient Book of Darkness.",
+        "current": {
+          "trend": "neutral",
+          "price": "893.0k"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 19.8k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+20.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+22.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+29.0%"
+        }
+      }
+    }
+  },
+  "13235": {
+    "id": 13235,
+    "item-name": "Eternal Boots",
+    "item-slot": "boots",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Infinity Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 8,
+        "range": 0
+      },
+      "defence": {
+        "stab": 5,
+        "slash": 5,
+        "crush": 5,
+        "magic": 8,
+        "range": 5
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13235",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13235",
+        "id": 13235,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Eternal boots",
+        "description": "A pair of upgraded infinity boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "4.4m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 171.5k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+13.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+9.0%"
+        }
+      }
+    }
+  },
+  "13237": {
+    "id": 13237,
+    "item-name": "Pegasian Boots",
+    "item-slot": "boots",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "D'hide Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -12,
+        "range": 12
+      },
+      "defence": {
+        "stab": 5,
+        "slash": 5,
+        "crush": 5,
+        "magic": 5,
+        "range": 5
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13237",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13237",
+        "id": 13237,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Pegasian boots",
+        "description": "A pair of upgraded ranger boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "28.2m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+264.1k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+8.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+12.0%"
+        }
+      }
+    }
+  },
+  "13239": {
+    "id": 13239,
+    "item-name": "Primordial Boots",
+    "item-slot": "boots",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "Dragon Boots",
+    "stats": {
+      "attack": {
+        "stab": 2,
+        "slash": 2,
+        "crush": 2,
+        "magic": -4,
+        "range": -1
+      },
+      "defence": {
+        "stab": 22,
+        "slash": 22,
+        "crush": 22,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 5,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13239",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13239",
+        "id": 13239,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Primordial boots",
+        "description": "A pair of upgraded dragon boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "20.6m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+67.0k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+13.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-0.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+5.0%"
+        }
+      }
+    }
+  },
+  "13263": {
+    "id": 13263,
+    "item-name": "Abyssal Bludgeon",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "crush",
+    "predecessor": "Zamorak Hasta",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 102,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 85,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13263",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13263",
+        "id": 13263,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Abyssal bludgeon",
+        "description": "Elements of deceased Abyssal Sires have been fused together.",
+        "current": {
+          "trend": "neutral",
+          "price": "27.7m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 176.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+6.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-11.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-18.0%"
+        }
+      }
+    }
+  },
+  "13265": {
+    "id": 13265,
+    "item-name": "Abyssal Dagger",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "all, strength",
+    "predecessor": "Staff of the Dead",
+    "stats": {
+      "speed": 2.4,
+      "attack": {
+        "stab": 75,
+        "slash": 40,
+        "crush": -4,
+        "magic": 1,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 1,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 75,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=13265",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=13265",
+        "id": 13265,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Abyssal dagger",
+        "description": "Something sharp from the body of a defeated Abyssal Sire.",
+        "current": {
+          "trend": "neutral",
+          "price": "6.0m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+11.9k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+26.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+2.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-8.0%"
+        }
+      }
+    }
+  },
+  "19544": {
+    "id": 19544,
+    "item-name": "Tormented Bracelet",
+    "item-slot": "hands",
+    "combat-style": "magic",
+    "tags": "all",
+    "predecessor": "Barrows Gloves",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 10,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 5,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=19544",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=19544",
+        "id": 19544,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Tormented bracelet",
+        "description": "A deep sense of torment burns within this powerful bracelet.",
+        "current": {
+          "trend": "neutral",
+          "price": "12.8m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 24.4k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+15.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+18.0%"
+        }
+      }
+    }
+  },
+  "19547": {
+    "id": 19547,
+    "item-name": "Necklace of anguish",
+    "item-slot": "neck",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "Amulet of Glory",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 15
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 5,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=19547",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=19547",
+        "id": 19547,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Necklace of anguish",
+        "description": "A deep sense of anguish burns within this powerful necklace.",
+        "current": {
+          "trend": "neutral",
+          "price": "12.9m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+60.7k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+19.0%"
+        }
+      }
+    }
+  },
+  "19553": {
+    "id": 19553,
+    "item-name": "Amulet of torture",
+    "item-slot": "neck",
+    "combat-style": "melee",
+    "tags": "all",
+    "predecessor": "Amulet of Fury",
+    "stats": {
+      "attack": {
+        "stab": 15,
+        "slash": 15,
+        "crush": 15,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 10,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=19553",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=19553",
+        "id": 19553,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Amulet of torture",
+        "description": "A deep sense of torture burns within this powerful amulet.",
+        "current": {
+          "trend": "neutral",
+          "price": "12.8m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+41.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+13.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+17.0%"
+        }
+      }
+    }
+  },
+  "19921": {
+    "id": 19921,
+    "item-name": "D'hide Boots",
+    "item-slot": "boots",
+    "combat-style": "range",
+    "tags": "all",
+    "predecessor": "Snakeskin Boots",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -10,
+        "range": 7
+      },
+      "defence": {
+        "stab": 4,
+        "slash": 4,
+        "crush": 4,
+        "magic": 4,
+        "range": 4
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=19921",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=19921",
+        "id": 19921,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Ancient d'hide boots",
+        "description": "Ancient blessed dragonhide boots.",
+        "current": {
+          "trend": "neutral",
+          "price": "702.7k"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+11.3k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+43.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+19.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+16.0%"
+        }
+      }
+    }
+  },
+  "21006": {
+    "id": 21006,
+    "item-name": "Kodai Wand",
+    "item-slot": "main hand",
+    "combat-style": "magic",
+    "tags": "aoe, prayer, ancients-max-hit",
+    "predecessor": "Master Wand",
+    "stats": {
+      "speed": 3,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 28,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 3,
+        "crush": 3,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 15,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=21006",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=21006",
+        "id": 21006,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Kodai wand",
+        "description": "A wand of an ancient Kodai mage.",
+        "current": {
+          "trend": "neutral",
+          "price": "109.8m"
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 497.6k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+1.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-5.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-8.0%"
+        }
+      }
+    }
+  },
+  "21021": {
+    "id": 21021,
+    "item-name": "Ancestral Robetop",
+    "item-slot": "chest",
+    "combat-style": "magic",
+    "tags": "without-prayer",
+    "predecessor": "Ahrims Robetop",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 30,
+        "range": -10
+      },
+      "defence": {
+        "stab": 52,
+        "slash": 37,
+        "crush": 63,
+        "magic": 30,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 2,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=21021",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=21021",
+        "id": 21021,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Ancestral robe top",
+        "description": "The robe top of a powerful sorceress from a bygone era.",
+        "current": {
+          "trend": "neutral",
+          "price": "102.8m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+1.3m"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+5.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+6.0%"
+        },
+        "day180": {
+          "trend": "negative",
+          "change": "-3.0%"
+        }
+      }
+    }
+  },
+  "21024": {
+    "id": 21024,
+    "item-name": "Ancestral Bottom",
+    "item-slot": "legs",
+    "combat-style": "magic",
+    "tags": "without-prayer",
+    "predecessor": "Ahrims Robeskirt",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 26,
+        "range": -7
+      },
+      "defence": {
+        "stab": 27,
+        "slash": 24,
+        "crush": 30,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 2,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=21024",
+        "icon_large": "http://services.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=21024",
+        "id": 21024,
+        "type": "Default",
+        "typeIcon": "http://www.runescape.com/img/categories/Default",
+        "name": "Ancestral robe bottom",
+        "description": "The robe bottoms of a powerful sorceress from a bygone era.",
+        "current": {
+          "trend": "neutral",
+          "price": "77.3m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+245.8k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+7.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+14.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+3.0%"
+        }
+      }
+    }
+  },
+  "21304": {
+    "id": 21304,
+    "item-name": "Obsidian Platelegs",
+    "item-slot": "legs",
+    "combat-style": "melee",
+    "tags": "without-prayer",
+    "predecessor": "Rune Platelegs",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 46,
+        "slash": 43,
+        "crush": 41,
+        "magic": -10,
+        "range": 40
+      },
+      "other": {
+        "melee-str": 1,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    },
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_sprite.gif?id=21304",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1513605640124_obj_big.gif?id=21304",
+        "id": 21304,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Obsidian platelegs",
+        "description": "Provides excellent protection.",
+        "current": {
+          "trend": "neutral",
+          "price": "1.1m"
+        },
+        "today": {
+          "trend": "positive",
+          "price": "+40.0k"
+        },
+        "members": "true",
+        "day30": {
+          "trend": "positive",
+          "change": "+10.0%"
+        },
+        "day90": {
+          "trend": "positive",
+          "change": "+23.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+4.0%"
+        }
+      }
+    }
+  }
+}
