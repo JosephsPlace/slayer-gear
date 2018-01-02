@@ -49,6 +49,106 @@ let VueObj = new Vue({
             'range': .3,
             'magic': .2,
             'aoe': .125,
+        },
+        base_dps: {
+            'melee': 0,
+            'range': 0,
+            'magic-trident': 0,
+            'magic-ancients': 0
+        },
+        base_dps_stats: {
+            'melee': {
+                "speed": 3,
+                "attack": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "defence": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "other": {
+                    "melee-str": 0,
+                    "range-str": 0,
+                    "magic-str": 0,
+                    "prayer": 0
+                }
+            },
+            'range': {
+                "speed": 1.2,
+                "attack": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "defence": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "other": {
+                    "melee-str": 0,
+                    "range-str": 0,
+                    "magic-str": 0,
+                    "prayer": 0
+                }
+            },
+            'magic-trident': {
+                "speed": 2.4,
+                "attack": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "defence": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "other": {
+                    "melee-str": 0,
+                    "range-str": 0,
+                    "magic-str": 0,
+                    "prayer": 0
+                }
+            },
+            'magic-ancients': {
+                "speed": 3,
+                "attack": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "defence": {
+                    "stab": 0,
+                    "slash": 0,
+                    "crush": 0,
+                    "magic": 0,
+                    "range": 0
+                },
+                "other": {
+                    "melee-str": 0,
+                    "range-str": 0,
+                    "magic-str": 0,
+                    "prayer": 0
+                }
+            }
         }
     },
 
@@ -57,7 +157,7 @@ let VueObj = new Vue({
             this.task_list = data.body;
         });
 
-        // console.log(this.calculateDPS('', 'base-dps', 'melee'));
+        //console.log(this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-seas-max-hit,', 'magic'));
 
         this.$http.get('./assets/json/prices.json').then((data) => {
             this.price_list = data.body;
@@ -65,6 +165,7 @@ let VueObj = new Vue({
             this.getEquipment();
         });
 
+        //this.getEquipment();
     },
 
     methods: {
@@ -99,6 +200,13 @@ let VueObj = new Vue({
             this.$http.get('./assets/json/equipment.json').then((data) => {
                 let equipment = data.body;
 
+                let base_dps = {
+                    'melee': this.calculateDPS(this.base_dps_stats['melee'], 'base-dps', 'melee'),
+                    'range': this.calculateDPS(this.base_dps_stats['range'], 'base-dps', 'range'),
+                    'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
+                    'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
+                }
+
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
 
@@ -106,20 +214,33 @@ let VueObj = new Vue({
                         equipment[key]['dps'] = 0;
                     }
 
-                    if (equipment[key]['combat-style'] === 'range' && equipment[key]['item-slot'] !== 'main hand') {
-                        equipment[key]['dps'] -= this.base_ranged_dps;
+                    if(equipment[key]['item-slot'] !== 'main hand') {
+                        if (equipment[key]['combat-style'] === 'melee') {
+                            equipment[key]['dps'] -= base_dps['melee'];
+                        }
+                        if (equipment[key]['combat-style'] === 'range') {
+                            equipment[key]['dps'] -= base_dps['range'];
+                        }
+                    }
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                        equipment[key]['dps'] -= base_dps['magic-trident'];
+                    }
+
+                    if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                        let tags_obj = equipment[key]['tags'].split(",");
+                        let aoe = false;
+                        for (let tag in tags_obj) {
+                            if (tags_obj[tag] === 'aoe') {
+                                equipment[key]['dps'] -=  base_dps['magic-ancients'];
+                            } else {
+                                //equipment[key]['dps'] -=  base_dps['magic-trident'];
+                            }
+                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + (this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
+                        }
                     }
 
                     equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
                     equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + this.task_styles[equipment[key]['combat-style']]);
-
-                    let tags_obj = equipment[key]['tags'].split(",");
-                    for (let tag in tags_obj) {
-                       if (tags_obj[tag] === 'aoe') {
-                           equipment[key]['dps'] -= this.base_blitz_dps;
-                           equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + (this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
-                       }
-                    }
                 }
 
                 let sortable_equipment = [];
@@ -151,7 +272,7 @@ let VueObj = new Vue({
         },
         calculateDPS: function (stats, tags, style) {
             let max_type = 0;
-            let max_type_name = 'slash';
+            let max_type_name = 'crush';
             let attack_speed = this.attack_speed[style];
             let accuracy = 0;
             let max_hit = 0;
@@ -204,7 +325,6 @@ let VueObj = new Vue({
                 effective_attack = this.user_levels.ranged + 8;
                 effective_strength = this.user_levels.ranged + 8;
 
-                // SUBTRACT BASE RANGED DPS
                 max_hit = Math.floor(0.5 + effective_strength * (64 + strength) / 640);
             } else if (style === 'magic') {
                 strength = stats['other']['magic-str'];
@@ -228,14 +348,17 @@ let VueObj = new Vue({
 
                 if (is_trident === true) {
                     max_hit = Math.floor((this.user_levels.magic / 3) - 2);
+                    stats['speed'] = 2.4;
                 } else if (is_ancients === true) {
                     max_hit = 26;
                 } else {
-                    max_hit = 1;
+                    max_hit = Math.floor((this.user_levels.magic / 3) - 2);
+                    stats['speed'] = 2.4;
                 }
 
                 if (strength !== 0) {
-                    max_hit = Math.floor(max_hit * (1 + (strength / 100)));
+                    //max_hit = Math.floor(max_hit * (1 + (strength / 100)));
+                    max_hit = max_hit * (1 + (strength / 100));
                 }
 
                 effective_attack = this.user_levels.magic + 8;
@@ -252,7 +375,7 @@ let VueObj = new Vue({
             let average_damage = ((max_hit * (max_hit + 1) / 2)) / (max_hit + 1);
             average_damage = average_damage * accuracy;
 
-            if (typeof stats['speed'] !== 'undefined' && style !== 'magic') {
+            if (typeof stats['speed'] !== 'undefined') {
                 attack_speed = stats['speed'];
                 this.attack_speed[style] = stats['speed'];
             }
