@@ -66,7 +66,7 @@ let VueObj = new Vue({
                     "magic": 0,
                     "range": 0
                 },
-                "defence": {
+                "defense": {
                     "stab": 0,
                     "slash": 0,
                     "crush": 0,
@@ -89,7 +89,7 @@ let VueObj = new Vue({
                     "magic": 0,
                     "range": 0
                 },
-                "defence": {
+                "defense": {
                     "stab": 0,
                     "slash": 0,
                     "crush": 0,
@@ -112,7 +112,7 @@ let VueObj = new Vue({
                     "magic": 0,
                     "range": 0
                 },
-                "defence": {
+                "defense": {
                     "stab": 0,
                     "slash": 0,
                     "crush": 0,
@@ -135,7 +135,7 @@ let VueObj = new Vue({
                     "magic": 0,
                     "range": 0
                 },
-                "defence": {
+                "defense": {
                     "stab": 0,
                     "slash": 0,
                     "crush": 0,
@@ -281,6 +281,7 @@ let VueObj = new Vue({
             let effective_strength = 0;
             let tags_obj = tags.split(",");
             let is_strength = false;
+            let is_crush = false;
             let mob_defense_roll = {
                 'stab': (this.default_mob["defense-level"].stab + 9) * (64 + this.default_mob["defense-bonus"].stab),
                 'slash': (this.default_mob["defense-level"].slash + 9) * (64 + this.default_mob["defense-bonus"].slash),
@@ -297,15 +298,22 @@ let VueObj = new Vue({
                     if (tags_obj[tag].trim() === 'strength') {
                         is_strength = true;
                     }
-                }
-
-                for (let type in stats['attack']) {
-                    if (stats['attack'][type] > max_type) {
-                        max_type = stats['attack'][type];
-                        max_type_name = type;
+                    if (tags_obj[tag].trim() === 'crush') {
+                        is_crush = true;
                     }
                 }
 
+                if (is_crush === true) {
+                    max_type = stats['attack']['crush'];
+                    max_type_name = 'crush';
+                } else {
+                    for (let type in stats['attack']) {
+                        if (stats['attack'][type] > max_type) {
+                            max_type = stats['attack'][type];
+                            max_type_name = type;
+                        }
+                    }
+                }
                 effective_attack = this.user_levels.attack + 8;
                 effective_strength = this.user_levels.strength + 8;
 

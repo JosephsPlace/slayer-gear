@@ -2,181 +2,1201 @@
   "TzHaar": {
     "monster-name": "TzHaar",
     "task-weight": 10,
-    "tags": "boss"
+    "tags": "boss",
+    "stats": {
+      "combat": {
+        "attack": 1,
+        "strength": 1,
+        "defense": 157,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "defense": 158
+      },
+      "defense" : {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Abyssal Demons": {
     "monster-name": "Abyssal Demons",
     "task-weight": 9,
-    "tags": "boss"
+    "tags": "boss",
+    "stats": {
+      "combat": {
+        "attack": 97,
+        "strength": 67,
+        "defense": 135,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 20,
+        "slash": 20,
+        "crush": 20,
+        "magic": 0,
+        "range": 20
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 180,
+        "strength": 136,
+        "defense": 250,
+        "magic": 200,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 40,
+        "slash": 60,
+        "crush": 50,
+        "magic": 20,
+        "range": 60
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Black Demons": {
     "monster-name": "Black Demons",
     "task-weight": 9,
-    "tags": "boss"
+    "tags": "boss",
+    "stats": {
+      "combat": {
+        "attack": 97,
+        "strength": 67,
+        "defense": 135,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 20,
+        "slash": 20,
+        "crush": 20,
+        "magic": 0,
+        "range": 20
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 205,
+        "strength": 195,
+        "defense": 200,
+        "magic": 195,
+        "range": 195
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 40,
+        "range": 43
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 50,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Bloodveld": {
     "monster-name": "Bloodveld",
     "task-weight": 9,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 75,
+        "strength": 45,
+        "defense": 30,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 110,
+        "strength": 115,
+        "defense": 30,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Kalphite": {
     "monster-name": "Kalphite",
     "task-weight": 9,
-    "tags": "boss, boss-crush"
+    "tags": "boss, boss-crush",
+    "stats": {
+      "combat": {
+        "attack": 70,
+        "strength": 70,
+        "defense": 70,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 25,
+        "slash": 25,
+        "crush": 5,
+        "magic": 50,
+        "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 300,
+        "strength": 300,
+        "defense": 300,
+        "magic": 150,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 75,
+        "slash": 75,
+        "crush": 55,
+        "magic": 55,
+        "range": 55
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Fire Giants": {
     "monster-name": "Fire Giants",
     "task-weight": 9,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 65,
+        "strength": 65,
+        "defense": 65,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 3,
+        "crush": 2,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 31,
+        "range": 0,
+        "attack": 29
+      }
+    }
   },
-  "Daggonnath": {
-    "monster-name": "Daggonnath",
+  "Dagonnath": {
+    "monster-name": "Dagonnath",
     "task-weight": 8,
-    "tags": "boss, ely"
+    "tags": "boss, ely",
+    "stats": {
+      "combat": {
+        "attack": 68,
+        "strength": 70,
+        "defense": 50,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 255,
+        "strength": 255,
+        "defense": 213,
+        "magic": 85,
+        "range": 85
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 173,
+        "slash": 173,
+        "crush": 173,
+        "magic": 173,
+        "range": 173
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    }
   },
   "Hellhounds": {
     "monster-name": "Hellhounds",
     "task-weight": 8,
-    "tags": "boss, boss-crush"
+    "tags": "boss, boss-crush",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Suqahs": {
     "monster-name": "Suqahs",
     "task-weight": 8,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Lizardmen": {
     "monster-name": "Lizardmen",
     "task-weight": 8,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Nechryael": {
     "monster-name": "Nechryael",
     "task-weight": 7,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Smoke Devils": {
     "monster-name": "Smoke Devils",
     "task-weight": 7,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Greater Demons": {
     "monster-name": "Greater Demons",
     "task-weight": 7,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Spiritual Creatures": {
     "monster-name": "Spiritual Creatures",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Aviansies": {
     "monster-name": "Aviansies",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Gargoyles": {
     "monster-name": "Gargoyles",
     "task-weight": 6,
-    "tags": "boss, boss-double-phase"
+    "tags": "boss, boss-double-phase",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Cave Kraken": {
     "monster-name": "Cave Kraken",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Dust Devils": {
     "monster-name": "Dust Devils",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Aberrant Spectres": {
     "monster-name": "Aberrant Spectres",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Trolls": {
     "monster-name": "Trolls",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Black Dragons": {
     "monster-name": "Black Dragons",
     "task-weight": 6,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Dark Beasts": {
     "monster-name": "Dark Beasts",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Iron Dragons": {
     "monster-name": "Iron Dragons",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Red Dragons": {
     "monster-name": "Red Dragons",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Mithril Dragons": {
     "monster-name": "Mithril Dragons",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Ankou": {
     "monster-name": "Ankou",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Steel Dragons": {
     "monster-name": "Steel Dragons",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Cave Horrors": {
     "monster-name": "Cave Horrors",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Skeletal Wyverns": {
     "monster-name": "Skeletal Wyverns",
     "task-weight": 5,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Elves": {
     "monster-name": "Elves",
     "task-weight": 4,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Blue Dragons": {
     "monster-name": "Blue Dragons",
     "task-weight": 4,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Scarabs": {
     "monster-name": "Scarabs",
     "task-weight": 4,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Kurask": {
     "monster-name": "Kurask",
     "task-weight": 3,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Turoth": {
     "monster-name": "Turoth",
     "task-weight": 3,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Brine Rates": {
     "monster-name": "Brine Rates",
     "task-weight": 3,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   },
   "Mutated Zygomites": {
     "monster-name": "Mutated Zygomites",
     "task-weight": 2,
-    "tags": ""
+    "tags": "",
+    "stats": {
+      "combat": {
+        "attack": 0,
+        "strength": 0,
+        "defense": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
   }
 }
