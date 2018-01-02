@@ -9,6 +9,8 @@ let VueObj = new Vue({
         equipment_list: [],
         task_list: [],
         price_list: [],
+        base_ranged_dps: 2.208773164,
+        base_blitz_dps: 4.124380352,
         default_mob: {
             'defense-level': {
                 'stab': 102,
@@ -43,9 +45,9 @@ let VueObj = new Vue({
             'magic': 2.4
         },
         task_styles: {
-            'melee': .3333,
-            'range': .3333,
-            'magic': .3333,
+            'melee': .5,
+            'range': .3,
+            'magic': .2,
             'aoe': .125,
         }
     },
@@ -99,10 +101,13 @@ let VueObj = new Vue({
 
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
-                    equipment[key]['speed'] = this.attack_speed[equipment[key]['combat-style']];
 
                     if (isNaN(equipment[key]['dps'])) {
                         equipment[key]['dps'] = 0;
+                    }
+
+                    if (equipment[key]['combat-style'] === 'range' && equipment[key]['item-slot'] !== 'main hand') {
+                        equipment[key]['dps'] -= this.base_ranged_dps;
                     }
 
                     equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
@@ -111,6 +116,7 @@ let VueObj = new Vue({
                     let tags_obj = equipment[key]['tags'].split(",");
                     for (let tag in tags_obj) {
                        if (tags_obj[tag] === 'aoe') {
+                           equipment[key]['dps'] -= this.base_blitz_dps;
                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + (this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
                        }
                     }
@@ -127,24 +133,7 @@ let VueObj = new Vue({
 
                 sortable_equipment.reverse();
 
-                // Since some ranged items are calculated with BP, we need to move those after BP
-                let main_hand_check = 0;
-                let tmp_storage =[];
-                let final_list = [];
-                for (let item in sortable_equipment) {
-                    if (sortable_equipment[item]['combat-style'] === 'range' && sortable_equipment[item]['item-slot'] !== 'main hand' && main_hand_check === 0) {
-                        tmp_storage.push(sortable_equipment[item]);
-                    } else {
-                        final_list.push(sortable_equipment[item]);
-                    }
-
-                    if (sortable_equipment[item]['combat-style'] === 'range' && sortable_equipment[item]['item-slot'] === 'main hand' && main_hand_check === 0) {
-                        main_hand_check = 1;
-                        for (let tmp in tmp_storage) {
-                            final_list.push(tmp_storage[tmp]);
-                        }
-                    }
-                }
+                console.log(sortable_equipment);
             });
         },
         getItemPrice: function (short_price) {
