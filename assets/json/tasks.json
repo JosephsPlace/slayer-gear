@@ -393,11 +393,11 @@
     "tags": "boss, boss-crush",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 105,
+        "strength": 104,
+        "defense": 102,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -412,6 +412,39 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 220,
+        "strength": 220,
+        "defense": 100,
+        "magic": 220,
+        "range": 220
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -421,11 +454,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 95,
+        "strength": 95,
+        "defense": 95,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -435,11 +468,16 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 90,
+        "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -449,25 +487,30 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 120,
+        "strength": 120,
+        "defense": 140,
+        "magic": 130,
+        "range": 120
       },
       "attack": {
         "stab": 0,
         "slash": 0,
         "crush": 0,
         "magic": 0,
-        "range": 0
+        "range": 45
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
+        "stab": -10,
+        "slash": 40,
+        "crush": 30,
+        "magic": 50,
         "range": 0
+      },
+      "other": {
+        "strength": 38,
+        "range": 38,
+        "attack": 45
       }
     }
   },
@@ -477,11 +520,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 97,
+        "strength": 97,
+        "defense": 105,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -491,11 +534,34 @@
         "range": 0
       },
       "defense": {
+        "stab": 20,
+        "slash": 20,
+        "crush": 20,
+        "magic": 0,
+        "range": 20
+      }
+    },
+    "boss": {
+      "combat": {
+        "attack": 197,
+        "strength": 197,
+        "defense": 85,
+        "magic": 1,
+        "range": 1
+      },
+      "attack": {
         "stab": 0,
         "slash": 0,
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "defense": {
+        "stab": 50,
+        "slash": 50,
+        "crush": 50,
+        "magic": 0,
+        "range": 50
       }
     }
   },
@@ -505,11 +571,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 140,
+        "strength": 130,
+        "defense": 275,
+        "magic": 1,
+        "range": 195
       },
       "attack": {
         "stab": 0,
@@ -522,8 +588,8 @@
         "stab": 0,
         "slash": 0,
         "crush": 0,
-        "magic": 0,
-        "range": 0
+        "magic": 600,
+        "range": 44
       }
     }
   },
@@ -533,17 +599,17 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 76,
+        "strength": 78,
+        "defense": 81,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
         "slash": 0,
         "crush": 0,
-        "magic": 0,
+        "magic": -10,
         "range": 0
       },
       "defense": {
@@ -556,16 +622,72 @@
     }
   },
   "Spiritual Creatures": {
-    "monster-name": "Spiritual Creatures",
+    "monster-name": "Spiritual Ranger",
     "task-weight": 6,
-    "tags": "",
+    "tags": "spiritual creature,",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
+        "attack": 1,
+        "strength": 1,
+        "defense": 80,
+        "magic": 1,
+        "range": 140
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
+  },
+  "Spiritual Warrior": {
+    "monster-name": "Spiritual Warrior",
+    "task-weight": 6,
+    "tags": "spiritual creature,",
+    "stats": {
+      "combat": {
+        "attack": 100,
+        "strength": 100,
+        "defense": 100,
+        "magic": 1,
+        "range": 11
+      },
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      }
+    }
+  },
+  "Spiritual Mage": {
+    "monster-name": "Spiritual Mage",
+    "task-weight": 6,
+    "tags": "spiritual creature,",
+    "stats": {
+      "combat": {
+        "attack": 1,
+        "strength": 1,
+        "defense": 61,
+        "magic": 180,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -589,11 +711,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 1,
+        "strength": 1,
+        "defense": 100,
+        "magic": 1,
+        "range": 76
       },
       "attack": {
         "stab": 0,
@@ -617,11 +739,11 @@
     "tags": "boss, boss-double-phase",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 75,
+        "strength": 105,
+        "defense": 107,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -631,11 +753,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
+        "stab": 20,
+        "slash": 20,
         "crush": 0,
-        "magic": 0,
-        "range": 0
+        "magic": 20,
+        "range": 20
       }
     }
   },
@@ -645,11 +767,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 1,
+        "strength": 1,
+        "defense": 1,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -662,8 +784,8 @@
         "stab": 0,
         "slash": 0,
         "crush": 0,
-        "magic": 0,
-        "range": 0
+        "magic": 130,
+        "range": 300
       }
     }
   },
@@ -673,11 +795,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 105,
+        "strength": 70,
+        "defense": 40,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -701,11 +823,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 1,
+        "strength": 1,
+        "defense": 90,
+        "magic": 1,
+        "range": 105
       },
       "attack": {
         "stab": 0,
@@ -715,11 +837,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
+        "stab": 20,
+        "slash": 20,
+        "crush": 20,
         "magic": 0,
-        "range": 0
+        "range": 15
       }
     }
   },
@@ -729,11 +851,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 100,
+        "strength": 100,
+        "defense": 120,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -743,9 +865,9 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
+        "stab": 30,
+        "slash": 60,
+        "crush": 30,
         "magic": 0,
         "range": 0
       }
@@ -757,11 +879,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 200,
+        "strength": 200,
+        "defense": 200,
+        "magic": 100,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -771,11 +893,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 60,
+        "range": 50
       }
     }
   },
@@ -785,11 +907,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 140,
+        "strength": 160,
+        "defense": 120,
+        "magic": 160,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -799,11 +921,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 30,
+        "slash": 40,
+        "crush": 100,
+        "magic": 90,
+        "range": 100
       }
     }
   },
@@ -813,11 +935,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 165,
+        "strength": 165,
+        "defense": 165,
+        "magic": 100,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -827,11 +949,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 30,
+        "range": 90
       }
     }
   },
@@ -841,11 +963,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 130,
+        "strength": 130,
+        "defense": 130,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -855,11 +977,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 60,
+        "range": 50
       }
     }
   },
@@ -869,11 +991,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 268,
+        "strength": 268,
+        "defense": 268,
+        "magic": 168,
+        "range": 168
       },
       "attack": {
         "stab": 0,
@@ -883,11 +1005,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 100,
+        "crush": 70,
+        "magic": 30,
+        "range": 90
       }
     }
   },
@@ -897,11 +1019,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 70,
+        "strength": 70,
+        "defense": 60,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -925,11 +1047,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 215,
+        "strength": 215,
+        "defense": 215,
+        "magic": 100,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -939,11 +1061,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 30,
+        "range": 90
       }
     }
   },
@@ -953,11 +1075,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 80,
+        "strength": 77,
+        "defense": 62,
+        "magic": 80,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -981,11 +1103,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 125,
+        "strength": 116,
+        "defense": 120,
+        "magic": 125,
+        "range": 120
       },
       "attack": {
         "stab": 0,
@@ -995,11 +1117,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 140,
+        "slash": 90,
+        "crush": 90,
+        "magic": 80,
+        "range": 140
       }
     }
   },
@@ -1009,10 +1131,10 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
+        "attack": 95,
+        "strength": 95,
+        "defense": 80,
+        "magic": 1,
         "range": 0
       },
       "attack": {
@@ -1023,11 +1145,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 60,
+        "range": 50
       }
     }
   },
@@ -1037,11 +1159,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 95,
+        "strength": 95,
+        "defense": 95,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -1051,11 +1173,11 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 70,
+        "crush": 70,
+        "magic": 60,
+        "range": 50
       }
     }
   },
@@ -1065,25 +1187,30 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 105,
+        "strength": 90,
+        "defense": 50,
+        "magic": 1,
+        "range": 90
       },
       "attack": {
         "stab": 0,
         "slash": 0,
         "crush": 0,
         "magic": 0,
-        "range": 0
+        "range": 80
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 50,
+        "slash": 90,
+        "crush": 50,
+        "magic": 34,
+        "range": 66
+      },
+      "other": {
+        "strength": 0,
+        "range": 80,
+        "attack": 0
       }
     }
   },
@@ -1093,11 +1220,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 67,
+        "strength": 105,
+        "defense": 105,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -1108,8 +1235,8 @@
       },
       "defense": {
         "stab": 0,
-        "slash": 0,
-        "crush": 0,
+        "slash": 20,
+        "crush": 20,
         "magic": 0,
         "range": 0
       }
@@ -1121,11 +1248,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 53,
+        "strength": 83,
+        "defense": 83,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -1136,8 +1263,8 @@
       },
       "defense": {
         "stab": 0,
-        "slash": 0,
-        "crush": 0,
+        "slash": 20,
+        "crush": 20,
         "magic": 0,
         "range": 0
       }
@@ -1149,11 +1276,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 70,
+        "strength": 79,
+        "defense": 40,
+        "magic": 1,
+        "range": 1
       },
       "attack": {
         "stab": 0,
@@ -1177,11 +1304,11 @@
     "tags": "",
     "stats": {
       "combat": {
-        "attack": 0,
-        "strength": 0,
-        "defense": 0,
-        "magic": 0,
-        "range": 0
+        "attack": 65,
+        "strength": 65,
+        "defense": 65,
+        "magic": 65,
+        "range": 65
       },
       "attack": {
         "stab": 0,
@@ -1191,11 +1318,16 @@
         "range": 0
       },
       "defense": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
+        "stab": 10,
+        "slash": 10,
+        "crush": 10,
+        "magic": 20,
+        "range": 20
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 30
       }
     }
   }
