@@ -20,6 +20,24 @@
             <button type="submit">Enter</button>
         </form>
 
+        <div class="columns" v-if="step === 1" v-cloak>
+            <div class="column is-6">
+                <div @click="selectMonster(task)" v-for="task in task_list">
+                    <h2 style="display: inline-block">
+                       {{ task['monster-name'] }}
+                    </h2>
+                    <span v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'">
+                        <input :value="task['task-weight']" type="checkbox" class="melee-style" @click="calculateCombatStyle()" selected :id="'melee_style[' + task['monster-name'] + ']'"> <label @click="calculateCombatStyle()" :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
+                        <input :value="task['task-weight']" type="checkbox" class="range-style" :id="'range_style[' + task['monster-name'] + ']'"> <label :for="'range_style[' + task['monster-name'] + ']'">Range</label>
+                        <input :value="task['task-weight']" type="checkbox" class="magic-style" :id="'magic_style[' + task['monster-name'] + ']'"> <label :for="'magic_style[' + task['monster-name'] + ']'">Magic</label>
+                        <input :value="task['task-weight']" type="checkbox" class="aoe-style" :id="'aoe_style[' + task['monster-name'] + ']'"> <label :for="'aoe_style[' + task['monster-name'] + ']'">AOE</label>
+                    </span>
+                </div>
+            </div>
+            <div class="column is-6">
+                {{ average_mob }}
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>

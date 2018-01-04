@@ -6,34 +6,42 @@ let VueObj = new Vue({
         //ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
 
+        step: 1,
         equipment_list: [],
         task_list: [],
+        total_task_weight: 0,
         price_list: [],
-        base_ranged_dps: 2.208773164,
-        base_blitz_dps: 4.124380352,
-        default_mob: {
-            'defense-level': {
-                'stab': 102,
-                'slash': 102,
-                'crush': 102,
-                'magic': 1,
-                'ranged': 102
+        selected_mobs: [],
+        average_mob: {
+            'combat': {
+                'attack': 0,
+                'strength': 0,
+                'defense': 0,
+                'magic': 0,
+                'ranged': 0
             },
-            'defense-bonus': {
+            'attack': {
                 'stab': 0,
                 'slash': 0,
                 'crush': 0,
                 'magic': 0,
-                'ranged': 0
+                'range': 0
+            },
+            'defense': {
+                'stab': 0,
+                'slash': 0,
+                'crush': 0,
+                'magic': 0,
+                'range': 0
             }
         },
         username: '',
         user_levels: {
-            'attack': 99,
-            'strength': 99,
-            'defense': 99,
-            'ranged': 99,
-            'magic': 99
+            'attack': 1,
+            'strength': 1,
+            'defense': 1,
+            'ranged': 1,
+            'magic': 1
         },
         // These attack speeds will be set to the starting loadout and will change when new weapons are bought
         attack_speed: {
@@ -45,10 +53,10 @@ let VueObj = new Vue({
             'magic': 2.4
         },
         task_styles: {
-            'melee': .5,
-            'range': .3,
-            'magic': .2,
-            'aoe': .125,
+            'melee': 0,
+            'range': 0,
+            'magic': 0,
+            'aoe': 0,
         },
         base_dps: {
             'melee': 0,
@@ -155,20 +163,141 @@ let VueObj = new Vue({
     created: function () {
         this.$http.get('./assets/json/tasks.json').then((data) => {
             this.task_list = data.body;
+            this.total_task_weight = 0;
+
+            for (let task in data.body) {
+                this.total_task_weight += data.body[task]['task-weight'];
+            }
         });
 
         //console.log(this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-seas-max-hit,', 'magic'));
 
-        this.$http.get('./assets/json/prices.json').then((data) => {
-            this.price_list = data.body;
-
-            this.getEquipment();
-        });
+        // this.$http.get('./assets/json/prices.json').then((data) => {
+        //     this.price_list = data.body;
+        //
+        //     this.getEquipment();
+        // });
 
         //this.getEquipment();
     },
 
     methods: {
+        calculateCombatStyle: function() {
+            let total_selected_count = 0;
+            let melee_selected = document.querySelectorAll('.melee-style');
+            let range_selected = document.querySelectorAll('.range-style');
+            let magic_selected = document.querySelectorAll('.magic-style');
+            let aoe_selected = document.querySelectorAll('.aoe-style');
+
+            let current_value = 0;
+
+            this.task_styles = {
+                'melee' : 0.0,
+                'range' : 0.0,
+                'magic' : 0.0,
+                'aoe': 0.0
+            };
+
+            for (let i = 0; i < melee_selected.length; i++) {
+                if (melee_selected[i].checked === true) {
+
+                }
+            }
+
+            for (let i = 0; i < range_selected.length; i++) {
+                if (range_selected[i].checked === true) {
+
+                }
+            }
+
+            for (let i = 0; i < magic_selected.length; i++) {
+                if (magic_selected[i].checked === true) {
+
+                }
+            }
+
+            for (let i = 0; i < aoe_selected.length; i++) {
+                if (aoe_selected[i].checked === true) {
+
+                }
+            }
+        },
+        selectMonster: function(monster) {
+            let deleted = false;
+            for (let task in this.task_list) {
+                if (typeof this.selected_mobs[task] !== 'undefined' && task === monster['monster-name']) {
+                    delete this.selected_mobs[task];
+                    deleted = true;
+                }
+            }
+
+            if (deleted === false) {
+                this.selected_mobs[monster['monster-name']] = monster;
+            }
+
+            this.calculateAverageMob();
+        },
+        calculateAverageMob: function() {
+            let average_defense = 0;
+            let current_weight = 0;
+
+            this.total_task_weight = 0;
+            for (let task in this.selected_mobs) {
+                current_weight += this.selected_mobs[task]['task-weight'];
+                this.total_task_weight += this.selected_mobs[task]['task-weight'];
+            }
+
+            this.average_mob = {
+                'combat': {
+                    'attack': 0,
+                    'strength': 0,
+                    'defense': 0,
+                    'magic': 0,
+                    'ranged': 0
+                },
+                'attack': {
+                    'stab': 0,
+                    'slash': 0,
+                    'crush': 0,
+                    'magic': 0,
+                    'range': 0
+                },
+                'defense': {
+                    'stab': 0,
+                    'slash': 0,
+                    'crush': 0,
+                    'magic': 0,
+                    'range': 0
+                }
+            };
+
+            for (let task in this.selected_mobs) {
+                this.average_mob = {
+                    'combat': {
+                        'attack': this.average_mob.combat.attack + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['attack']),
+                        'strength': this.average_mob.combat.strength + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['strength']),
+                        'defense': this.average_mob.combat.defense + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['defense']),
+                        'magic': this.average_mob.combat.magic + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['magic']),
+                        'range': this.average_mob.combat.range + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['range'])
+                    },
+                    'attack': {
+                        'stab': this.average_mob.attack.stab + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['attack']['stab']),
+                        'slash': this.average_mob.attack.slash +  Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['attack']['slash']),
+                        'crush': this.average_mob.attack.crush +  Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['attack']['crush']),
+                        'magic': this.average_mob.attack.magic +  Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['attack']['magic']),
+                        'range': this.average_mob.attack.range +  Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['attack']['range'])
+                    },
+                    'defense': {
+                        'stab': this.average_mob.defense.stab + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['stab']),
+                        'slash': this.average_mob.defense.slash + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['slash']),
+                        'crush': this.average_mob.defense.crush + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['crush']),
+                        'magic': this.average_mob.defense.magic + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['magic']),
+                        'range': this.average_mob.defense.range + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['range'])
+                    }
+                };
+                average_defense += Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['defense']);
+            }
+        },
         setUsername: function () {
             let username = this.username;
             this.$http.get(this.user_base_url + username, {
@@ -194,6 +323,8 @@ let VueObj = new Vue({
                 this.user_levels.hitpoints = parseInt(combat_data.hitpoints[1]);
                 this.user_levels.ranged = parseInt(combat_data.ranged[1]);
                 this.user_levels.magic = parseInt(combat_data.magic[1]);
+
+                this.step = 2;
             });
         },
         getEquipment: function () {
@@ -283,11 +414,11 @@ let VueObj = new Vue({
             let is_strength = false;
             let is_crush = false;
             let mob_defense_roll = {
-                'stab': (this.default_mob["defense-level"].stab + 9) * (64 + this.default_mob["defense-bonus"].stab),
-                'slash': (this.default_mob["defense-level"].slash + 9) * (64 + this.default_mob["defense-bonus"].slash),
-                'crush': (this.default_mob["defense-level"].crush + 9) * (64 + this.default_mob["defense-bonus"].crush),
-                'magic': (this.default_mob["defense-level"].magic + 9) * (64 + this.default_mob["defense-bonus"].magic),
-                'ranged': (this.default_mob["defense-level"].ranged + 9) * (64 + this.default_mob["defense-bonus"].ranged),
+                'stab': (this.average_mob["combat"].defense + 9) * (64 + this.average_mob["defense"].stab),
+                'slash': (this.average_mob["combat"].defense + 9) * (64 + this.average_mob["defense"].slash),
+                'crush': (this.average_mob["combat"].defense + 9) * (64 + this.average_mob["defense"].crush),
+                'magic': (this.average_mob["combat"].magic + 9) * (64 + this.average_mob["defense"].magic),
+                'ranged': (this.average_mob["combat"].range + 9) * (64 + this.average_mob["defense"].range),
             };
 
             if (style === 'melee') {
