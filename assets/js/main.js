@@ -35,6 +35,11 @@ let VueObj = new Vue({
                 'crush': 0,
                 'magic': 0,
                 'range': 0
+            },
+            "other": {
+                "strength": 0,
+                "range": 0,
+                "attack": 0
             }
         },
         username: '',
@@ -311,6 +316,11 @@ let VueObj = new Vue({
                     'crush': 0,
                     'magic': 0,
                     'range': 0
+                },
+                "other": {
+                    "strength": 0,
+                    "range": 0,
+                    "attack": 0
                 }
             };
 
@@ -336,6 +346,11 @@ let VueObj = new Vue({
                         'crush': this.average_mob.defense.crush + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['crush']),
                         'magic': this.average_mob.defense.magic + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['magic']),
                         'range': this.average_mob.defense.range + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['defense']['range'])
+                    },
+                    "other": {
+                        "strength": this.average_mob.other.strength + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['other']['strength']),
+                        "range": this.average_mob.other.range + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['other']['range']),
+                        "attack": this.average_mob.other.attack + Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['other']['attack'])
                     }
                 };
                 average_defense += Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['defense']);
@@ -432,6 +447,8 @@ let VueObj = new Vue({
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
                 };
 
+                let base_defense = this.calculateDamageTaken();
+
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
                     equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
@@ -480,7 +497,23 @@ let VueObj = new Vue({
                             equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
                         }
                     } else {
-                        equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
+                        if (equipment[key]['combat-style'] === 'melee') {
+                            let max_type = equipment[key]['stats']['defense']['slash'];
+                            let max_type_name = 'slash';
+
+                            for (let type in equipment[key]['stats']['defense']) {
+                                if (equipment[key]['stats']['defense'][type] > max_type) {
+                                    max_type = equipment[key]['stats']['defense'][type];
+                                    max_type_name = type;
+                                }
+                            }
+
+                            equipment[key]['damage-reduced'] = base_defense - this.calculateDamageTaken(max_type, max_type_name)
+                            equipment[key]['rank'] = (1000000 * ((equipment[key]['dps'] + equipment[key]['damage-reduced']) / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
+
+                        } else {
+                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
+                        }
                     }
                 }
 
@@ -517,6 +550,51 @@ let VueObj = new Vue({
             }
 
             return final_price;
+        },
+        calculateDamageTaken: function (defense_bonus = 0, style = null) {
+            let max_type = 0;
+            let max_type_name = 'crush';
+            let attack_speed = 2.4;
+            let accuracy = 0;
+            let max_hit = 0;
+            let strength = 0;
+            let effective_attack = 0;
+            let effective_strength = 0;
+            let mob_defense_roll = {
+                'stab': (this.user_levels.defense + 9) * (64 + defense_bonus),
+                'slash': (this.user_levels.defense + 9) * (64 + defense_bonus),
+                'crush': (this.user_levels.defense + 9) * (64 + defense_bonus),
+                'magic': (this.user_levels.magic + 9) * (64 + defense_bonus),
+                'range': (this.user_levels.range + 9) * (64 + defense_bonus),
+            };
+
+            strength = this.average_mob['other']['strength'];
+
+            for (let type in this.average_mob['attack']) {
+                if (this.average_mob['attack'][type] > max_type) {
+                    max_type = this.average_mob['attack'][type];
+                    max_type_name = type;
+                }
+            }
+
+            effective_attack = this.average_mob.combat.attack + 8;
+            effective_strength = this.average_mob.combat.strength + 8;
+
+
+            max_hit = Math.floor((0.5 + effective_strength * (64 + strength) / 640));
+
+            let max_attack_roll = Math.floor(effective_attack * (max_type + 64));
+            let max_mob_defense_roll = mob_defense_roll[max_type_name];
+            if (max_attack_roll > max_mob_defense_roll) {
+                accuracy = 1 - (max_mob_defense_roll + 2) / (2 * (max_attack_roll + 1))
+            } else {
+                accuracy = max_attack_roll / (2 * (max_mob_defense_roll + 1));
+            }
+            let average_damage = ((max_hit * (max_hit + 1) / 2)) / (max_hit + 1);
+            average_damage = average_damage * accuracy;
+
+
+            return average_damage / attack_speed;
         },
         calculateDPS: function (stats, tags, style) {
             let max_type = 0;

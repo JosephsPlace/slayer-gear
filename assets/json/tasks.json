@@ -539,6 +539,11 @@
         "crush": 20,
         "magic": 0,
         "range": 20
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     },
     "boss": {
@@ -562,6 +567,11 @@
         "crush": 50,
         "magic": 0,
         "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -590,6 +600,11 @@
         "crush": 0,
         "magic": 600,
         "range": 44
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -618,6 +633,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -646,6 +666,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -674,6 +699,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -702,6 +732,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -730,6 +765,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -758,6 +798,11 @@
         "crush": 0,
         "magic": 20,
         "range": 20
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -786,6 +831,11 @@
         "crush": 0,
         "magic": 130,
         "range": 300
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -814,6 +864,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -842,6 +897,11 @@
         "crush": 20,
         "magic": 0,
         "range": 15
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -870,6 +930,11 @@
         "crush": 30,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -898,6 +963,11 @@
         "crush": 70,
         "magic": 60,
         "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -926,6 +996,11 @@
         "crush": 100,
         "magic": 90,
         "range": 100
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -954,6 +1029,11 @@
         "crush": 70,
         "magic": 30,
         "range": 90
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -982,6 +1062,11 @@
         "crush": 70,
         "magic": 60,
         "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1010,6 +1095,11 @@
         "crush": 70,
         "magic": 30,
         "range": 90
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1038,6 +1128,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1066,6 +1161,11 @@
         "crush": 70,
         "magic": 30,
         "range": 90
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1094,6 +1194,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1122,6 +1227,11 @@
         "crush": 90,
         "magic": 80,
         "range": 140
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1150,6 +1260,11 @@
         "crush": 70,
         "magic": 60,
         "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1178,6 +1293,11 @@
         "crush": 70,
         "magic": 60,
         "range": 50
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1239,6 +1359,11 @@
         "crush": 20,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1267,6 +1392,11 @@
         "crush": 20,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
@@ -1295,6 +1425,11 @@
         "crush": 0,
         "magic": 0,
         "range": 0
+      },
+      "other": {
+        "strength": 0,
+        "range": 0,
+        "attack": 0
       }
     }
   },
