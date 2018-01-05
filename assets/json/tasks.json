@@ -235,7 +235,7 @@
   "Kalphite": {
     "monster-name": "Kalphite",
     "task-weight": 9,
-    "tags": "boss, boss-crush",
+    "tags": "boss, crush, boss-crush",
     "stats": {
       "combat": {
         "attack": 70,
@@ -736,7 +736,7 @@
   "Gargoyles": {
     "monster-name": "Gargoyles",
     "task-weight": 6,
-    "tags": "boss, boss-double-phase",
+    "tags": "boss, crush, boss-double-phase",
     "stats": {
       "combat": {
         "attack": 75,

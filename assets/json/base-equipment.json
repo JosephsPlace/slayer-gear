@@ -1,0 +1,641 @@
+{
+  "4587": {
+    "id": 4587,
+    "item-name": "Dragon Scimitar",
+    "item-slot": "main hand",
+    "combat-style": "melee",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 8,
+        "slash": 67,
+        "crush": -2,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 1,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 66,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "12954": {
+    "id": 12954,
+    "item-name": "Dragon Defender",
+    "item-slot": "off hand",
+    "combat-style": "melee",
+    "tags": "untradable,",
+    "stats": {
+      "attack": {
+        "stab": 25,
+        "slash": 24,
+        "crush": 23,
+        "magic": -3,
+        "range": -2
+      },
+      "defence": {
+        "stab": 25,
+        "slash": 24,
+        "crush": 23,
+        "magic": -3,
+        "range": -2
+      },
+      "other": {
+        "melee-str": 6,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "10551": {
+    "id": 10551,
+    "item-name": "Fighter Torso",
+    "item-slot": "chest",
+    "combat-style": "melee",
+    "tags": "untradable,",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -40,
+        "range": 0
+      },
+      "defence": {
+        "stab": 62,
+        "slash": 85,
+        "crush": 62,
+        "magic": -10,
+        "range": 67
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "1079": {
+    "id": 1079,
+    "item-name": "Rune Platelegs",
+    "item-slot": "legs",
+    "combat-style": "melee",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -21,
+        "range": 0
+      },
+      "defence": {
+        "stab": 51,
+        "slash": 49,
+        "crush": 47,
+        "magic": -4,
+        "range": 49
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "3105": {
+    "id": 3105,
+    "item-name": "Climbing Boots",
+    "item-slot": "boots",
+    "combat-style": "melee",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 2,
+        "crush": 2,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 2,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "7462": {
+    "id": 7462,
+    "item-name": "Barrows Gloves",
+    "item-slot": "hands",
+    "combat-style": "magic",
+    "tags": "untradable,",
+    "stats": {
+      "attack": {
+        "stab": 12,
+        "slash": 12,
+        "crush": 12,
+        "magic": 6,
+        "range": 12
+      },
+      "defence": {
+        "stab": 12,
+        "slash": 12,
+        "crush": 12,
+        "magic": 6,
+        "range": 12
+      },
+      "other": {
+        "melee-str": 12,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "1704": {
+    "id": 1704,
+    "item-name": "Amulet of Glory",
+    "item-slot": "neck",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 10,
+        "slash": 10,
+        "crush": 10,
+        "magic": 10,
+        "range": 10
+      },
+      "defence": {
+        "stab": 3,
+        "slash": 3,
+        "crush": 3,
+        "magic": 3,
+        "range": 3
+      },
+      "other": {
+        "melee-str": 6,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 3
+      }
+    }
+  },
+  "6570": {
+    "id": 6570,
+    "item-name": "Fire Cape",
+    "item-slot": "back",
+    "combat-style": "melee",
+    "tags": "untradable,",
+    "stats": {
+      "attack": {
+        "stab": 1,
+        "slash": 1,
+        "crush": 1,
+        "magic": 1,
+        "range": 1
+      },
+      "defence": {
+        "stab": 11,
+        "slash": 11,
+        "crush": 11,
+        "magic": 11,
+        "range": 11
+      },
+      "other": {
+        "melee-str": 4,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 2
+      }
+    }
+  },
+  "20235": {
+    "id": 20235,
+    "item-name": "Blessing",
+    "item-slot": "ammo",
+    "combat-style": "all",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
+  },
+  "9185": {
+    "id": 9185,
+    "item-name": "Rune Crossbow",
+    "item-slot": "main hand",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "speed" : 3.6,
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 90
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "13153": {
+    "id": 13153,
+    "item-name": "Book of Balance",
+    "item-slot": "off hand",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 4,
+        "slash": 4,
+        "crush": 4,
+        "magic": 4,
+        "range": 4
+      },
+      "defence": {
+        "stab": 4,
+        "slash": 4,
+        "crush": 4,
+        "magic": 4,
+        "range": 4
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 5
+      }
+    }
+  },
+  "12492": {
+    "id": 12492,
+    "item-name": "Blessed D'Hide Body",
+    "item-slot": "chest",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -15,
+        "range": 30
+      },
+      "defence": {
+        "stab": 55,
+        "slash": 47,
+        "crush": 60,
+        "magic": 50,
+        "range": 55
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
+  },
+  "12494": {
+    "id": 12494,
+    "item-name": "Blessed D'hide Chaps",
+    "item-slot": "legs",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -10,
+        "range": 17
+      },
+      "defence": {
+        "stab": 31,
+        "slash": 25,
+        "crush": 33,
+        "magic": 28,
+        "range": 31
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 1
+      }
+    }
+  },
+  "6328": {
+    "id": 6328,
+    "item-name": "Snakeskin Boots",
+    "item-slot": "boots",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -10,
+        "range": 3
+      },
+      "defence": {
+        "stab": 1,
+        "slash": 1,
+        "crush": 2,
+        "magic": 1,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "4091": {
+    "id": 4091,
+    "item-name": "Mystic Robe Top",
+    "item-slot": "chest",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 20,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "4093": {
+    "id": 4093,
+    "item-name": "Mystic Robe Bottom",
+    "item-slot": "legs",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "4097": {
+    "id": 4097,
+    "item-name": "Mystic Boots",
+    "item-slot": "boots",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 3,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 3,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "11907": {
+    "id": 11907,
+    "item-name": "Trident of the Seas",
+    "item-slot": "main hand",
+    "combat-style": "magic",
+    "tags": "trident-max-hit, trident-seas-max-hit,",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 15,
+        "range": 0
+      },
+      "defence": {
+        "stab": 2,
+        "slash": 3,
+        "crush": 1,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "20716": {
+    "id": 20716,
+    "item-name": "Tome of Fire",
+    "item-slot": "off hand",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 8,
+        "range": 0
+      },
+      "defence": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 8,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "4675": {
+    "id": 4675,
+    "item-name": "Ancient Staff",
+    "item-slot": "main hand",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 10,
+        "slash": -1,
+        "crush": 40,
+        "magic": 15,
+        "range": 0
+      },
+      "defence": {
+        "stab": 2,
+        "slash": 3,
+        "crush": 1,
+        "magic": 15,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 50,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": -1
+      }
+    }
+  },
+  "9676": {
+    "id": 9676,
+    "item-name": "Proselyte Cuisse",
+    "item-slot": "legs",
+    "combat-style": "prayer",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -21,
+        "range": -7
+      },
+      "defence": {
+        "stab": 33,
+        "slash": 31,
+        "crush": 29,
+        "magic": -4,
+        "range": 34
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 6
+      }
+    }
+  },
+  "9674": {
+    "id": 9674,
+    "item-name": "Proselyte Hauberk",
+    "item-slot": "chest",
+    "combat-style": "prayer",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": -30,
+        "range": -10
+      },
+      "defence": {
+        "stab": 46,
+        "slash": 44,
+        "crush": 38,
+        "magic": -6,
+        "range": 44
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 6
+      }
+    }
+  }
+}

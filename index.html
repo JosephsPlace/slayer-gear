@@ -14,34 +14,63 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <div id="app">
-        <form v-on:submit.prevent="setUsername">
-            <input type="text" id="username" v-model="username">
-            <button type="submit">Enter</button>
-        </form>
+<div id="app">
+    <form v-on:submit.prevent="setUsername">
+        <input type="text" id="username" v-model="username">
+        <button type="submit">Enter</button>
+    </form>
 
-        <div class="columns" v-if="step === 1" v-cloak>
-            <div class="column is-6">
-                <div @click="selectMonster(task)" v-for="task in task_list">
-                    <h2 style="display: inline-block">
-                       {{ task['monster-name'] }}
-                    </h2>
-                    <span v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'">
-                        <input :value="task['task-weight']" type="checkbox" class="melee-style" @click="calculateCombatStyle()" selected :id="'melee_style[' + task['monster-name'] + ']'"> <label @click="calculateCombatStyle()" :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
-                        <input :value="task['task-weight']" type="checkbox" class="range-style" :id="'range_style[' + task['monster-name'] + ']'"> <label :for="'range_style[' + task['monster-name'] + ']'">Range</label>
-                        <input :value="task['task-weight']" type="checkbox" class="magic-style" :id="'magic_style[' + task['monster-name'] + ']'"> <label :for="'magic_style[' + task['monster-name'] + ']'">Magic</label>
-                        <input :value="task['task-weight']" type="checkbox" class="aoe-style" :id="'aoe_style[' + task['monster-name'] + ']'"> <label :for="'aoe_style[' + task['monster-name'] + ']'">AOE</label>
+    <div class="columns" v-if="step > 0" v-cloak>
+        <div class="column is-6">
+            <div v-for="task in task_list">
+                <h2 @click="selectMonster(task)" style="display: inline-block">
+                    {{ task['monster-name'] }}
+                </h2>
+                <span v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'" @click="calculateCombatStyle()">
+                    <span v-if="checkCrush(selected_mobs[task['monster-name']])">
+                        <input :value="task['task-weight']" type="checkbox" class="crush-style"
+                               :id="'crush_style[' + task['monster-name'] + ']'" > <label
+                        :for="'crush_style[' + task['monster-name'] + ']'">Melee</label>
                     </span>
-                </div>
+                    <span v-else="">
+                         <input :value="task['task-weight']" type="checkbox" class="melee-style"
+                                :id="'melee_style[' + task['monster-name'] + ']'"> <label
+                            :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
+                    </span>
+                        <input :value="task['task-weight']" type="checkbox" class="range-style"
+                               :id="'range_style[' + task['monster-name'] + ']'"> <label
+                        :for="'range_style[' + task['monster-name'] + ']'">Range</label>
+                        <input :value="task['task-weight']" type="checkbox" class="magic-style"
+                               :id="'magic_style[' + task['monster-name'] + ']'"> <label
+                        :for="'magic_style[' + task['monster-name'] + ']'">Magic</label>
+                        <input :value="task['task-weight']" type="checkbox" class="aoe-style"
+                               :id="'aoe_style[' + task['monster-name'] + ']'"> <label
+                        :for="'aoe_style[' + task['monster-name'] + ']'">AOE</label>
+                    </span>
             </div>
-            <div class="column is-6">
-                {{ average_mob }}
+        </div>
+        <div class="column is-6">
+            <h1>Your Stats</h1>
+            {{ user_levels }}
+            <br/>
+            <h1>Average Enemy</h1>
+            {{ average_mob }}
+            <br/>
+            <h1>Combat Style Usage</h1>
+            {{ task_styles }}
+            <br/>
+            <button @click="calculateOrder()">Calculate Order</button>
+            <div v-if="step > 2">
+                <div v-for="item in equipment_list" v-if="item['rank'] !== 0">
+                    {{ item['item-name'] }}
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="./assets/js/vue.js"></script>
-    <script src="./assets/js/vue-resource.js"></script>
-    <script type="text/babel"  src="./assets/js/main.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./assets/js/vue.js"></script>
+<script src="./assets/js/vue-resource.js"></script>
+<script type="text/babel" src="./assets/js/main.js"></script>
 </body>

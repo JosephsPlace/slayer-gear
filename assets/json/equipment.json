@@ -4,7 +4,7 @@
     "item-name": "Saradomin Sword",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "tags": "all, strength",
+    "tags": "all, strength, 2-handed",
     "predecessor": "Dragon scimitar",
     "stats": {
       "speed": 2.4,
@@ -97,7 +97,7 @@
     "item-name": "Saradomin's Blessed Sword",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "tags": "all, strength, ss-charges",
+    "tags": "all, strength, ss-charges, 2-handed",
     "predecessor": "Staff of the Dead",
     "stats": {
       "speed": 2.4,
@@ -190,7 +190,7 @@
     "item-name": "Abyssal Bludgeon",
     "item-slot": "main hand",
     "combat-style": "melee",
-    "tags": "crush",
+    "tags": "crush, 2-handed",
     "predecessor": "Zamorak Hasta",
     "stats": {
       "speed": 2.4,
@@ -451,36 +451,6 @@
         "crush": 73,
         "magic": 2,
         "range": 52
-      },
-      "other": {
-        "melee-str": 0,
-        "range-str": 0,
-        "magic-str": 0,
-        "prayer": 3
-      }
-    }
-  },
-  "12817": {
-    "id": 12817,
-    "item-name": "Elysian spirit shield",
-    "item-slot": "off hand",
-    "combat-style": "melee",
-    "tags": "dks",
-    "predecessor": "Blessed Spirit Shield",
-    "stats": {
-      "attack": {
-        "stab": 0,
-        "slash": 0,
-        "crush": 0,
-        "magic": 0,
-        "range": 0
-      },
-      "defence": {
-        "stab": 63,
-        "slash": 65,
-        "crush": 75,
-        "magic": 2,
-        "range": 57
       },
       "other": {
         "melee-str": 0,

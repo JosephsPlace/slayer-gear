@@ -7,6 +7,8 @@ let VueObj = new Vue({
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
 
         step: 1,
+        base_equipment: [],
+        current_equipment: [],
         equipment_list: [],
         task_list: [],
         total_task_weight: 0,
@@ -18,7 +20,7 @@ let VueObj = new Vue({
                 'strength': 0,
                 'defense': 0,
                 'magic': 0,
-                'ranged': 0
+                'range': 0
             },
             'attack': {
                 'stab': 0,
@@ -37,11 +39,11 @@ let VueObj = new Vue({
         },
         username: '',
         user_levels: {
-            'attack': 1,
-            'strength': 1,
-            'defense': 1,
-            'ranged': 1,
-            'magic': 1
+            'attack': 99,
+            'strength': 99,
+            'defense': 99,
+            'range': 99,
+            'magic': 99
         },
         // These attack speeds will be set to the starting loadout and will change when new weapons are bought
         attack_speed: {
@@ -57,6 +59,7 @@ let VueObj = new Vue({
             'range': 0,
             'magic': 0,
             'aoe': 0,
+            'crush': 0
         },
         base_dps: {
             'melee': 0,
@@ -172,22 +175,41 @@ let VueObj = new Vue({
 
         //console.log(this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-seas-max-hit,', 'magic'));
 
-        // this.$http.get('./assets/json/prices.json').then((data) => {
-        //     this.price_list = data.body;
-        //
-        //     this.getEquipment();
-        // });
+        this.$http.get('./assets/json/prices.json').then((data) => {
+            this.price_list = data.body;
+        });
 
         //this.getEquipment();
     },
 
     methods: {
+        checkCrush: function(task) {
+            let tags_obj = task['tags'].split(",");
+            for (let tag in tags_obj) {
+                if (tags_obj[tag].trim() === 'crush') {
+                    return true;
+                }
+            }
+
+            return false;
+        },
+        calculateOrder: function () {
+            this.getBaseEquipment();
+            this.getEquipment();
+        },
         calculateCombatStyle: function() {
-            let total_selected_count = 0;
             let melee_selected = document.querySelectorAll('.melee-style');
+            let crush_selected = document.querySelectorAll('.crush-style');
             let range_selected = document.querySelectorAll('.range-style');
             let magic_selected = document.querySelectorAll('.magic-style');
             let aoe_selected = document.querySelectorAll('.aoe-style');
+
+            let total_selected_count = 0;
+            let melee_count = 0;
+            let range_count = 0;
+            let magic_count = 0;
+            let aoe_count = 0;
+            let crush_count = 0;
 
             let current_value = 0;
 
@@ -195,32 +217,53 @@ let VueObj = new Vue({
                 'melee' : 0.0,
                 'range' : 0.0,
                 'magic' : 0.0,
-                'aoe': 0.0
+                'aoe': 0.0,
+                'crush': 0.0
             };
 
-            for (let i = 0; i < melee_selected.length; i++) {
-                if (melee_selected[i].checked === true) {
+            for (let i = 0; i < crush_selected.length; i++) {
+                current_value = crush_selected[i].value;
+                if (crush_selected[i].checked === true) {
+                    melee_count += parseInt(current_value);
+                    crush_count += parseInt(current_value);
+                }
+            }
 
+            for (let i = 0; i < melee_selected.length; i++) {
+                current_value = melee_selected[i].value;
+                if (melee_selected[i].checked === true) {
+                    melee_count += parseInt(current_value);
                 }
             }
 
             for (let i = 0; i < range_selected.length; i++) {
+                current_value = range_selected[i].value;
                 if (range_selected[i].checked === true) {
-
+                    range_count += parseInt(current_value);
                 }
             }
 
             for (let i = 0; i < magic_selected.length; i++) {
+                current_value = magic_selected[i].value;
                 if (magic_selected[i].checked === true) {
-
+                    magic_count += parseInt(current_value);
                 }
             }
 
             for (let i = 0; i < aoe_selected.length; i++) {
+                current_value = aoe_selected[i].value;
                 if (aoe_selected[i].checked === true) {
-
+                    aoe_count += parseInt(current_value);
                 }
             }
+
+            this.task_styles = {
+                'melee' : melee_count / this.total_task_weight,
+                'range' : range_count / this.total_task_weight,
+                'magic' : magic_count / this.total_task_weight,
+                'aoe': aoe_count / this.total_task_weight,
+                'crush': crush_count / this.total_task_weight
+            };
         },
         selectMonster: function(monster) {
             let deleted = false;
@@ -253,7 +296,7 @@ let VueObj = new Vue({
                     'strength': 0,
                     'defense': 0,
                     'magic': 0,
-                    'ranged': 0
+                    'range': 0
                 },
                 'attack': {
                     'stab': 0,
@@ -313,7 +356,7 @@ let VueObj = new Vue({
                     "defense": all_user_data[2].split(","),
                     "strength": all_user_data[3].split(","),
                     "hitpoints": all_user_data[4].split(","),
-                    "ranged": all_user_data[5].split(","),
+                    "range": all_user_data[5].split(","),
                     "magic": all_user_data[7].split(","),
                 };
 
@@ -321,10 +364,61 @@ let VueObj = new Vue({
                 this.user_levels.defense = parseInt(combat_data.defense[1]);
                 this.user_levels.strength = parseInt(combat_data.strength[1]);
                 this.user_levels.hitpoints = parseInt(combat_data.hitpoints[1]);
-                this.user_levels.ranged = parseInt(combat_data.ranged[1]);
+                this.user_levels.range = parseInt(combat_data.range[1]);
                 this.user_levels.magic = parseInt(combat_data.magic[1]);
 
                 this.step = 2;
+            });
+        },
+        getBaseEquipment: function() {
+            this.$http.get('./assets/json/base-equipment.json').then((data) => {
+                let equipment = data.body;
+
+                let base_dps = {
+                    'melee': this.calculateDPS(this.base_dps_stats['melee'], 'base-dps', 'melee'),
+                    'range': this.calculateDPS(this.base_dps_stats['range'], 'base-dps', 'range'),
+                    'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
+                    'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
+                };
+
+                for (let key in equipment) {
+                    equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    if (typeof this.price_list[key]['price-data'] !== 'undefined' && this.price_list[key]['price-data'] !== null) {
+                        equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
+                    }
+
+                    if(equipment[key]['item-slot'] !== 'main hand') {
+                        if (equipment[key]['combat-style'] === 'melee') {
+                            equipment[key]['dps'] -= base_dps['melee'];
+                        }
+                        if (equipment[key]['combat-style'] === 'range') {
+                            equipment[key]['dps'] -= base_dps['range'];
+                        }
+                    }
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                        equipment[key]['dps'] -= base_dps['magic-trident'];
+                    }
+
+                    let tags_obj = [];
+                    let crush_check = false;
+                    if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                        tags_obj = equipment[key]['tags'].split(",");
+                        let aoe = false;
+                        for (let tag in tags_obj) {
+                            if (tags_obj[tag].trim() === 'aoe') {
+                                equipment[key]['dps'] -=  base_dps['magic-ancients'];
+                            }
+                        }
+                    }
+                }
+
+                this.base_equipment = equipment;
+                this.current_equipment = {
+                    'melee' : {
+                        'main-hand': equipment['4587']
+                    }
+                };
+                console.log(this.current_equipment);
             });
         },
         getEquipment: function () {
@@ -336,10 +430,11 @@ let VueObj = new Vue({
                     'range': this.calculateDPS(this.base_dps_stats['range'], 'base-dps', 'range'),
                     'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
-                }
+                };
 
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
 
                     if (isNaN(equipment[key]['dps'])) {
                         equipment[key]['dps'] = 0;
@@ -357,21 +452,36 @@ let VueObj = new Vue({
                         equipment[key]['dps'] -= base_dps['magic-trident'];
                     }
 
+                    let tags_obj = [];
+                    let crush_check = false;
                     if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
-                        let tags_obj = equipment[key]['tags'].split(",");
+                        tags_obj = equipment[key]['tags'].split(",");
                         let aoe = false;
                         for (let tag in tags_obj) {
-                            if (tags_obj[tag] === 'aoe') {
+                            if (tags_obj[tag].trim() === 'aoe') {
                                 equipment[key]['dps'] -=  base_dps['magic-ancients'];
                             } else {
                                 //equipment[key]['dps'] -=  base_dps['magic-trident'];
                             }
-                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + (this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
+                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * ((this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
                         }
-                    }
+                    } else if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'melee') {
+                        tags_obj = equipment[key]['tags'].split(",");
 
-                    equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
-                    equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (1 + this.task_styles[equipment[key]['combat-style']]);
+                        for (let tag in tags_obj) {
+                            if (tags_obj[tag].trim() === 'crush' && typeof equipment[key]['rank'] === 'undefined') {
+                                crush_check = true;
+                            }
+                        }
+
+                        if (crush_check === true) {
+                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * ((this.task_styles[equipment[key]['combat-style']] * this.task_styles['crush']));
+                        } else {
+                            equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
+                        }
+                    } else {
+                        equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
+                    }
                 }
 
                 let sortable_equipment = [];
@@ -386,12 +496,19 @@ let VueObj = new Vue({
                 sortable_equipment.reverse();
 
                 console.log(sortable_equipment);
+                this.equipment_list = sortable_equipment;
+                this.step = 3;
             });
         },
         getItemPrice: function (short_price) {
             let whole_price = short_price;
-            let last_letter = whole_price.slice(-1);
-            let final_price = whole_price.slice(0, -1);
+            let last_letter = '';
+            let final_price = '';
+
+            if (Number.isInteger(whole_price) === false) {
+                last_letter = whole_price.slice(-1);
+                final_price = whole_price.slice(0, -1);
+            }
 
             if (last_letter === 'm') {
                 final_price *= 1000000;
@@ -418,7 +535,7 @@ let VueObj = new Vue({
                 'slash': (this.average_mob["combat"].defense + 9) * (64 + this.average_mob["defense"].slash),
                 'crush': (this.average_mob["combat"].defense + 9) * (64 + this.average_mob["defense"].crush),
                 'magic': (this.average_mob["combat"].magic + 9) * (64 + this.average_mob["defense"].magic),
-                'ranged': (this.average_mob["combat"].range + 9) * (64 + this.average_mob["defense"].range),
+                'range': (this.average_mob["combat"].range + 9) * (64 + this.average_mob["defense"].range),
             };
 
             if (style === 'melee') {
@@ -459,10 +576,10 @@ let VueObj = new Vue({
                 strength = stats['other']['range-str'];
 
                 max_type = stats['attack']['range'];
-                max_type_name = 'ranged';
+                max_type_name = 'range';
 
-                effective_attack = this.user_levels.ranged + 8;
-                effective_strength = this.user_levels.ranged + 8;
+                effective_attack = this.user_levels.range + 8;
+                effective_strength = this.user_levels.range + 8;
 
                 max_hit = Math.floor(0.5 + effective_strength * (64 + strength) / 640);
             } else if (style === 'magic') {
