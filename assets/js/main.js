@@ -212,11 +212,13 @@ let VueObj = new Vue({
         },
         calculateChangePercentage: function() {
             this.dps_difference = '';
+
             let index = Object.keys(this.equipment_list)[0];
             let new_number = this.equipment_list[index]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
             let original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
 
             this.dps_difference = (((new_number - original_number) / original_number) * 100).toFixed(2);
+
 
             this.dmg_reduced_difference = 0;
             index = Object.keys(this.equipment_list)[0];
@@ -443,7 +445,7 @@ let VueObj = new Vue({
 
                 let base_dps = {
                     'melee': this.calculateDPS(this.base_dps_stats['melee'], 'base-dps', 'melee'),
-                    'range': this.calculateDPS(this.base_dps_stats['range'], 'base-dps', 'range'),
+                    'range': (this.calculateDPS(this.base_dps_stats['range'], 'base-dps', 'range')),
                     'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
                 };

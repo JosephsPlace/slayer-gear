@@ -297,7 +297,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
-      "speed": 3.6,
+      "speed": 1.2,
       "attack": {
         "stab": 4,
         "slash": 4,
@@ -327,6 +327,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
+      "speed": 1.2,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -356,6 +357,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
+      "speed": 1.2,
       "attack": {
         "stab": 0,
         "slash": 0,
@@ -414,6 +416,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
+      "speed": 1.2,
       "attack": {
         "stab": 0,
         "slash": 0,
