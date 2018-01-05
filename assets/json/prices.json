@@ -1819,6 +1819,22 @@
     "tags": "untradable,",
     "price-data": null
   },
+  "10499": {
+    "id": 10499,
+    "item-name": "Fire Cape",
+    "item-slot": "back",
+    "combat-style": "range",
+    "tags": "untradable,",
+    "price-data": null
+  },
+  "2412": {
+    "id": 2412,
+    "item-name": "Fire Cape",
+    "item-slot": "back",
+    "combat-style": "magic",
+    "tags": "untradable,",
+    "price-data": null
+  },
   "20235": {
     "id": 20235,
     "item-name": "Blessing",
@@ -2510,7 +2526,7 @@
     }
   },
   "811": {
-    "id": 12004,
+    "id": 811,
     "item-name": "Rune Dart",
     "price-data": {
       "item": {
@@ -2541,6 +2557,42 @@
         "day180": {
           "trend": "negative",
           "change": "-9.0%"
+        }
+      }
+    }
+  },
+  "1635": {
+    "id": 1635,
+    "item-name": "Gold Ring",
+    "price-data": {
+      "item": {
+        "icon": "https://secure.runescape.com/m=itemdb_oldschool/1515062683857_obj_sprite.gif?id=1635",
+        "icon_large": "https://secure.runescape.com/m=itemdb_oldschool/1515062683857_obj_big.gif?id=1635",
+        "id": 1635,
+        "type": "Default",
+        "typeIcon": "https://www.runescape.com/img/categories/Default",
+        "name": "Gold ring",
+        "description": "A valuable ring.",
+        "current": {
+          "trend": "neutral",
+          "price": 129
+        },
+        "today": {
+          "trend": "negative",
+          "price": "- 2"
+        },
+        "members": "false",
+        "day30": {
+          "trend": "negative",
+          "change": "-4.0%"
+        },
+        "day90": {
+          "trend": "negative",
+          "change": "-6.0%"
+        },
+        "day180": {
+          "trend": "positive",
+          "change": "+16.0%"
         }
       }
     }

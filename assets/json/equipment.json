@@ -2,7 +2,7 @@
   "11838": {
     "id": 11838,
     "item-name": "Saradomin Sword",
-    "item-slot": "main hand",
+    "item-slot": "main hand strength",
     "combat-style": "melee",
     "tags": "all, strength, 2-handed",
     "predecessor": "Dragon scimitar",
@@ -33,7 +33,7 @@
   "11791": {
     "id": 11791,
     "item-name": "Staff of the Dead",
-    "item-slot": "main hand",
+    "item-slot": "main hand strength",
     "combat-style": "melee",
     "tags": "all, strength",
     "predecessor": "Saradomin Sword",
@@ -64,7 +64,7 @@
   "13265": {
     "id": 13265,
     "item-name": "Abyssal Dagger",
-    "item-slot": "main hand",
+    "item-slot": "main hand strength",
     "combat-style": "melee",
     "tags": "all, strength",
     "predecessor": "Staff of the Dead",
@@ -95,7 +95,7 @@
   "12804": {
     "id": 12804,
     "item-name": "Saradomin's Blessed Sword",
-    "item-slot": "main hand",
+    "item-slot": "main hand strength",
     "combat-style": "melee",
     "tags": "all, strength, ss-charges, 2-handed",
     "predecessor": "Staff of the Dead",
@@ -210,6 +210,7 @@
       },
       "other": {
         "melee-str": 85,
+        "range-str": 0,
         "range-str": 0,
         "magic-str": 0,
         "prayer": 0

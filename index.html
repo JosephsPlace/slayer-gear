@@ -29,13 +29,19 @@
                 <span v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'" @click="calculateCombatStyle()">
                     <span v-if="checkCrush(selected_mobs[task['monster-name']])">
                         <input :value="task['task-weight']" type="checkbox" class="crush-style"
-                               :id="'crush_style[' + task['monster-name'] + ']'" > <label
-                        :for="'crush_style[' + task['monster-name'] + ']'">Melee</label>
+                               :id="'crush_style[' + task['monster-name'] + ']'"> <label
+                            :for="'crush_style[' + task['monster-name'] + ']'">Melee</label>
                     </span>
                     <span v-else="">
                          <input :value="task['task-weight']" type="checkbox" class="melee-style"
                                 :id="'melee_style[' + task['monster-name'] + ']'"> <label
                             :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
+
+                         <span class="prayer-style-container">
+                            <input :value="task['task-weight']" type="checkbox" class="prayer-style"
+                               :id="'prayer_style[' + task['monster-name'] + ']'"> <label
+                                 :for="'prayer_style[' + task['monster-name'] + ']'">Protection Prayers</label>
+                        </span>
                     </span>
                         <input :value="task['task-weight']" type="checkbox" class="range-style"
                                :id="'range_style[' + task['monster-name'] + ']'"> <label
@@ -61,9 +67,17 @@
             <br/>
             <button @click="calculateOrder()">Calculate Order</button>
             <div v-if="step > 2">
-                <div v-for="item in equipment_list" v-if="item['rank'] !== 0">
+                <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
                     {{ item['item-name'] }}
+                    <span v-if="key === 0">
+                        | {{ dps_difference }} % DPS Difference | {{ dmg_reduced_difference }} % Defense Difference
+                        <span @click="addItem(equipment_list[key])">Next</span>
+                    </span>
                 </div>
+
+                <pre>
+                    {{ current_equipment }}
+                </pre>
             </div>
         </div>
     </div>

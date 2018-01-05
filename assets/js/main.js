@@ -14,6 +14,8 @@ let VueObj = new Vue({
         total_task_weight: 0,
         price_list: [],
         selected_mobs: [],
+        dps_difference: [],
+        dmg_reduced_difference: [],
         average_mob: {
             'combat': {
                 'attack': 0,
@@ -64,7 +66,8 @@ let VueObj = new Vue({
             'range': 0,
             'magic': 0,
             'aoe': 0,
-            'crush': 0
+            'crush': 0,
+            'prayer': 0
         },
         base_dps: {
             'melee': 0,
@@ -72,6 +75,7 @@ let VueObj = new Vue({
             'magic-trident': 0,
             'magic-ancients': 0
         },
+        base_defense: 0,
         base_dps_stats: {
             'melee': {
                 "speed": 3,
@@ -188,6 +192,45 @@ let VueObj = new Vue({
     },
 
     methods: {
+        addItem: function (item) {
+            this.equipment_list[0] = [];
+            this.current_equipment[item['combat-style']][item['item-slot']] = item;
+            this.refreshEquipmentList();
+        },
+        refreshEquipmentList: function() {
+            let equipment = this.equipment_list;
+            let new_equipment = [];
+            for (let item in equipment) {
+
+                if (equipment[item].length !== 0) {
+                    new_equipment.push(equipment[item]);
+                }
+            }
+
+            this.equipment_list = new_equipment;
+            this.calculateChangePercentage();
+        },
+        calculateChangePercentage: function() {
+            this.dps_difference = '';
+            let index = Object.keys(this.equipment_list)[0];
+            let new_number = this.equipment_list[index]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
+            let original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
+
+            this.dps_difference = (((new_number - original_number) / original_number) * 100).toFixed(2);
+
+            this.dmg_reduced_difference = 0;
+            index = Object.keys(this.equipment_list)[0];
+
+            if (this.equipment_list[index]['combat-style'] === 'melee' && typeof this.equipment_list[index]['damage-reduced'] !== 'undefined') {
+                console.log(this.equipment_list[index]['damage-reduced']);
+                console.log(this.base_defense);
+
+                new_number = this.equipment_list[index]['damage-reduced'] + this.base_defense;
+                original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['damage-reduced'] + this.base_defense;
+
+                this.dmg_reduced_difference = (((new_number - original_number) / original_number) * 100).toFixed(2);
+            }
+        },
         checkCrush: function(task) {
             let tags_obj = task['tags'].split(",");
             for (let tag in tags_obj) {
@@ -205,6 +248,7 @@ let VueObj = new Vue({
         calculateCombatStyle: function() {
             let melee_selected = document.querySelectorAll('.melee-style');
             let crush_selected = document.querySelectorAll('.crush-style');
+            let prayer_selected = document.querySelectorAll('.prayer-style');
             let range_selected = document.querySelectorAll('.range-style');
             let magic_selected = document.querySelectorAll('.magic-style');
             let aoe_selected = document.querySelectorAll('.aoe-style');
@@ -215,6 +259,7 @@ let VueObj = new Vue({
             let magic_count = 0;
             let aoe_count = 0;
             let crush_count = 0;
+            let prayer_count = 0;
 
             let current_value = 0;
 
@@ -231,6 +276,9 @@ let VueObj = new Vue({
                 if (crush_selected[i].checked === true) {
                     melee_count += parseInt(current_value);
                     crush_count += parseInt(current_value);
+                    if (prayer_selected[i].checked === true) {
+                        prayer_count += parseInt(current_value);
+                    }
                 }
             }
 
@@ -238,6 +286,9 @@ let VueObj = new Vue({
                 current_value = melee_selected[i].value;
                 if (melee_selected[i].checked === true) {
                     melee_count += parseInt(current_value);
+                    if (prayer_selected[i].checked === true) {
+                        prayer_count += parseInt(current_value);
+                    }
                 }
             }
 
@@ -267,7 +318,8 @@ let VueObj = new Vue({
                 'range' : range_count / this.total_task_weight,
                 'magic' : magic_count / this.total_task_weight,
                 'aoe': aoe_count / this.total_task_weight,
-                'crush': crush_count / this.total_task_weight
+                'crush': crush_count / this.total_task_weight,
+                'prayer': prayer_count / this.total_task_weight
             };
         },
         selectMonster: function(monster) {
@@ -395,6 +447,10 @@ let VueObj = new Vue({
                     'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
                 };
+                this.base_dps = base_dps;
+
+                let base_defense = this.calculateDamageTaken();
+                this.base_defense = base_defense;
 
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
@@ -425,12 +481,61 @@ let VueObj = new Vue({
                             }
                         }
                     }
+                    if (equipment[key]['combat-style'] === 'melee') {
+                        let max_type = equipment[key]['stats']['defense']['slash'];
+                        let max_type_name = 'slash';
+
+                        for (let type in equipment[key]['stats']['defense']) {
+                            if (equipment[key]['stats']['defense'][type] > max_type) {
+                                max_type = equipment[key]['stats']['defense'][type];
+                                max_type_name = type;
+                            }
+                        }
+                        let damage_reduced = base_defense - this.calculateDamageTaken(max_type, max_type_name)
+                        equipment[key]['damage-reduced'] = (damage_reduced) * (1 - this.task_styles.prayer);
+                    }
                 }
 
                 this.base_equipment = equipment;
                 this.current_equipment = {
                     'melee' : {
-                        'main-hand': equipment['4587']
+                        'main hand': equipment['4587'],
+                        'main hand strength': equipment['4587'],
+                        'off hand': equipment['12954'],
+                        'chest': equipment['10551'],
+                        'legs': equipment['1079'],
+                        'boots': equipment['3105'],
+                        'hands': equipment['7462'],
+                        'back': equipment['6570'],
+                        'ammo': equipment['20235'],
+                        'neck':  equipment['1704'],
+                        'ring': equipment['1635'],
+                    },
+                    'prayer': {
+                        'chest': equipment['9674'],
+                        'legs': equipment['9676']
+                    },
+                    'range': {
+                        'main hand': equipment['9185'],
+                        'off hand': equipment['13153'],
+                        'chest': equipment['12492'],
+                        'legs': equipment['12494'],
+                        'boots': equipment['6328'],
+                        'hands': equipment['7462'],
+                        'back': equipment['10499'],
+                        'neck':  equipment['1704'],
+                        'ring': equipment['1635'],
+                    },
+                    'magic': {
+                        'main hand': equipment['11907'],
+                        'off hand': equipment['20716'],
+                        'chest': equipment['4091'],
+                        'legs': equipment['4093'],
+                        'boots': equipment['4097'],
+                        'hands': equipment['7462'],
+                        'back': equipment['2412'],
+                        'neck':  equipment['1704'],
+                        'ring': equipment['1635'],
                     }
                 };
                 console.log(this.current_equipment);
@@ -446,8 +551,10 @@ let VueObj = new Vue({
                     'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
                 };
+                this.base_dps = base_dps;
 
                 let base_defense = this.calculateDamageTaken();
+                this.base_defense = base_defense;
 
                 for (let key in equipment) {
                     equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
@@ -471,6 +578,8 @@ let VueObj = new Vue({
 
                     let tags_obj = [];
                     let crush_check = false;
+                    let two_hand_check = false;
+
                     if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
                         tags_obj = equipment[key]['tags'].split(",");
                         let aoe = false;
@@ -482,13 +591,20 @@ let VueObj = new Vue({
                             }
                             equipment[key]['rank'] = (1000000 * (equipment[key]['dps'] / equipment[key]['price'])) * ((this.task_styles[equipment[key]['combat-style']] * this.task_styles['aoe']));
                         }
-                    } else if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'melee') {
+                    } else if((equipment[key]['item-slot'] === 'main hand' || equipment[key]['item-slot'] === 'main hand strength' ) && equipment[key]['combat-style'] === 'melee') {
                         tags_obj = equipment[key]['tags'].split(",");
 
                         for (let tag in tags_obj) {
                             if (tags_obj[tag].trim() === 'crush' && typeof equipment[key]['rank'] === 'undefined') {
                                 crush_check = true;
                             }
+                            if (tags_obj[tag].trim() === '2-handed') {
+                                two_hand_check = true;
+                            }
+                        }
+
+                        if (two_hand_check === false) {
+                            equipment[key]['dps'] += this.current_equipment['melee']['off hand']['dps'];
                         }
 
                         if (crush_check === true) {
@@ -507,8 +623,8 @@ let VueObj = new Vue({
                                     max_type_name = type;
                                 }
                             }
-
-                            equipment[key]['damage-reduced'] = base_defense - this.calculateDamageTaken(max_type, max_type_name)
+                            let damage_reduced =  base_defense - this.calculateDamageTaken(max_type, max_type_name)
+                            equipment[key]['damage-reduced'] = (damage_reduced) * (1 - this.task_styles.prayer);
                             equipment[key]['rank'] = (1000000 * ((equipment[key]['dps'] + equipment[key]['damage-reduced']) / equipment[key]['price'])) * (this.task_styles[equipment[key]['combat-style']]);
 
                         } else {
@@ -528,9 +644,9 @@ let VueObj = new Vue({
 
                 sortable_equipment.reverse();
 
-                console.log(sortable_equipment);
                 this.equipment_list = sortable_equipment;
                 this.step = 3;
+                this.calculateChangePercentage();
             });
         },
         getItemPrice: function (short_price) {

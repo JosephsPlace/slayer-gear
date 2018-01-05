@@ -1,3 +1,12 @@
 [v-cloak] {
     display: none
 }
+
+.prayer-style-container {
+    display: none;
+}
+
+.crush-style:checked .prayer-style-container,
+.melee-style:checked + label + .prayer-style-container {
+    display: inline-block;
+}

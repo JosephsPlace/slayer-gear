@@ -297,6 +297,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
+      "speed": 3.6,
       "attack": {
         "stab": 4,
         "slash": 4,
@@ -396,6 +397,35 @@
         "slash": 1,
         "crush": 2,
         "magic": 1,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
+  "10499": {
+    "id": 10499,
+    "item-name": "Ava's accumulator",
+    "item-slot": "back",
+    "combat-style": "range",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 4
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 1,
+        "crush": 0,
+        "magic": 4,
         "range": 0
       },
       "other": {
@@ -522,6 +552,35 @@
       }
     }
   },
+  "2412": {
+    "id": 2412,
+    "item-name": "God Cape",
+    "item-slot": "back",
+    "combat-style": "magic",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 10,
+        "range": 0
+      },
+      "defense": {
+        "stab": 1,
+        "slash": 1,
+        "crush": 2,
+        "magic": 10,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
+      }
+    }
+  },
   "20716": {
     "id": 20716,
     "item-name": "Tome of Fire",
@@ -635,6 +694,35 @@
         "range-str": 0,
         "magic-str": 0,
         "prayer": 6
+      }
+    }
+  },
+  "1635": {
+    "id": 9674,
+    "item-name": "Gold Ring",
+    "item-slot": "ring",
+    "combat-style": "melee",
+    "tags": "",
+    "stats": {
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "range": 0
+      },
+      "other": {
+        "melee-str": 0,
+        "range-str": 0,
+        "magic-str": 0,
+        "prayer": 0
       }
     }
   }
