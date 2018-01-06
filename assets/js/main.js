@@ -1,3 +1,7 @@
+Vue.filter('round', function (value) {
+    return Number((value).toFixed(2))
+})
+
 let VueObj = new Vue({
     el: "#app",
     data: {
@@ -196,6 +200,17 @@ let VueObj = new Vue({
     },
 
     methods: {
+        checkDisabled: function (step) {
+            if (step === 1) {
+                this.disabled.step_one = false;
+
+                for (let level in this.user_levels) {
+                    if (this.user_levels[level] === '') {
+                        this.disabled.step_one = true;
+                    }
+                }
+            }
+        },
         checkLevels: function () {
             this.disabled.step_one = false;
 
@@ -206,7 +221,7 @@ let VueObj = new Vue({
             }
         },
         checkActive: function (task) {
-            if (typeof task!== 'undefined') {
+            if (typeof task !== 'undefined') {
                 return 'active-task';
             }
 
@@ -358,11 +373,10 @@ let VueObj = new Vue({
             }
 
             this.disabled.step_two = this.isEmpty(this.selected_mobs);
-
             this.calculateAverageMob();
         },
         isEmpty: function (obj) {
-            for(var key in obj) {
+            for(let key in obj) {
                 if(obj.hasOwnProperty(key))
                     return false;
             }

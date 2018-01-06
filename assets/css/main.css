@@ -45,6 +45,16 @@ input:focus {
     color: #b5b5b5;
 }
 
+h2.title {
+    font-size: 1.5rem;
+}
+
+.subtitle strong,
+.title strong {
+    color: inherit;
+    font-weight: 700;
+}
+
 .select-tasks .is-label,
 .enter-stats .is-label {
     background: #343b41;
@@ -145,7 +155,7 @@ input:focus {
 }
 
 .active-task .task-options input:checked + label {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .active-task .task-options input:checked {

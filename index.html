@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="./assets/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css?v=1.001">
+    <link rel="stylesheet" href="./assets/css/main.css?v=0.002">
 </head>
 <body>
 <div id="app">
@@ -136,6 +136,14 @@
                             </div>
                         </div>
 
+                        <h2 class="title has-text-centered">
+                            Your average enemy has <strong>{{ average_mob.combat.attack }}</strong> attack, <strong>{{ average_mob.combat.strength }}</strong> strength, <strong>{{ average_mob.combat.defense }}</strong> defense, <strong>{{ average_mob.combat.range }}</strong> range, and <strong>{{ average_mob.combat.magic }}</strong> magic.
+                        </h2>
+                        <h2 class="subtitle has-text-centered">
+                            You use melee <strong>{{ task_styles.melee * 100 | round }}%</strong> of the time, range <strong>{{ task_styles.range * 100 | round }}%</strong> of the time, and magic <strong>{{ task_styles.magic * 100 | round }}%</strong> of the time.
+                        </h2>
+                        <br/>
+
                         <div class="columns">
                             <div class="column is-12">
                                 <button @click="calculateOrder()" class="button is-primary" type="submit"
@@ -148,23 +156,23 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="column is-6">
-        <div v-if="step > 2" v-cloak="">
-            <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
-                {{ item['item-name'] }}
-                <span v-if="key === 0">
+        <div v-cloak>
+            <div class="hero-body" v-if="step === 3" v-cloak>
+                <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
+                    {{ item['item-name'] }}
+                    <span v-if="key === 0">
                         | {{ dps_difference }} % DPS Difference | {{ dmg_reduced_difference }} % Defense Difference
                         <span @click="addItem(equipment_list[key])">Next</span>
                     </span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="./assets/js/vue.js"></script>
 <script src="./assets/js/vue-resource.js"></script>
-<script type="text/babel" src="./assets/js/main.js?v=1.001"></script>
+<script type="text/babel" src="./assets/js/main.js?v=0.002"></script>
 </body>
