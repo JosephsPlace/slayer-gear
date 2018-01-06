@@ -11,73 +11,153 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./assets/css/bulma.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css?v=1.001">
 </head>
 <body>
 <div id="app">
-    <form v-on:submit.prevent="setUsername">
-        <input type="text" id="username" v-model="username">
-        <button type="submit">Enter</button>
-    </form>
+    <section class="hero is-fullheight">
+        <div class="hero-body" v-if="step === 1">
+            <div class="container">
+                <h1 class="has-text-centered is-white title">Enter your stats</h1>
 
-    <div class="columns" v-if="step > 0" v-cloak>
-        <div class="column is-6">
-            <div v-for="task in task_list">
-                <h2 @click="selectMonster(task)" style="display: inline-block">
-                    {{ task['monster-name'] }}
-                </h2>
-                <span v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'" @click="calculateCombatStyle()">
-                    <span v-if="checkCrush(selected_mobs[task['monster-name']])">
-                        <input :value="task['task-weight']" type="checkbox" class="crush-style"
-                               :id="'crush_style[' + task['monster-name'] + ']'"> <label
-                            :for="'crush_style[' + task['monster-name'] + ']'">Melee</label>
-                    </span>
-                    <span v-else="">
-                         <input :value="task['task-weight']" type="checkbox" class="melee-style"
-                                :id="'melee_style[' + task['monster-name'] + ']'"> <label
-                            :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
+                <div class="enter-stats">
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <a class="button is-static is-label">
+                                Attack
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" min="1" max="99" type="number" @keyup="checkLevels()"
+                                   v-model="user_levels.attack">
+                        </p>
+                    </div>
 
-                         <span class="prayer-style-container">
-                            <input :value="task['task-weight']" type="checkbox" class="prayer-style"
-                               :id="'prayer_style[' + task['monster-name'] + ']'"> <label
-                                 :for="'prayer_style[' + task['monster-name'] + ']'">Protection Prayers</label>
-                        </span>
-                    </span>
-                        <input :value="task['task-weight']" type="checkbox" class="range-style"
-                               :id="'range_style[' + task['monster-name'] + ']'"> <label
-                        :for="'range_style[' + task['monster-name'] + ']'">Range</label>
-                        <input :value="task['task-weight']" type="checkbox" class="magic-style"
-                               :id="'magic_style[' + task['monster-name'] + ']'"> <label
-                        :for="'magic_style[' + task['monster-name'] + ']'">Magic</label>
-                        <input :value="task['task-weight']" type="checkbox" class="aoe-style"
-                               :id="'aoe_style[' + task['monster-name'] + ']'"> <label
-                        :for="'aoe_style[' + task['monster-name'] + ']'">AOE</label>
-                    </span>
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <a class="button is-static is-label">
+                                Strength
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" min="1" max="99" type="number" @keyup="checkLevels()" v-model="user_levels.strength">
+                        </p>
+                    </div>
+
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <a class="button is-static is-label">
+                                Defense
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" min="1" max="99" type="number" @keyup="checkLevels()" v-model="user_levels.defense">
+                        </p>
+                    </div>
+
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <a class="button is-static is-label">
+                                Range
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" min="1" max="99" type="number" @keyup="checkLevels()" v-model="user_levels.range">
+                        </p>
+                    </div>
+
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <a class="button is-static is-label">
+                                Magic
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" min="1" max="99" type="number" @keyup="checkLevels()" v-model="user_levels.magic">
+                        </p>
+                    </div>
+                </div>
+
+                <button @click="setStats()" class="button is-primary" type="submit"
+                        :disabled="disabled.step_one == true">Continue
+                </button>
             </div>
         </div>
-        <div class="column is-6">
-            <h1>Your Stats</h1>
-            {{ user_levels }}
-            <br/>
-            <h1>Average Enemy</h1>
-            {{ average_mob }}
-            <br/>
-            <h1>Combat Style Usage</h1>
-            {{ task_styles }}
-            <br/>
-            <button @click="calculateOrder()">Calculate Order</button>
-            <div v-if="step > 2">
-                <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
-                    {{ item['item-name'] }}
-                    <span v-if="key === 0">
+
+        <div v-cloak>
+            <div class="hero-body" v-if="step === 2" v-cloak>
+                <div class="container-fluid">
+                    <h1 class="has-text-centered is-white title">Choose the slayer tasks you do</h1>
+                    <h1 class="has-text-centered is-white subtitle">Choose lots</h1>
+
+                    <div class="">
+                        <div class="columns is-multiline select-tasks">
+                            <div v-for="task in task_list" :class="'column is-4-widescreen is-6-desktop is-12-mobile ' + checkActive(selected_mobs[task['monster-name']])">
+                                <div class="field has-addons has-addons-centered columns task-container">
+                                    <p class="control column is-5 is-label-container" @click="selectMonster(task)">
+                                        <a class="button is-static is-label" >
+                                            {{ task['monster-name'] }}
+                                        </a>
+                                    </p>
+                                    <p class="control column is-7 task-options" v-if="typeof selected_mobs[task['monster-name']] !== 'undefined'">
+                                        <span  @click="calculateCombatStyle()">
+                                            <span v-if="checkCrush(selected_mobs[task['monster-name']])">
+                                                <input :value="task['task-weight']" type="checkbox" class="crush-style"
+                                                       :id="'crush_style[' + task['monster-name'] + ']'"> <label
+                                                    :for="'crush_style[' + task['monster-name'] + ']'">Melee</label>
+                                                <span class="prayer-style-container">
+                                                    <input :value="task['task-weight']" type="checkbox" class="prayer-style"
+                                                           :id="'prayer_style[' + task['monster-name'] + ']'"> <label
+                                                          :for="'prayer_style[' + task['monster-name'] + ']'">Protection Prayers</label>
+                                                </span>
+                                            </span>
+                                            <span v-else="">
+                                                 <input :value="task['task-weight']" type="checkbox" class="melee-style"
+                                                        :id="'melee_style[' + task['monster-name'] + ']'"> <label
+                                                    :for="'melee_style[' + task['monster-name'] + ']'">Melee</label>
+                                                 <span class="prayer-style-container">
+                                                    <input :value="task['task-weight']" type="checkbox" class="prayer-style"
+                                                           :id="'prayer_style[' + task['monster-name'] + ']'"> <label
+                                                         :for="'prayer_style[' + task['monster-name'] + ']'">Protection Prayers</label>
+                                                </span>
+                                            </span>
+                                            <input :value="task['task-weight']" type="checkbox" class="range-style"
+                                                   :id="'range_style[' + task['monster-name'] + ']'"> <label :for="'range_style[' + task['monster-name'] + ']'">Range</label>
+                                            <input :value="task['task-weight']" type="checkbox" class="magic-style"
+                                                   :id="'magic_style[' + task['monster-name'] + ']'"> <label :for="'magic_style[' + task['monster-name'] + ']'">Magic</label>
+                                            <span class="aoe-style-container">
+                                                <input :value="task['task-weight']" type="checkbox" class="aoe-style"
+                                                       :id="'aoe_style[' + task['monster-name'] + ']'"> <label :for="'aoe_style[' + task['monster-name'] + ']'">AOE</label>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-12">
+                                <button @click="calculateOrder()" class="button is-primary" type="submit"
+                                        :disabled="disabled.step_two === true">Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="column is-6">
+        <div v-if="step > 2" v-cloak="">
+            <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
+                {{ item['item-name'] }}
+                <span v-if="key === 0">
                         | {{ dps_difference }} % DPS Difference | {{ dmg_reduced_difference }} % Defense Difference
                         <span @click="addItem(equipment_list[key])">Next</span>
                     </span>
-                </div>
-
-                <pre>
-                    {{ current_equipment }}
-                </pre>
             </div>
         </div>
     </div>
@@ -86,5 +166,5 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="./assets/js/vue.js"></script>
 <script src="./assets/js/vue-resource.js"></script>
-<script type="text/babel" src="./assets/js/main.js"></script>
+<script type="text/babel" src="./assets/js/main.js?v=1.001"></script>
 </body>

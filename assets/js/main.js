@@ -7,6 +7,10 @@ let VueObj = new Vue({
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
 
         step: 1,
+        disabled: {
+            step_one: false,
+            step_two: true
+        },
         base_equipment: [],
         current_equipment: [],
         equipment_list: [],
@@ -192,6 +196,22 @@ let VueObj = new Vue({
     },
 
     methods: {
+        checkLevels: function () {
+            this.disabled.step_one = false;
+
+            for (let level in this.user_levels) {
+                if (this.user_levels[level] === '') {
+                    this.disabled.step_one = true;
+                }
+            }
+        },
+        checkActive: function (task) {
+            if (typeof task!== 'undefined') {
+                return 'active-task';
+            }
+
+            return '';
+        },
         addItem: function (item) {
             this.equipment_list[0] = [];
             this.current_equipment[item['combat-style']][item['item-slot']] = item;
@@ -337,7 +357,16 @@ let VueObj = new Vue({
                 this.selected_mobs[monster['monster-name']] = monster;
             }
 
+            this.disabled.step_two = this.isEmpty(this.selected_mobs);
+
             this.calculateAverageMob();
+        },
+        isEmpty: function (obj) {
+            for(var key in obj) {
+                if(obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
         },
         calculateAverageMob: function() {
             let average_defense = 0;
@@ -409,6 +438,9 @@ let VueObj = new Vue({
                 };
                 average_defense += Math.round((this.selected_mobs[task]['task-weight'] / current_weight) * this.selected_mobs[task]['stats']['combat']['defense']);
             }
+        },
+        setStats: function() {
+           this.step = 2;
         },
         setUsername: function () {
             let username = this.username;
