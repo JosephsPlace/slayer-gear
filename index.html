@@ -12,10 +12,30 @@
 
     <link rel="stylesheet" href="./assets/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css?v=0.004">
+    <link rel="stylesheet" href="./assets/css/main.css?v=0.005">
 </head>
 <body>
 <div id="app">
+    <nav class="navbar is-dark is-fixed-top is-transparent">
+        <div class="breadcrumb navbar-start" v-cloak>
+            <ul>
+                <li><a href="/" target="_blank">Gearing for Slayer</a></li>
+                <li :class="step === 1 ? 'is-active' : ''" @click="step = 1" v-if="step > 0"><a>Stats</a></li>
+                <li :class="step === 2 ? 'is-active' : ''" @click="step = 2" v-if="step > 1"><a>Task Selection</a></li>
+                <li :class="step === 3 ? 'is-active' : ''" @click="step = 3" v-if="step > 2"><a>Buy Order</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="/" target="_blank">
+                About this Site
+            </a>
+            <a class="navbar-item" href="/" target="_blank">
+                Upcoming Features
+            </a>
+        </div>
+    </nav>
+
     <section class="hero is-fullheight">
         <div class="hero-body" v-if="step === 1">
             <div class="container is-fluid">
@@ -85,7 +105,7 @@
             </div>
         </div>
 
-        <div v-if="step === 2" v-cloak>
+        <div v-if="step === 2" style="padding-top: 50px;" v-cloak>
             <div class="hero-body">
                 <div class="container is-fluid">
                     <h1 class="has-text-centered is-white title">Choose the slayer tasks you do</h1>
@@ -158,7 +178,7 @@
         </div>
 
         <div v-cloak>
-            <div class="hero-body" v-if="step === 3" v-cloak>
+            <div class="hero-body" v-if="step === 3"  style="padding-top: 100px;" v-cloak>
                 <div class="container is-fluid">
                     <div class="columns is-multiline">
                         <div class="column is-4 is-12-mobile item-container">
@@ -307,5 +327,5 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="./assets/js/vue.js"></script>
 <script src="./assets/js/vue-resource.js"></script>
-<script type="text/babel" src="./assets/js/main.js?v=0.003"></script>
+<script type="text/babel" src="./assets/js/main.js?v=0.005"></script>
 </body>
