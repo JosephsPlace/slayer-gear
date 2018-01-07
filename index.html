@@ -187,6 +187,9 @@
                                 <div v-if="key === 0" class="next-item">
                                     <div class="item-title">{{ item['item-name'] }}</div>
 
+                                    <span class="meta-info">
+                                        <span class="tag is-warning">{{ item['price'] | price }}</span> GP
+                                    </span>
                                     <span v-if="dps_difference > 0" class="meta-info">
                                         <span class="tag is-success">{{ dps_difference }}% <i class="fa fa-caret-up" aria-hidden="true"></i></span> DPS
                                     </span>
@@ -260,9 +263,9 @@
                                     </tr>
                                     <tr>
                                         <th>Neck</th>
-                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
-                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
-                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.melee['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['neck']['item-name'] }}</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -351,6 +354,14 @@
                             Updates
                         </p>
                         <ul class="menu-list">
+                            <li>
+                                <a>Add in 'Cost per shot' calculations for items with charges</a>
+                                <ul>
+                                    <li><a>Saradomin's Blessed Sword</a></li>
+                                    <li><a>Toxic Blowpipe</a></li>
+                                    <li><a>Both Tridents</a></li>
+                                </ul>
+                            </li>
                             <li><a>Calculate all Spiritual Creatures as one task</a></li>
                             <li>
                                 <a>Add special conditions for monsters weak to stab</a>

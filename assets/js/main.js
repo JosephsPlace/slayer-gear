@@ -1,6 +1,10 @@
 Vue.filter('round', function (value) {
     return Number((value).toFixed(2))
-})
+});
+
+Vue.filter('price', function (value) {
+    return value.toLocaleString();
+});
 
 let VueObj = new Vue({
     el: "#app",
@@ -549,7 +553,6 @@ let VueObj = new Vue({
                     'melee' : {
                         'main hand': equipment['4587'],
                         'main hand strength': equipment['4587'],
-                        'main hand strength': equipment['4587'],
                         'off hand': equipment['12954'],
                         'chest': equipment['10551'],
                         'legs': equipment['1079'],
@@ -559,9 +562,6 @@ let VueObj = new Vue({
                         'ammo': equipment['20235'],
                         'neck':  equipment['1704'],
                         'ring': equipment['1635'],
-                    },
-                    'all': {
-                        'neck':  equipment['1704'],
                     },
                     'prayer': {
                         'chest': equipment['9674'],
