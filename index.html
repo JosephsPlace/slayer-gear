@@ -19,7 +19,7 @@
     <nav class="navbar is-dark is-fixed-top is-transparent">
         <div class="breadcrumb navbar-start" v-cloak>
             <ul>
-                <li><a href="/" target="_blank">Gearing for Slayer</a></li>
+                <li><a href="/">Gearing for Slayer</a></li>
                 <li :class="step === 1 ? 'is-active' : ''" @click="step = 1" v-if="step > 0"><a>Stats</a></li>
                 <li :class="step === 2 ? 'is-active' : ''" @click="step = 2" v-if="step > 1"><a>Task Selection</a></li>
                 <li :class="step === 3 ? 'is-active' : ''" @click="step = 3" v-if="step > 2"><a>Buy Order</a></li>
@@ -260,9 +260,9 @@
                                     </tr>
                                     <tr>
                                         <th>Neck</th>
-                                        <td>{{ current_equipment.melee['neck']['item-name'] }}</td>
-                                        <td>{{ current_equipment.range['neck']['item-name'] }}</td>
-                                        <td>{{ current_equipment.magic['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.all['neck']['item-name'] }}</td>
                                         <td></td>
                                     </tr>
                                     <tr>

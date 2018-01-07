@@ -191,13 +191,9 @@ let VueObj = new Vue({
             }
         });
 
-        //console.log(this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-seas-max-hit,', 'magic'));
-
         this.$http.get('./assets/json/prices.json').then((data) => {
             this.price_list = data.body;
         });
-
-        //this.getEquipment();
     },
 
     methods: {
@@ -230,7 +226,13 @@ let VueObj = new Vue({
         },
         addItem: function (item) {
             this.equipment_list[0] = [];
-            this.current_equipment[item['combat-style']][item['item-slot']] = item;
+            if (item['combat-style'] === 'all') {
+                this.current_equipment['melee'][item['item-slot']] = item;
+                this.current_equipment['range'][item['item-slot']] = item;
+                this.current_equipment['magic'][item['item-slot']] = item;
+            } else {
+                this.current_equipment[item['combat-style']][item['item-slot']] = item;
+            }
             this.refreshEquipmentList();
         },
         refreshEquipmentList: function() {
@@ -260,9 +262,6 @@ let VueObj = new Vue({
             index = Object.keys(this.equipment_list)[0];
 
             if (this.equipment_list[index]['combat-style'] === 'melee' && typeof this.equipment_list[index]['damage-reduced'] !== 'undefined') {
-                console.log(this.equipment_list[index]['damage-reduced']);
-                console.log(this.base_defense);
-
                 new_number = this.equipment_list[index]['damage-reduced'] + this.base_defense;
                 original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['damage-reduced'] + this.base_defense;
 
@@ -550,6 +549,7 @@ let VueObj = new Vue({
                     'melee' : {
                         'main hand': equipment['4587'],
                         'main hand strength': equipment['4587'],
+                        'main hand strength': equipment['4587'],
                         'off hand': equipment['12954'],
                         'chest': equipment['10551'],
                         'legs': equipment['1079'],
@@ -559,6 +559,9 @@ let VueObj = new Vue({
                         'ammo': equipment['20235'],
                         'neck':  equipment['1704'],
                         'ring': equipment['1635'],
+                    },
+                    'all': {
+                        'neck':  equipment['1704'],
                     },
                     'prayer': {
                         'chest': equipment['9674'],
@@ -588,7 +591,6 @@ let VueObj = new Vue({
                         'ring': equipment['1635'],
                     }
                 };
-                console.log(this.current_equipment);
             });
         },
         getEquipment: function () {

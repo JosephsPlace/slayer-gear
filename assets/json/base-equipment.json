@@ -177,7 +177,7 @@
     "id": 1704,
     "item-name": "Amulet of Glory",
     "item-slot": "neck",
-    "combat-style": "range",
+    "combat-style": "all",
     "tags": "",
     "stats": {
       "attack": {
