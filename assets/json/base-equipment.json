@@ -6,6 +6,7 @@
     "combat-style": "melee",
     "tags": "",
     "stats": {
+      "speed": 2.4,
       "attack": {
         "stab": 8,
         "slash": 67,
@@ -35,6 +36,7 @@
     "combat-style": "melee",
     "tags": "untradable,",
     "stats": {
+      "speed": 3,
       "attack": {
         "stab": 25,
         "slash": 24,
@@ -284,7 +286,7 @@
       },
       "other": {
         "melee-str": 0,
-        "range-str": 0,
+        "range-str": 90,
         "magic-str": 0,
         "prayer": 0
       }
@@ -297,7 +299,7 @@
     "combat-style": "range",
     "tags": "",
     "stats": {
-      "speed": 1.2,
+      "speed": 3.6,
       "attack": {
         "stab": 4,
         "slash": 4,
@@ -618,8 +620,9 @@
     "item-name": "Ancient Staff",
     "item-slot": "main hand aoe",
     "combat-style": "magic",
-    "tags": "",
+    "tags": "aoe, ancients-max-hit",
     "stats": {
+      "speed": 3,
       "attack": {
         "stab": 10,
         "slash": -1,

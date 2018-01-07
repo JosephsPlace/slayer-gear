@@ -70,8 +70,17 @@ input:focus {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);;
 }
 
+.next-item .meta-info.is-normal {
+    font-weight: 400;
+}
+
+.next-item .meta-info.is-normal .tag {
+    margin-right: 4px;
+}
+
 .next-item .meta-info .tag i {
     margin-left: 2px;
+    margin-right: 2px;
 }
 
 .item-title {

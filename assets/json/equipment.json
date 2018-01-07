@@ -253,7 +253,7 @@
     "item-name": "Toxic Blowpipe",
     "item-slot": "main hand",
     "combat-style": "range",
-    "tags": "all, blowpipe-charges",
+    "tags": "all, blowpipe-charges, 2-handed",
     "predecessor": "Rune Crossbow",
     "stats": {
       "speed": 1.2,

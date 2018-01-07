@@ -201,6 +201,16 @@ let VueObj = new Vue({
     },
 
     methods: {
+        canTrainStrength: function (task) {
+            let tags_obj = task['tags'].split(",");
+            for (let tag in tags_obj) {
+                if (tags_obj[tag].trim() === 'strength') {
+                    return true;
+                }
+            }
+
+            return false;
+        },
         checkDisabled: function (step) {
             if (step === 1) {
                 this.disabled.step_one = false;
@@ -232,6 +242,13 @@ let VueObj = new Vue({
             this.equipment_list[0] = [];
             this.current_equipment[item['combat-style']][item['item-slot']] = item;
 
+            let tags_obj = item['tags'].split(",");
+            for (let tag in tags_obj) {
+                if (tags_obj[tag].trim() === '2-handed') {
+                    this.current_equipment[item['combat-style']]['off hand'] = item;
+                }
+            }
+
             this.refreshEquipmentList();
         },
         refreshEquipmentList: function() {
@@ -249,10 +266,22 @@ let VueObj = new Vue({
         },
         calculateChangePercentage: function() {
             this.dps_difference = '';
-
+            let new_number = 0;
+            let original_number = 0;
             let index = Object.keys(this.equipment_list)[0];
-            let new_number = this.equipment_list[index]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
-            let original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
+
+            if (this.equipment_list[index]['combat-style'] === 'magic') {
+                if (this.equipment_list[index]['item-slot'] === 'main hand aoe') {
+                    new_number = this.equipment_list[index]['dps'] + this.base_dps['magic-ancients'];
+                    original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps['magic-ancients'];
+                } else {
+                    new_number = this.equipment_list[index]['dps'] + this.base_dps['magic-trident'];
+                    original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps['magic-trident'];
+                }
+            } else {
+                new_number = this.equipment_list[index]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
+                original_number = this.current_equipment[this.equipment_list[index]['combat-style']][this.equipment_list[index]['item-slot']]['dps'] + this.base_dps[this.equipment_list[index]['combat-style']];
+            }
 
             this.dps_difference = (((new_number - original_number) / original_number) * 100).toFixed(2);
 
@@ -538,13 +567,14 @@ let VueObj = new Vue({
                         equipment[key + '-magic']['dps'] = magic_dps;
                     } else {
                         equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                        console.log( equipment[key]);
                     }
 
                     if (typeof this.price_list[key]['price-data'] !== 'undefined' && this.price_list[key]['price-data'] !== null) {
                         equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
                     }
 
-                    if(equipment[key]['item-slot'] !== 'main hand') {
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['item-slot'] !== 'main hand strength') {
                         if (equipment[key]['combat-style'] === 'melee') {
                             equipment[key]['dps'] -= base_dps['melee'];
                         }
@@ -552,13 +582,13 @@ let VueObj = new Vue({
                             equipment[key]['dps'] -= base_dps['range'];
                         }
                     }
-                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['item-slot'] !== 'main hand aoe' && equipment[key]['combat-style'] === 'magic') {
                         equipment[key]['dps'] -= base_dps['magic-trident'];
                     }
 
                     let tags_obj = [];
                     let crush_check = false;
-                    if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                    if((equipment[key]['item-slot'] === 'main hand' || equipment[key]['item-slot'] === 'main hand aoe') && equipment[key]['combat-style'] === 'magic') {
                         tags_obj = equipment[key]['tags'].split(",");
                         let aoe = false;
                         for (let tag in tags_obj) {
@@ -583,6 +613,8 @@ let VueObj = new Vue({
                 }
 
                 this.base_equipment = equipment;
+
+                this.base_equipment['4587']['dps'] += this.base_equipment['12954']['dps'];
 
                 this.current_equipment = {
                     'melee' : {
@@ -626,6 +658,7 @@ let VueObj = new Vue({
                         'ring': equipment['1635'],
                     }
                 };
+                console.log(this.current_equipment);
             });
         },
         getEquipment: function () {
@@ -652,7 +685,7 @@ let VueObj = new Vue({
                         equipment[key]['dps'] = 0;
                     }
 
-                    if(equipment[key]['item-slot'] !== 'main hand') {
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['item-slot'] !== 'main hand strength') {
                         if (equipment[key]['combat-style'] === 'melee') {
                             equipment[key]['dps'] -= base_dps['melee'];
                         }
@@ -660,7 +693,7 @@ let VueObj = new Vue({
                             equipment[key]['dps'] -= base_dps['range'];
                         }
                     }
-                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                    if(equipment[key]['item-slot'] !== 'main hand' && equipment[key]['item-slot'] !== 'main hand aoe' && equipment[key]['combat-style'] === 'magic') {
                         equipment[key]['dps'] -= base_dps['magic-trident'];
                     }
 
@@ -668,7 +701,7 @@ let VueObj = new Vue({
                     let crush_check = false;
                     let two_hand_check = false;
 
-                    if(equipment[key]['item-slot'] === 'main hand' && equipment[key]['combat-style'] === 'magic') {
+                    if((equipment[key]['item-slot'] === 'main hand' || equipment[key]['item-slot'] === 'main hand aoe') && equipment[key]['combat-style'] === 'magic') {
                         tags_obj = equipment[key]['tags'].split(",");
                         let aoe = false;
                         for (let tag in tags_obj) {
@@ -731,6 +764,8 @@ let VueObj = new Vue({
                 });
 
                 sortable_equipment.reverse();
+
+                console.log(sortable_equipment);
 
                 this.equipment_list = sortable_equipment;
                 this.step = 3;

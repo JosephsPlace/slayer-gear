@@ -19,7 +19,7 @@
     <nav class="navbar is-dark is-fixed-top is-transparent">
         <div class="breadcrumb navbar-start" v-cloak>
             <ul>
-                <li><a href="/">Gearing for Slayer</a></li>
+                <li><a href="https://josephsplace.github.io/slayer-gear/">Gearing for Slayer</a></li>
                 <li :class="step === 1 ? 'is-active' : ''" @click="step = 1" v-if="step > 0"><a>Stats</a></li>
                 <li :class="step === 2 ? 'is-active' : ''" @click="step = 2" v-if="step > 1"><a>Task Selection</a></li>
                 <li :class="step === 3 ? 'is-active' : ''" @click="step = 3" v-if="step > 2"><a>Buy Order</a></li>
@@ -187,6 +187,10 @@
                                 <div v-if="key === 0" class="next-item">
                                     <div class="item-title">{{ item['item-name'] }}</div>
 
+                                    <span v-if="canTrainStrength(item)" class="meta-info is-normal">
+                                        <span class="tag is-info">Note: </span>This item has the ability to train strength.
+                                    </span>
+
                                     <span class="meta-info">
                                         <span class="tag is-warning">{{ item['price'] | price }}</span> GP
                                     </span>
@@ -194,7 +198,7 @@
                                         <span class="tag is-success">{{ dps_difference }}% <i class="fa fa-caret-up" aria-hidden="true"></i></span> DPS
                                     </span>
                                     <span v-else="" class="meta-info">
-                                        <span class="tag is-danger">{{ dps_difference }}% <i class="fa fa-caret-down" aria-hidden="true"></i> DPS</span>
+                                        <span class="tag is-danger">{{ dps_difference }}% <i class="fa fa-caret-down" aria-hidden="true"></i></span> DPS
                                     </span>
 
                                     <span v-if="dmg_reduced_difference !== 0">
