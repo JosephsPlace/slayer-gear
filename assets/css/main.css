@@ -282,6 +282,7 @@ tbody tr {
     color: whitesmoke;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     padding: 10px 25px;
+    z-index: 1;
 }
 
 .breadcrumb:not(:last-child) {
@@ -305,4 +306,13 @@ tbody tr {
 .breadcrumb li:hover a {
     color: #fff;
     text-decoration: underline;
+}
+
+.modal {
+    display: flex;
+    color: #4a4a4a;
+}
+
+.modal-card-foot {
+    padding: 5px;
 }

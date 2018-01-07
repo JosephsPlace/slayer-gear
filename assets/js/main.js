@@ -10,6 +10,7 @@ let VueObj = new Vue({
         //ge_base_url: 'https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=',
         rsb_base_url: 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=',
 
+        modal: false,
         step: 1,
         disabled: {
             step_one: false,

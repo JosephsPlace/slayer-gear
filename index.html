@@ -30,7 +30,7 @@
             <a class="navbar-item" href="/" target="_blank">
                 About this Site
             </a>
-            <a class="navbar-item" href="/" target="_blank">
+            <a class="navbar-item" @click="modal = true" target="_blank">
                 Upcoming Features
             </a>
         </div>
@@ -322,6 +322,51 @@
             </div>
         </div>
     </section>
+
+    <div v-cloak>
+        <div class="modal" v-show="modal === true">
+            <div class="modal-background" @click="modal = false"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Upcoming Features and Updates</p>
+                    <button class="delete" aria-label="close" @click="modal = false"></button>
+                </header>
+                <section class="modal-card-body">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            Features
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Add Boss Tasks</a></li>
+                            <li>
+                                <a>Add Alternate Tasks</a>
+                                <ul>
+                                    <li><a>Tzhaar</a></li>
+                                    <li><a>Monster Variations</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p class="menu-label">
+                            Updates
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Calculate all Spiritual Creatures as one task</a></li>
+                            <li>
+                                <a>Add special conditions for monsters weak to stab</a>
+                                <ul>
+                                    <li><a>Metal Dragons</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Mobile Optimization</a></li>
+                        </ul>
+                    </aside>
+                </section>
+                <footer class="modal-card-foot has-text-centered">
+                </footer>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
