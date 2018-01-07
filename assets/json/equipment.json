@@ -282,7 +282,7 @@
   "6914": {
     "id": 6914,
     "item-name": "Master Wand",
-    "item-slot": "main hand",
+    "item-slot": "main hand aoe",
     "combat-style": "magic",
     "tags": "aoe, prayer, ancients-max-hit",
     "predecessor": "Ancient Staff",
@@ -313,7 +313,7 @@
   "21006": {
     "id": 21006,
     "item-name": "Kodai Wand",
-    "item-slot": "main hand",
+    "item-slot": "main hand aoe",
     "combat-style": "magic",
     "tags": "aoe, prayer, ancients-max-hit",
     "predecessor": "Master Wand",

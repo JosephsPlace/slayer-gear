@@ -36,6 +36,10 @@ input:focus {
     white-space: pre;
 }
 
+.is-italic {
+    font-style: italic;
+}
+
 .title {
     color: #fff;
     font-weight: 400;
@@ -43,6 +47,44 @@ input:focus {
 
 .subtitle {
     color: #b5b5b5;
+}
+
+.next-item {
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.next-item .meta-info {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.next-item .meta-info .tag {
+    text-shadow: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);;
+}
+
+.next-item .meta-info .tag i {
+    margin-left: 2px;
+}
+
+.item-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.item-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 h2.title {
@@ -170,4 +212,66 @@ h2.title {
 
 .active-task .task-options input:checked::before {
     content: "\f00c";
+}
+
+.table {
+    background: transparent;
+    color: #fff;
+}
+
+.table thead td, .table thead th {
+    color: #fff;
+    text-align: center;
+}
+
+.table td {
+    background: #3b4148;
+}
+
+.table td, .table th {
+    /* border: 1px solid #dbdbdb; */
+    /* border-width: 0 0 1px; */
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    border-width: 0;
+    font-weight: 700;
+    /* box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3); */
+}
+
+.table th {
+    text-align: right;
+    background: #343b41;
+    color: #585b60;
+    font-weight: 400;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+tbody tr {
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.table thead th {
+    background: transparent;
+}
+
+.table thead tr th {
+    border-bottom: 3px solid rgba(255, 255, 255, .1);
+}
+
+.item-container {
+    height: 100%;
+    max-height: 800px;
+    position: relative;
+}
+
+.item-container::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgb(43, 50, 56) 90%);
+    width: 100%;
+    height: 20em;
 }

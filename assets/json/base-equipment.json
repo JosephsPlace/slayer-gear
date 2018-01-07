@@ -616,7 +616,7 @@
   "4675": {
     "id": 4675,
     "item-name": "Ancient Staff",
-    "item-slot": "main hand",
+    "item-slot": "main hand aoe",
     "combat-style": "magic",
     "tags": "",
     "stats": {

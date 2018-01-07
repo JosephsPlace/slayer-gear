@@ -12,13 +12,13 @@
 
     <link rel="stylesheet" href="./assets/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css?v=0.002">
+    <link rel="stylesheet" href="./assets/css/main.css?v=0.004">
 </head>
 <body>
 <div id="app">
     <section class="hero is-fullheight">
         <div class="hero-body" v-if="step === 1">
-            <div class="container">
+            <div class="container is-fluid">
                 <h1 class="has-text-centered is-white title">Enter your stats</h1>
 
                 <div class="enter-stats">
@@ -85,15 +85,15 @@
             </div>
         </div>
 
-        <div v-cloak>
-            <div class="hero-body" v-if="step === 2" v-cloak>
-                <div class="container-fluid">
+        <div v-if="step === 2" v-cloak>
+            <div class="hero-body">
+                <div class="container is-fluid">
                     <h1 class="has-text-centered is-white title">Choose the slayer tasks you do</h1>
                     <h1 class="has-text-centered is-white subtitle">Choose lots</h1>
 
                     <div class="">
                         <div class="columns is-multiline select-tasks">
-                            <div v-for="task in task_list" :class="'column is-4-widescreen is-6-desktop is-12-mobile ' + checkActive(selected_mobs[task['monster-name']])">
+                            <div v-for="task in task_list" :class="'column is-4-widescreen is-6 is-12-mobile ' + checkActive(selected_mobs[task['monster-name']])">
                                 <div class="field has-addons has-addons-centered columns task-container">
                                     <p class="control column is-5 is-label-container" @click="selectMonster(task)">
                                         <a class="button is-static is-label" >
@@ -159,12 +159,145 @@
 
         <div v-cloak>
             <div class="hero-body" v-if="step === 3" v-cloak>
-                <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0">
-                    {{ item['item-name'] }}
-                    <span v-if="key === 0">
-                        | {{ dps_difference }} % DPS Difference | {{ dmg_reduced_difference }} % Defense Difference
-                        <span @click="addItem(equipment_list[key])">Next</span>
-                    </span>
+                <div class="container is-fluid">
+                    <div class="columns is-multiline">
+                        <div class="column is-4 is-12-mobile item-container">
+                            <h1 class="has-text-centered is-white title">Next Item</h1>
+                            <div v-for="(item, key) in equipment_list" v-if="item['rank'] !== 0" class="has-text-centered">
+                                <div v-if="key === 0" class="next-item">
+                                    <div class="item-title">{{ item['item-name'] }}</div>
+
+                                    <span v-if="dps_difference > 0" class="meta-info">
+                                        <span class="tag is-success">{{ dps_difference }}% <i class="fa fa-caret-up" aria-hidden="true"></i></span> DPS
+                                    </span>
+                                    <span v-else="" class="meta-info">
+                                        <span class="tag is-danger">{{ dps_difference }}% <i class="fa fa-caret-down" aria-hidden="true"></i> DPS</span>
+                                    </span>
+
+                                    <span v-if="dmg_reduced_difference !== 0">
+                                        <span v-if="dmg_reduced_difference > 0" class="meta-info">
+                                            <span class="tag is-success">{{ dmg_reduced_difference }}% <i class="fa fa-caret-up" aria-hidden="true"></i></span> Defense
+                                        </span>
+                                        <span v-else="" class="meta-info">
+                                            <span class="tag is-danger">{{ dmg_reduced_difference }} <i class="fa fa-caret-down" aria-hidden="true"></i></span> Defense
+                                        </span>
+                                    </span>
+
+                                    <div class="is-italic">compared to {{ current_equipment[item['combat-style']][item['item-slot']]['item-name'] }}</div>
+
+                                    <button @click="addItem(equipment_list[key])" class="button is-primary" type="submit"
+                                            :disabled="disabled.step_two === true">Next Item
+                                    </button>
+                                </div>
+                                <div v-else="">
+                                     <div class="item-subtitle">{{ item['item-name'] }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-8 is-12-mobile">
+                            <h1 class="has-text-centered is-white title">Current Gear Setup</h1>
+                            <h1 class="has-text-centered is-white subtitle">The pre-filled gear is what you should have BEFORE you even start Slayer</h1>
+
+                            <table class="table is-fullwidth is-hoverable table is-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Slot</th>
+                                        <th>Melee</th>
+                                        <th>Range</th>
+                                        <th>Magic</th>
+                                        <th>Prayer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Head</th>
+                                        <td>Black Mask (i) / Slayer Helm (i)</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Main Hand</th>
+                                        <td>{{ current_equipment.melee['main hand']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['main hand']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['main hand']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Main Hand Alt</th>
+                                        <td>{{ current_equipment.melee['main hand strength']['item-name'] }}</td>
+                                        <td></td>
+                                        <td>{{ current_equipment.magic['main hand aoe']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Off Hand</th>
+                                        <td>{{ current_equipment.melee['off hand']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['off hand']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['off hand']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Neck</th>
+                                        <td>{{ current_equipment.melee['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['neck']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['neck']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Chest</th>
+                                        <td>{{ current_equipment.melee['chest']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['chest']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['chest']['item-name'] }}</td>
+                                        <td>{{ current_equipment.prayer['chest']['item-name'] }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Legs</th>
+                                        <td>{{ current_equipment.melee['legs']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['legs']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['legs']['item-name'] }}</td>
+                                        <td>{{ current_equipment.prayer['legs']['item-name'] }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Boots</th>
+                                        <td>{{ current_equipment.melee['boots']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['boots']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['boots']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Hands</th>
+                                        <td>{{ current_equipment.melee['hands']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['hands']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['hands']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ring</th>
+                                        <td>{{ current_equipment.melee['ring']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['ring']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['ring']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ammo</th>
+                                        <td>{{ current_equipment.melee['ammo']['item-name'] }}</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Back</th>
+                                        <td>{{ current_equipment.melee['back']['item-name'] }}</td>
+                                        <td>{{ current_equipment.range['back']['item-name'] }}</td>
+                                        <td>{{ current_equipment.magic['back']['item-name'] }}</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,5 +307,5 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="./assets/js/vue.js"></script>
 <script src="./assets/js/vue-resource.js"></script>
-<script type="text/babel" src="./assets/js/main.js?v=0.002"></script>
+<script type="text/babel" src="./assets/js/main.js?v=0.003"></script>
 </body>

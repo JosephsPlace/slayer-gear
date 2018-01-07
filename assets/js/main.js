@@ -577,6 +577,7 @@ let VueObj = new Vue({
                     'magic': {
                         'main hand': equipment['11907'],
                         'off hand': equipment['20716'],
+                        'main hand aoe': equipment['4675'],
                         'chest': equipment['4091'],
                         'legs': equipment['4093'],
                         'boots': equipment['4097'],
