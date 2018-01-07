@@ -458,6 +458,11 @@ let VueObj = new Vue({
             }
         },
         setStats: function() {
+            this.user_levels.attack = Number(this.user_levels.attack);
+            this.user_levels.strength = Number(this.user_levels.strength);
+            this.user_levels.defense = Number(this.user_levels.defense);
+            this.user_levels.range = Number(this.user_levels.range);
+            this.user_levels.magic = Number(this.user_levels.magic);
            this.step = 2;
         },
         setUsername: function () {
@@ -603,6 +608,7 @@ let VueObj = new Vue({
                     'magic-trident': this.calculateDPS(this.base_dps_stats['magic-trident'], 'base-dps, trident-max-hit', 'magic'),
                     'magic-ancients': this.calculateDPS(this.base_dps_stats['magic-ancients'], 'base-dps, ancients-max-hit,', 'magic'),
                 };
+
                 this.base_dps = base_dps;
 
                 let base_defense = this.calculateDamageTaken();
@@ -883,6 +889,6 @@ let VueObj = new Vue({
             }
 
             return average_damage / attack_speed;
-        },
+        }
     }
 });

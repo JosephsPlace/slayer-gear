@@ -326,8 +326,8 @@
       }
     }
   },
-  "Dagonnath": {
-    "monster-name": "Dagonnath",
+  "Dagannoth": {
+    "monster-name": "Dagannoth",
     "task-weight": 8,
     "tags": "boss, ely",
     "stats": {
@@ -1400,8 +1400,8 @@
       }
     }
   },
-  "Brine Rates": {
-    "monster-name": "Brine Rates",
+  "Brine Rats": {
+    "monster-name": "Brine Rats",
     "task-weight": 3,
     "tags": "",
     "stats": {
