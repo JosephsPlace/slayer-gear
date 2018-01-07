@@ -230,13 +230,8 @@ let VueObj = new Vue({
         },
         addItem: function (item) {
             this.equipment_list[0] = [];
-            if (item['combat-style'] === 'all') {
-                this.current_equipment['melee'][item['item-slot']] = item;
-                this.current_equipment['range'][item['item-slot']] = item;
-                this.current_equipment['magic'][item['item-slot']] = item;
-            } else {
-                this.current_equipment[item['combat-style']][item['item-slot']] = item;
-            }
+            this.current_equipment[item['combat-style']][item['item-slot']] = item;
+
             this.refreshEquipmentList();
         },
         refreshEquipmentList: function() {
@@ -510,7 +505,41 @@ let VueObj = new Vue({
                 this.base_defense = base_defense;
 
                 for (let key in equipment) {
-                    equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    if (equipment[key]['combat-style'] === 'all') {
+                        equipment[key + '-melee'] = equipment[key];
+                        equipment[key + '-range'] = equipment[key];
+                        equipment[key + '-magic'] = equipment[key];
+
+                        let melee_dps = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], 'melee');
+                        melee_dps -= base_dps['melee'];
+
+                        let max_type = equipment[key + '-melee']['stats']['defense']['slash'];
+                        let max_type_name = 'slash';
+
+                        for (let type in equipment[key + '-melee']['stats']['defense']) {
+                            if (equipment[key + '-melee']['stats']['defense'][type] > max_type) {
+                                max_type = equipment[key + '-melee']['stats']['defense'][type];
+                                max_type_name = type;
+                            }
+                        }
+                        let damage_reduced = base_defense - this.calculateDamageTaken(max_type, max_type_name)
+                        equipment[key + '-melee']['damage-reduced'] = (damage_reduced) * (1 - this.task_styles.prayer);
+
+
+                        let range_dps = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], 'range');
+                        range_dps -= base_dps['range'];
+
+                        let magic_dps = this.calculateDPS(equipment[key]['stats'], 'trident-max-hit,', 'magic');
+                        magic_dps -= base_dps['magic-trident'];
+
+                        equipment[key + '-melee']['dps'] = melee_dps;
+                        equipment[key + '-range']['dps'] = range_dps;
+                        equipment[key + '-magic']['dps'] = magic_dps;
+                        equipment[key + '-magic']['dps'] = magic_dps;
+                    } else {
+                        equipment[key]['dps'] = this.calculateDPS(equipment[key]['stats'], equipment[key]['tags'], equipment[key]['combat-style']);
+                    }
+
                     if (typeof this.price_list[key]['price-data'] !== 'undefined' && this.price_list[key]['price-data'] !== null) {
                         equipment[key]['price'] = this.getItemPrice(this.price_list[key]['price-data'].item.current.price);
                     }
@@ -554,6 +583,7 @@ let VueObj = new Vue({
                 }
 
                 this.base_equipment = equipment;
+
                 this.current_equipment = {
                     'melee' : {
                         'main hand': equipment['4587'],
@@ -564,8 +594,8 @@ let VueObj = new Vue({
                         'boots': equipment['3105'],
                         'hands': equipment['7462'],
                         'back': equipment['6570'],
-                        'ammo': equipment['20235'],
-                        'neck':  equipment['1704'],
+                        'ammo': equipment['20235-melee'],
+                        'neck':  equipment['1704-melee'],
                         'ring': equipment['1635'],
                     },
                     'prayer': {
@@ -580,7 +610,7 @@ let VueObj = new Vue({
                         'boots': equipment['6328'],
                         'hands': equipment['7462'],
                         'back': equipment['10499'],
-                        'neck':  equipment['1704'],
+                        'neck':  equipment['1704-range'],
                         'ring': equipment['1635'],
                     },
                     'magic': {
@@ -592,7 +622,7 @@ let VueObj = new Vue({
                         'boots': equipment['4097'],
                         'hands': equipment['7462'],
                         'back': equipment['2412'],
-                        'neck':  equipment['1704'],
+                        'neck':  equipment['1704-magic'],
                         'ring': equipment['1635'],
                     }
                 };

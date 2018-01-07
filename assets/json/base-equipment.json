@@ -178,7 +178,7 @@
     "item-name": "Amulet of Glory",
     "item-slot": "neck",
     "combat-style": "all",
-    "tags": "",
+    "tags": "trident-max-hit, trident-seas-max-hit,",
     "stats": {
       "attack": {
         "stab": 10,
