@@ -769,6 +769,7 @@ let VueObj = new Vue({
 
                 this.equipment_list = sortable_equipment;
                 this.step = 3;
+                document.getElementById('app').scrollIntoView();
                 this.calculateChangePercentage();
             });
         },
